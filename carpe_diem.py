@@ -2,29 +2,6 @@ import random
 import sys
 import time
 
-print "Welcome to Carpe Diem, an optimization game."
-print "You begin with 3 Energy and 8 Dollars."
-print "You have 5 Time each turn."
-print "Each turn, flip up 4 cards from a deck of playing cards."
-print "1st card costs 1 Time to play"
-print "2nd card costs 2 Time"
-print "3rd card costs 3 Time"
-print "4th card costs 4 Time"
-print "Play Number cards to gain that much money"
-print "Face cards cost $5, and grant 10, 20, 30 or 50 victory points"
-print "(For Jack, Queen, King, Ace, respectively)"
-print "Recuperation: Unused Time can be traded for 1 Energy per Time"
-print "Freelancing: Unused Time can be traded for 1 Dollar per Time"
-print "Clubs           +1 Energy"
-print "Diamonds        0 Energy"
-print "Hearts          -1 Energy"
-print "Spades          -3 Energy"
-print "End of each turn (daily expenses):"
-print "-1 Energy"
-print "-4 Dollars"
-print "Play till you run out of cards or no cards are playable."
-print "Game lasts up to 13 days."
-raw_input("\nHit enter to begin.")
 
 def clear_screen():
     print"\033[2J\033[1;1H"
@@ -44,6 +21,15 @@ face_points = {
 }
 facenames = {
         1: 'Ace',
+        2: '2',
+        3: '3',
+        4: '4',
+        5: '5',
+        6: '6',
+        7: '7',
+        8: '8',
+        9: '9',
+        10: '10',
         11: 'Jack',
         12: 'Queen',
         13: 'King'
@@ -110,18 +96,14 @@ class Game(object):
         print "-------------------------- Day {:2} ----------------------------\n".format(
                 game.day
                 )
-        print "\n{:>25}{:>17}{:>10}{:>9}".format(
+        print "\n{:>26}{:>20}{:>20}{:>20}".format(
                 'card', 'energy', 'dollars', 'time'
                 )
         time = 0
         for card in self.hand:
             time += 1
-            if card.rank in [1, 11, 12, 13]:
-                rank = facenames[card.rank]
-            else:
-                rank = card.rank
-            print "\n({}){:>15} of {:8}{:10}{:10}{:10}".format(
-                     self.hand.index(card)+1, rank, card.suit, card.energy, card.dollars, time
+            print "\n({}){:>15} of {:8}{:13}{:20}{:22}".format(
+                     self.hand.index(card)+1, facenames[card.rank], card.suit, card.energy, card.dollars, time
                      )
 
     def choose_card(self, hand):
@@ -139,26 +121,23 @@ class Game(object):
                 '4': self.hand[3]
         }
         card = choices[choice]
-        # print "This card will give you {} energy, {} dollars, and {} day(s) left to play.\n".format(
-        #         game.energy, game.dollars, 14-game.day
-        # print "\nThis card will give you{:>25}{:>17}{:>10}{:>9}".format(
-        #         'card', 'energy', 'dollars', 'time'
-        print "This card will result in {} energy, {} dollars, an additional {} victory points, and leave {} time units to trade.".format(
-                game.energy, game.dollars, card.victory_points, 4 - self.hand.index(card)
-                )
+        print "\n{:>30} #{}{:>13}{:>20}{:>22}{:>22}".format('you will get for', choice, 'energy', 'dollars', 'time left', 'victory points')
+        print "\n{:>18} of {:8}{:13}{:20}{:22}".format(
+                    facenames[card.rank], card.suit, card.energy, card.dollars, (4 - self.hand.index(card)), card.victory_points
+                    )
         return card
 
     def exchange_time(self, card):
         freetime = 4 - self.hand.index(card)
-        change = raw_input("\nDo you want to (r)ejuvenate or (w)ork freelance? (or (q)uit)    ".format(freetime))
+        change = raw_input("\nDo you want to (r)ecuperate or (w)ork freelance? (or (q)uit)    ".format(freetime))
         if change == 'q':
             self.exit()
         if change == 'r':
-            self.rejuvenate(change)
+            self.recuperate(change)
         if change == 'w':
             self.freelance(change)
 
-    def rejuvenate(self, exchange):
+    def recuperate(self, exchange):
         freetime = 4 - self.hand.index(card)
         exchange = int(raw_input("\nHow much time do you want to exchange for energy?    "))
         while exchange > freetime:
@@ -212,7 +191,7 @@ class Game(object):
             print "\n{:>10}:{:>5}".format(string, attribute) 
         print "\n----------------------Your point tally:-----------------------"
         for i in range(3):
-            time.sleep(.5)
+            time.sleep(.1)
             print "--------------------------------------------------------------"
         print "                            {}\n\n".format(self.points)
 
