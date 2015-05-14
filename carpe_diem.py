@@ -121,37 +121,52 @@ class Game(object):
                 '4': self.hand[3]
         }
         card = choices[choice]
-        print "\n{:>30} #{}{:>13}{:>20}{:>22}{:>22}".format('you will get for', choice, 'energy', 'dollars', 'time left', 'victory points')
-        print "\n{:>18} of {:8}{:13}{:20}{:22}".format(
-                    facenames[card.rank], card.suit, card.energy, card.dollars, (4 - self.hand.index(card)), card.victory_points
+        print "\n{:>30} {:>13}{:>20}{:>22}{:>22}".format('you will have ', 'energy', 'dollars', 'time', 'victory points')
+        print "\n{:>18} of {:8}{:13}{:20}{:22}{:20}".format(
+                    facenames[card.rank], 
+                    card.suit, 
+                    self.energy + card.energy - 1, 
+                    self.dollars + card.dollars - 4, 
+                    4 - self.hand.index(card), 
+                    self.victory_points + card.victory_points
                     )
         return card
 
     def exchange_time(self, card):
+        # import pudb; pudb.set_trace()
         freetime = 4 - self.hand.index(card)
-        change = raw_input("\nDo you want to (r)ecuperate or (w)ork freelance? (or (q)uit)    ".format(freetime))
-        if change == 'q':
-            self.exit()
-        if change == 'r':
-            self.recuperate(change)
-        if change == 'w':
-            self.freelance(change)
+        timeleft = freetime
+        while timeleft:
+            change = raw_input("\nDo you want to (r)ecuperate or (w)ork freelance? (or (q)uit)    ".format(freetime))
+            if change == 'q':
+                self.exit()
+            elif change == 'r':
+                timeleft = self.recuperate(timeleft)
+            elif change == 'w':
+                timeleft = self.freelance(timeleft)
+            else:
+                print "You must have entered a stray character. Try again.  " 
 
-    def recuperate(self, exchange):
-        freetime = 4 - self.hand.index(card)
-        exchange = int(raw_input("\nHow much time do you want to exchange for energy?    "))
+
+    def recuperate(self, freetime):
+        exchange = int(raw_input("\nHow much time do you want to exchange for energy? {} available     ".format(freetime)))
+
         while exchange > freetime:
             exchange = raw_input(
                     "That's more time than you have available.\n"
                     "Enter a value equal to or lower than {}.   (q to quit)   ".format(freetime)
                     )
             if exchange == 'q':
-                sys.exit()
+                self.exit()
+            exchange = int(exchange)
         self.energy += exchange
+        freetime -= exchange
+        if freetime:
+            print "\nYou still have {} time left to exchange.".format(freetime)
+        return freetime
 
-    def freelance(self, exchange):
-        freetime = 4 - self.hand.index(card)
-        exchange = int(raw_input("\nHow much time do you want to exchange for energy?     "))
+    def freelance(self, freetime):
+        exchange = int(raw_input("\nHow much time do you want to exchange for dollars? {} available     ".format(freetime)))
         while exchange > freetime:
             exchange = raw_input(
                     "That's more time than you have available.\n"
@@ -159,7 +174,12 @@ class Game(object):
                     )
             if exchange == 'q':
                 self.exit()
+            exchange = int(exchange)
         self.dollars += exchange
+        freetime -= exchange
+        if freetime:
+            print "\nYou still have {} time left to exchange.".format(freetime)
+        return freetime
 
     def check_playability(self, hand):
         # if all cards in hand are not playable, playability is False 
@@ -204,24 +224,26 @@ class Game(object):
 
     def get_different_card(self, card):
         if card.tired and card.nsf:
-            print "That card is not playable because energy and dollars are too low"
+            print "\nUnfortunately, that card is not playable because energy and dollars would be negative"
         elif card.nsf:
-            print "That card is not playable because dollars is too low"
+            print "\nUnfortunately, that card is not playable because dollars would be negative"
         else:
             # card.tired
-            print "That card is not playable because energy is too low"
+            print "\nUnfortunately, that card is not playable because energy would be negative"
         card = self.choose_card(self.hand)
         self.check_playability(self.hand)
         return card
 
 
 game = Game()
-# import pudb; pudb.set_trace()
 
 while game.day <= 13:
     game.make_hand()
     clear_screen()
-    game.check_playability(game.hand)
+    playable = game.check_playability(game.hand)
+    if not playable:
+        print "Unfortunately, none of the cards in your last hand were playable. Game ended. Here are your points:"
+        game.exit()
     game.display_choices(game.hand)
     card = game.choose_card(game.hand)
     while not card.playable:
