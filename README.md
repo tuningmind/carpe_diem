@@ -12,37 +12,45 @@ TODO: Describe the installation progress
 ## Game Rules:
 Carpe Diem is an optimization game illustrating the trade-offs between time,
     energy, and money.
+
 You begin with 3 energy and 8 dollars. 
+
 To gain or lose time:
-    You have 5 time each turn. 
-    Each turn, which is equal to one day, you get 4 cards from a deck of playing cards. 
-    1st card costs 1 time to play 
-    2nd card costs 2 time to play
-    3rd card costs 3 time to play
-    4th card costs 4 time to play
+   -  You have 5 time each turn. 
+   -  Each turn, which is equal to one day, you get 4 cards from a deck of playing cards. 
+   -  1st card costs 1 time to play 
+   -  2nd card costs 2 time to play
+   -  3rd card costs 3 time to play
+   -  4th card costs 4 time to play
+
 To gain or lose energy:
-    Clubs           +1 Energy 
-    Diamonds         0 Energy 
-    Hearts          -1 Energy 
-    Spades          -3 Energy 
-    Recuperation: Unused time can be traded for 1 Energy per time 
-    Daily expenses: each day costs 1 energy
+   -  Hearts give +1 Energy 
+   -  Diamonds give 0 Energy 
+   -  Clubs give -1 Energy 
+   -  Spades give -3 Energy 
+   -  Recuperation: Unused time can be traded for 1 Energy per time 
+   -  Daily expenses: each day costs 1 energy
+
 To gain or lose money:
-    Play number cards to gain that much money. (e.g.: 9 of hearts gives $9)
-    Freelancing: unused time can be traded for 1 dollar per time 
-    Face cards cost $5, and grant victory points of:
-        10 (Jack), 
-        20 (Queen), 
-        30 (King), 
-        50 (Ace). 
-    Daily expenses: each day costs 4 dollars 
+   -  Play number cards to gain that much money. (e.g.: 9 of hearts gives $9)
+   -  Freelancing: unused time can be traded for 1 dollar per time 
+   -  Face cards cost $5, and grant victory points of:
+       *  10 (Jack), 
+       *  20 (Queen), 
+       *  30 (King), 
+       *  50 (Ace). 
+   -  Daily expenses: each day costs 4 dollars 
+
 Victory points:
-    Victory points are added directly to the point total and cannot be lost.
+   -  Victory points are added directly to the point total and cannot be lost or spent.
+
 End of each turn (daily expenses, mentioned above): 
-    -1 Energy 
-    -4 Dollars 
-Play till you run out of cards or no cards are playable. 
-    Game lasts up to 13 days. 
+   -  -1 Energy 
+   -  -4 Dollars 
+
+You may not make a move that will result in negative values.
+
+Play till you run out of cards or no cards are playable. Game lasts up to 13 days. 
 
 ## Other notes
 This is an initial effort. Design suggestions are welcome. 
