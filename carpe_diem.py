@@ -1,10 +1,11 @@
 import random
 import sys
 import time
+import os
 
 
 def clear_screen():
-    print"\033[2J\033[1;1H"
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 suit_energies = {
     "hearts": 1,
