@@ -89,22 +89,22 @@ class Game(object):
     def display_choices(self):
         height_spacer = 13 - game.day
         print "\n" * height_spacer
-        print "--------------------------------------------------------------"
-        print "                         Carpe Diem"
-        print "--------------------------------------------------------------"
-        print "You have {} energy, {} dollars, and {} day(s) left to play.\n".format(
+        print "-----------------------------------------------------------------------"
+        print "                             Carpe Diem"
+        print "-----------------------------------------------------------------------"
+        print "     You have {} energy, {} dollars, and {} day(s) left to play.\n".format(
                 game.energy, game.dollars, 14-game.day
                 )
-        print "-------------------------- Day {:2} ----------------------------\n".format(
+        print "------------------------------ Day {:2} ---------------------------------\n".format(
                 game.day
                 )
-        print "\n{:>26}{:>20}{:>20}{:>20}".format(
+        print "\n{:>16}{:>17}{:>11}{:>9}".format(
                 'card', 'energy', 'dollars', 'time'
                 )
         time = 0
         for card in self.hand:
             time += 1
-            print "\n({}){:>15} of {:8}{:13}{:20}{:22}".format(
+            print "\n({}){:>5} of {:8}{:10}{:11}{:11}".format(
                      self.hand.index(card)+1, facenames[card.rank], card.suit, card.energy, card.dollars, time
                      )
 
@@ -123,8 +123,10 @@ class Game(object):
                 '4': self.hand[3]
         }
         card = choices[choice]
-        print "\n{:>30} {:>13}{:>20}{:>22}{:>22}".format('you will have ', 'energy', 'dollars', 'time', 'victory points')
-        print "\n{:>18} of {:8}{:13}{:20}{:22}{:20}".format(
+        print "\n{:>20}{:>13}{:>11}{:>9}{:>18}".format(
+                'you will have', 'energy', 'dollars', 'time', 'victory points'
+                )
+        print "\n{:>8} of {:8}{:10}{:11}{:11}{:13}".format(
                     facenames[card.rank], 
                     card.suit, 
                     self.energy + card.energy - 1, 
@@ -210,11 +212,11 @@ class Game(object):
         self.points += self.dollars  
         for string, attribute in [('Energy',self.energy), ('Dollars',self.dollars), ('Victory Points', self.victory_points)]:
             print "\n{:>10}:{:>5}".format(string, attribute) 
-        print "\n----------------------Your point tally:-----------------------"
+        print "\n--------------------------Your point tally:----------------------------"
         for i in range(3):
             time.sleep(.1)
-            print "--------------------------------------------------------------"
-        print "                            {}\n\n".format(self.points)
+            print "-----------------------------------------------------------------------"
+        print "                                 {}\n\n".format(self.points)
 
     def get_different_card(self, card):
         if card.tired and card.nsf:
