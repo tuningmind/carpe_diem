@@ -19,6 +19,7 @@ face_points = {
     12: 20,
     13: 30
 }
+
 facenames = {
         1: 'Ace',
         2: '2',
@@ -33,7 +34,7 @@ facenames = {
         11: 'Jack',
         12: 'Queen',
         13: 'King'
-        }
+}
 
 class Card(object):
     def __init__(self, rank, suit):
@@ -84,7 +85,7 @@ class Game(object):
             card = self.deck.pop()
             self.hand.append(card)
 
-    def display_choices(self, hand):
+    def display_choices(self):
         height_spacer = 13 - game.day
         print "\n" * height_spacer
         print "--------------------------------------------------------------"
@@ -106,7 +107,7 @@ class Game(object):
                      self.hand.index(card)+1, facenames[card.rank], card.suit, card.energy, card.dollars, time
                      )
 
-    def choose_card(self, hand):
+    def choose_card(self):
         choice = raw_input("\nWhich card do you choose? (1, 2, 3, 4 or (q)uit):  ")
         while choice not in ['quit', 'q', '1', '2', '3', '4']:
             print "Your choice was not one of the options available. Try again."
@@ -150,7 +151,6 @@ class Game(object):
 
     def recuperate(self, freetime):
         exchange = int(raw_input("\nHow much time do you want to exchange for energy? {} available     ".format(freetime)))
-
         while exchange > freetime:
             exchange = raw_input(
                     "That's more time than you have available.\n"
@@ -181,11 +181,11 @@ class Game(object):
             print "\nYou still have {} time left to exchange.".format(freetime)
         return freetime
 
-    def check_playability(self, hand):
+    def check_playability(self):
         # if all cards in hand are not playable, playability is False 
         playablehand = True 
         deadcard = 0
-        for card in hand:
+        for card in self.hand:
             if (self.energy + card.energy - 1) < 0:
                 card.playable = False
                 card.tired = True
@@ -215,23 +215,16 @@ class Game(object):
             print "--------------------------------------------------------------"
         print "                            {}\n\n".format(self.points)
 
-    def unplayable_hand(self):
-        time.sleep(1)
-        print "\n\n\nYou have no playable cards in this hand. Game ended.\n"
-        time.sleep(1)
-        game.display_final_points()
-        self.exit()
-
     def get_different_card(self, card):
         if card.tired and card.nsf:
-            print "\nUnfortunately, that card is not playable because energy and dollars would be negative"
+            print "\nUnfortunately, that card is not playable because energy and dollars would be negative."
         elif card.nsf:
-            print "\nUnfortunately, that card is not playable because dollars would be negative"
+            print "\nUnfortunately, that card is not playable because dollars would be negative."
         else:
             # card.tired
-            print "\nUnfortunately, that card is not playable because energy would be negative"
-        card = self.choose_card(self.hand)
-        self.check_playability(self.hand)
+            print "\nUnfortunately, that card is not playable because energy would be negative."
+        card = self.choose_card()
+        self.check_playability()
         return card
 
 
@@ -240,12 +233,13 @@ game = Game()
 while game.day <= 13:
     game.make_hand()
     clear_screen()
-    playable = game.check_playability(game.hand)
+    playable = game.check_playability()
     if not playable:
+        time.sleep(1)
         print "Unfortunately, none of the cards in your last hand were playable. Game ended. Here are your points:"
         game.exit()
-    game.display_choices(game.hand)
-    card = game.choose_card(game.hand)
+    game.display_choices()
+    card = game.choose_card()
     while not card.playable:
         card = game.get_different_card(card)
     game.apply_card(card)
