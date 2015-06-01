@@ -1,0 +1,16 @@
+.card {
+  border-color: #808080 #000000 #000000 #808080;
+  border-width: 1px;
+  border-style: solid;
+  color: #000000;
+  font-size: 20pt;
+  position: absolute;
+  width:  3.75em;
+  height: 5.00em;
+}
+
+.red { color: #ff0000; }
+
+.suit {
+    font-size: 5.5em;
+}
