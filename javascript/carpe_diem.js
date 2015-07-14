@@ -70,8 +70,8 @@ function makecard(rank, suit) {
         isFacecard: isFacecard,
         dollarValue: dollarValue,
         victoryPoints: victoryPoints,
-        // todo: do playable, tired, etc, make sense in javascript:
-        // also: why did vim highlight when I wrote "todo" in caps?
+        points: 1,
+        // todo: do playable, tired, etc, make sense in javascript
         playable: true,
         tired: false,
         nsf: false,
@@ -93,22 +93,6 @@ function createDeck() {
 
 var deck = createDeck();
 
-function createhand(deck) {
-    if (deck) {
-        shuffle(deck);
-        var hand = [];
-        for (var i=1; i <= 4; i++){
-            card = deck.pop();
-            hand.push(card);
-            deck.splice((deck.indexOf(card)),1);
-            time = hand.indexOf(card);
-        } // end of for loop to create hand
-        return hand;
-    } // end of if-statment to check presence of deck
-} // end of function createhand()
-
-hand = createhand(deck);
-
 var suitTags = {
     hearts: "&hearts;",
     diamonds: "&diams;",
@@ -116,17 +100,63 @@ var suitTags = {
     spades: "&spades;"
 };
 
-function showCard() {
-    var iStr = ["1", "2", "3", "4"];
-    for (var i = 0; i < hand.length; i++) {
-        cardname = "card" + iStr[i];
-        suitname = "suit" + iStr[i];
-        colorname = "color" + iStr[i];
-        console.log("cardname: " + cardname + "   rank: " + hand[i].rank + "   suit:" + hand[i].suit)
-        document.getElementById(cardname).innerHTML = hand[i].rank + " of " + hand[i].suit;
-        document.getElementById(suitname).innerHTML = suitTags[hand[i].suit];
-        if ((hand[i].suit == "diamonds") || (hand[i].suit == "hearts")) {
-            document.getElementById(suitname).className = "suit red";
-        }
-    }
+
+var Game = function(deck) {
+    this.deck = deck;
+    this.energy = 3;
+    this.dollars = 8;
+    this.day = 1;
+    this.points = 0;
+    this.victoryPoints = 0;
+    this.hand = [];
+    this.keepGoing = true; 
+
+    this.exit = function() {
+        Game.keepGoing = false;
+    };
+
+    this.makeHand = function() {
+        if (this.deck) {
+            shuffle(this.deck);
+            for (var i=1; i <= 4; i++){
+                card = this.deck.pop();
+                this.hand.push(card);
+                this.deck.splice((this.deck.indexOf(card)),1);
+                this.time = this.hand.indexOf(card);
+            } // end of for loop to create hand
+        } // end of if-statment to check presence of deck
+    }; // end of function makeHand()
+
+} // end of Game object
+
+
+var loadShowCard = function(){ 
+    showCard();
 }
+
+var showCard = function() {
+    var iStr = ["1", "2", "3", "4"];
+    j = (game.hand.length-1);
+    for (var i = 0; i <= j; i++) {
+        cardname = "card" + iStr[i];
+        points = "points" + iStr[i];
+        suitname = "suitof" + iStr[i];
+        colorname = "color" + iStr[i];
+        document.getElementById(cardname).textContent = game.hand[i].rank + " of " + game.hand[i].suit;
+        document.getElementById(suitname).innerHTML = suitTags[game.hand[i].suit];
+        if ((game.hand[i].suit == "diamonds") || (game.hand[i].suit == "hearts")) {
+            document.getElementById(suitname).className = "suit red";
+        } // end of if statement
+        document.getElementById(points).innerHTML = "victory points: " + game.hand[i].victoryPoints;
+    }; // end of for loop
+} // end of function showCard()
+
+
+var game = new Game(deck);
+
+game.makeHand();
+var loadNewHand = function(game) {
+    console.log(game);
+    game.makeHand();
+}
+
