@@ -1,32 +1,24 @@
 {
-  "scripts": {
-    "start": "webpack ./index.js bundle.js",
-    "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "name": "carpe_diem.js",
-  "version": "1.0.0",
-  "description": "Carpe Diem is an optimization game illustrating the trade-offs between time, energy, and money.",
+  "version": "1.0.3",
+  "description": "a solitaire game illustraiting the trade-offs between time, energy and money",
   "main": "index.js",
-  "dependencies": {
-    "css-loader": "^0.22.0",
-    "http-server": "^0.8.5",
-    "images": "^2.1.10",
-    "json-loader": "^0.5.4",
-    "style-loader": "^0.13.0",
-    "webpack-dev-server": "^1.14.0"
-  },
-  "devDependencies": {
-    "webpack": "^1.12.9"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tuningmind/carpe_diem.git"
+    "url": "https://github.com/tuningmind/carpe_diem/"
   },
+  "keywords": [
+    "optimization",
+    "solitaire"
+  ],
   "author": "tuningmind",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/tuningmind/carpe_diem/issues"
-  },
-  "homepage": "https://github.com/tuningmind/carpe_diem#readme"
+  "devDependencies": {
+    "babel-core": "^6.4.5",
+    "babel-loader": "^6.2.1",
+    "webpack": "^1.12.12"
+  }
 }
