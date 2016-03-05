@@ -1,5 +1,6 @@
-var main = require('./app/carpe_diem.js')
+//import carpe_diem from './app/carpe_diem'
+var carpe_diem = require('./app/carpe_diem')
 
-main()
+carpe_diem()
 
 

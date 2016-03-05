@@ -4,6 +4,7 @@
   "description": "a solitaire game illustraiting the trade-offs between time, energy and money",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +20,10 @@
   "devDependencies": {
     "babel-core": "^6.4.5",
     "babel-loader": "^6.2.1",
+    "babel-preset-es2015": "^6.3.13",
     "webpack": "^1.12.12"
+  },
+  "dependencies": {
+    "express": "^4.13.4"
   }
 }
