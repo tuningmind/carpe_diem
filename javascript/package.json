@@ -1,7 +1,7 @@
 {
   "name": "carpe_diem.js",
   "version": "1.0.3",
-  "description": "a solitaire game illustraiting the trade-offs between time, energy and money",
+  "description": "a solitaire game illustrating the trade-offs between time, energy and money",
   "main": "index.js",
   "scripts": {
     "start": "webpack ./index.js bundle.js",
