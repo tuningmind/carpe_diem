@@ -4,7 +4,8 @@
   "description": "a solitaire game illustrating the trade-offs between time, energy and money",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --watch",
+    "start": "node server/server.js",
+    "build": "webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -1,0 +1,88 @@
+body {
+    background:-webkit-gradient(linear, 92% 85%, 13% 1%, from(#362a21), to(#bc7821))
+}
+
+.card {
+  border-color: #808080 #000000 #000000 #808080;
+  border-width: 1px;
+  border-style: solid;
+  color: #000000;
+  font-size: 20pt;
+  position: absolute;
+  width:  3.75em;
+  height: 5.00em;
+  /* card shadow from Jesse */
+  border: none;
+  border: 1px solid #e0e4e8;
+  box-shadow: 0 1px 10px 1px #e0e4e8;
+  border-radius: 3px;
+
+}
+
+.front {
+  background-color: #ffffff;
+  color: #000000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.red { color: #ff0000; }
+.black { color: #000000; }
+
+.suit {
+    font-size: 5.5em;
+}
+
+.spotA1 { position: absolute; left: 0.60em; top: 0.5em; }
+.spotA2 { position: absolute; left: 0.60em; top: 1.5em; }
+.spotA3 { position: absolute; left: 0.60em; top: 2.0em; }
+.spotA4 { position: absolute; left: 0.60em; top: 2.5em; }
+.spotA5 { position: absolute; left: 0.60em; top: 3.5em; }
+.spotB1 { position: absolute; left: 1.55em; top: 0.5em; }
+.spotB2 { position: absolute; left: 1.55em; top: 1.5em; }
+.spotB3 { position: absolute; left: 1.55em; top: 2.0em; }
+.spotB4 { position: absolute; left: 1.55em; top: 2.5em; }
+.spotB5 { position: absolute; left: 1.55em; top: 3.5em; }
+.spotC1 { position: absolute; left: 2.50em; top: 0.5em; }
+.spotC2 { position: absolute; left: 2.50em; top: 1.5em; }
+.spotC3 { position: absolute; left: 2.50em; top: 2.0em; }
+.spotC4 { position: absolute; left: 2.50em; top: 2.5em; }
+.spotC5 { position: absolute; left: 2.50em; top: 3.5em; }
+
+.ace {
+  font-size: 300%;
+  position: absolute;
+  left: 0.325em;
+  top:  0.250em;
+}
+
+.index {
+  font-size: 50%;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  left: 0.25em;
+  top:  0.25em;
+}
+
+.face {
+  border: 1px solid #000000;
+  position: absolute;
+  left: 0.50em;
+  top:  0.45em;
+  width:  2.6em;
+  height: 4.0em;
+}
+
+td {
+  padding-right: 50px;
+}
+
+table {
+  text-align: center;
+  font-size: 15pt;
+  margin-right: auto;
+  margin-left: auto;
+}
+
