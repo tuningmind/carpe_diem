@@ -1,5 +1,6 @@
 function carpe_diem() {
-    document.getElementById('content').innerHTML = "This future awesome page is under development.<br/> Check back later for insights and info on tuning up your mind."
+    document.getElementById('content').innerHTML = `This future awesome page is
+    under development.<br/> Check back later for the optimization card game called Carpe Diem.`
 }
 
 module.exports = carpe_diem
@@ -307,18 +308,3 @@ function cardCreateNode() {
     return cardNode
 }
 
-var deck = new Stack()
-var hand = new Stack()
-console.log("hand[0] %s", hand[0])
-var i
-
-deck.makeDeck();
-document.getElementById('cardnode').innerHTML = deck[0]
-for (i = 0; i < 5; i++) {
-    hand.addCard(deck.deal())
-}
-
-
-
-var card = new Card("9", "C")
-var node = card.createNode()

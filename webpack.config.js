@@ -1,4 +1,5 @@
 module.exports = {
+  context: __dirname, 
   entry: './index.js',
   output: { filename: 'bundle.js' },
   module: {
@@ -10,7 +11,7 @@ module.exports = {
       },
       {
         test: /\.json?/,
-        loader: 'json=loader',
+        loader: 'json-loader',
         exclude: /node_modules/
       }
     ]
