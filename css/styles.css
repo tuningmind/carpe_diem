@@ -1,5 +1,7 @@
 body {
-    background: radial-gradient(#434533 60%, #242423);
+    background: radial-gradient(#434533 60%, #242423) no-repeat;
+    background-size: cover;
+    min-height: 100vh;
 }
 
 .card {
