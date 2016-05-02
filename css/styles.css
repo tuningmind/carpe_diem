@@ -1,9 +1,5 @@
 body {
-    background:-webkit-gradient(linear, 92% 85%, 13% 1%, from(#362a21), to(#bc7821));
-    background:-moz-gradient(linear, 92% 85%, 13% 1%, from(#362a21), to(#bc7821));
-    background:-ms-gradient(linear, 92% 85%, 13% 1%, from(#362a21), to(#bc7821));
-    background:-o-gradient(linear, 92% 85%, 13% 1%, from(#362a21), to(#bc7821));
-    background:gradient(linear, 92% 85%, 13% 1%, from(#362a21), to(#bc7821));
+    background: radial-gradient(#434533 60%, #242423);
 }
 
 .card {
