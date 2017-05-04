@@ -5,12 +5,6 @@ This game was designed by Zvi Mowshowitz
 as described in 
 https://thezvi.wordpress.com/2015/03/17/carpe-diem-the-optimization-game-level-1/
 
-## Installation
-
-TODO: Describe the installation progress.  
-  - change directory to javascript `cd javascript`
-  - do an npm install `npm install`
-
 ## Game Rules:
 Carpe Diem is an optimization game illustrating the trade-offs between time,
     energy, and money.
