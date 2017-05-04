@@ -4,7 +4,7 @@ class CardOne extends Component {
 
   render () {
     return (
-      <div className="front">
+      <div className="front black">
         <div className="spotA1">&clubs;</div>
         <div className="spotA2">&clubs;</div>
         <div className="spotA4">&clubs;</div>

@@ -23,16 +23,16 @@ body {
   font-size: large;
 }
 #card1 {
-  flex-grow: 1;
+  padding-left: 10px;
 }
 #card2 {
-  flex-grow: 1;
+  padding-left: 50px;
 }
 #card3 {
-  flex-grow: 1;
+  padding-left: 100px;
 }
 #card4 {
-  flex-grow: 1;
+  padding-left: 300px;
 }
 .card {
   flex-grow: 1;

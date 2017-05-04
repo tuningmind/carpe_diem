@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import './App.css';
-import Front from './components/Front.js'
 import CardOne from './components/CardOne.js'
 import CardTwo from './components/CardTwo.js'
 import CardThree from './components/CardThree.js'
@@ -16,6 +15,7 @@ class App extends Component {
         <main className="main">
           <div id="card1" className="card">
             <CardOne />
+            <CardTwo />
           </div>
           <div id="card2" className="card">
             <CardTwo />
