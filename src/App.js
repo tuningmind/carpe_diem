@@ -8,25 +8,18 @@ import CardFour from './components/CardFour.js'
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="header">
-          <h2>Welcome to Carpe Diem</h2>
-        </div>
-        <main className="main">
-          <div id="card1" className="card">
-            <CardOne />
-            <CardTwo />
-          </div>
-          <div id="card2" className="card">
-            <CardTwo />
-          </div>
-          <div id="card3" className="card">
-            <CardThree />
-          </div>
-          <div id="card4" className="card">
-            <CardFour />
-          </div>
+      <div id="App">
+        <header>
+          <h1>Carpe Diem</h1>
+        </header>
+        <main>
+          <section id="gameplay">
+          </section>
+          <section id="instructions">
+          </section>
         </main>
+        <footer>
+        </footer>
       </div>
     );
   }

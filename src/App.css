@@ -1,38 +1,40 @@
-body {
+* {
   margin: 0;
   padding: 0;
+}
+body {
   font-family: sans-serif;
   background-color: #243010;
+  height: 100vh;
+  width: 100vw;
 }
-.App {
-  text-align: center;
+#App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.header {
+header {
   background-color: #222;
   height: 150px;
+  width: 100%;
   padding: 20px;
   color: white;
 }
 
-.main {
+main {
+  width: 100%;
+  height: 90vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-size: large;
 }
-#card1 {
-  padding-left: 10px;
-}
-#card2 {
-  padding-left: 50px;
-}
-#card3 {
-  padding-left: 100px;
-}
-#card4 {
-  padding-left: 300px;
+footer {
+  width: 100%;
+  height: 5%;
+  background-color: #222;
 }
 .card {
   flex-grow: 1;
