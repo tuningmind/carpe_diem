@@ -1,5 +1,5 @@
 /node_modules
 /javascript/node_modules
-.DS_Stores
+.DS_Store
 npm-debug.log
 *.swp
