@@ -26,8 +26,8 @@ class App extends Component {
               </div>
             </div>
         </main>
-        <footer id="footer">
-          <div>
+        <footer>
+          <div id="footer">
             <p>links</p>
             <p>links</p>
             <p>links</p>
