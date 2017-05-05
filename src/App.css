@@ -199,6 +199,13 @@ footer {
   width: 3.75em;
   height: 5.00em;
   font-size: 1.3em;
-  border: 1px solid #black;
+  border: 1px solid black;
   box-shadow: 1px 2px 3px 2px #e0e4e8;
   border-radius: 3px; }
+
+#display p {
+  border: 1px solid gray;
+  box-shadow: inset 1px 2px 3px 1px gray;
+  border-radius: 3px;
+  background-color: lightgray;
+  color: gray; }
