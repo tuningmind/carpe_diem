@@ -11,61 +11,41 @@ body {
   color: white;
   font-size: 20px; }
 
+#myapp {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center; }
+
 header {
   background-color: #222;
   width: 100vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  flex: 0 0 20vh; }
 
 main {
   background-color: #green;
   flex: 1 0 90vh;
   width: 100vw;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  flex: 1 0 85vh;
+  width: 100%; }
 
 footer {
   background-color: #222;
   flex: 0 0 5vh;
   width: 100vw; }
 
-.column-container {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap; }
-
-.column-item-top {
-  flex: 0 0 20vh;
-  width: 100%; }
-
-.column-item-center {
-  flex: 1 0 85vh;
-  width: 100%; }
-
-.column-item-bottom {
-  flex: 0 0 5vh;
-  width: 100%; }
-
-.column-item {
-  flex: 0 0 25%;
-  width: 100%; }
-
-.row-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap; }
-
-.row-item {
-  flex: 0 0 25%;
-  width: 100%;
-  justify-content: center;
-  align-items: center; }
-
 .italic {
   font-style: italic; }
 
 .card {
-  flex-grow: 1;
   background-image: url("../img/cardback.gif");
   color: black;
   font-size: 20pt;
@@ -74,7 +54,8 @@ footer {
   border: 1px solid #e0e4e8;
   border: 1px solid #black;
   box-shadow: 1px 2px 3px 2px #e0e4e8;
-  border-radius: 3px; }
+  border-radius: 3px;
+  flex: 1 0 25%; }
 
 .front {
   background-color: white;
@@ -192,6 +173,9 @@ footer {
   top: 0.25em; }
 
 #gameplay {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center; }
 
@@ -209,3 +193,12 @@ footer {
   border-radius: 3px;
   background-color: lightgray;
   color: gray; }
+
+#hand {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap; }
+
+#hand div {
+  flex: 0 0 25%;
+  width: 100%; }
