@@ -4,7 +4,7 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <body className="column-container">
+      <div className="column-container">
         <header className="column-item-top column-container">
           <h1>Carpe Diem</h1>
           <a href="#">Instructions</a>
@@ -19,18 +19,24 @@ class App extends Component {
                 <p className="column-item">days</p>
               </div>
               <div className="row-container" id="hand">
-                <div className="card" id="card1">card</div>
-                <div className="card" id="card2">card</div>
-                <div className="card" id="card3">card</div>
-                <div className="card" id="card4">card</div>
+                <div className="card" id="card1"></div>
+                <div className="card" id="card2"></div>
+                <div className="card" id="card3"></div>
+                <div className="card" id="card4"></div>
               </div>
           </section>
           <section id="instructions">
           </section>
         </main>
-        <footer className="column-item-bottom">
+        <footer className="column-item-bottom" id="footer">
+          <div className="row-container">
+            <p className="row-item">links</p>
+            <p className="row-item">links</p>
+            <p className="row-item">links</p>
+            <p className="row-item">links</p>
+          </div>
         </footer>
-      </body>
+      </div>
     )
   }
 }
