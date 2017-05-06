@@ -64,21 +64,29 @@ main {
     align-self: center;
   }
 }
-
 #hand {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-
-  flex: 0 0 80%;
 }
 #hand div {
   flex: 0 0 25%;
 }
 #deck {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  height: 2.5em;
+  width: 100vw;
+  background-color: #2d3d14;
+}
+.deckcard {
+  display: inline-flex;
+  flex-flow: row wrap;
+  height: 2.5em;
+  width: 1.9em;
+  background-color: #243010;
+  border: 1px solid black;
 }
 .card {
   background-image: url("../img/cardback.gif");
