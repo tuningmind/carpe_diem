@@ -9,7 +9,7 @@ body {
   height: 100vh;
   width: 100vw;
   color: white;
-  font-size: 20px;
+  font-size: 3vw;
 }
 #myapp {
   display: flex;
@@ -27,26 +27,22 @@ header {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  text-align: center;
 
-  flex: 0 0 20vh;
+  flex: 0 0 30vh;
 }
 main {
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-
-  flex: 1 0 85vh;
-  width: 100%;
+  flex: 1 0 auto;
 }
 #gameplay {
-  width: 75%;
+  width: 100%;
 
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  align-contents: center;
 }
 #display {
   width:  3.75em;
@@ -56,8 +52,7 @@ main {
   box-shadow: 1px 2px 3px 2px #e0e4e8;
   border-radius: 3px;
    
-  flex: 1 0 20%;
-  align-self: center;
+  flex: 0 0 20%;
 
   p {
     border: 1px solid gray;
@@ -75,12 +70,15 @@ main {
   flex-direction: row;
   flex-wrap: nowrap;
 
-  flex: 3 0 80%;
-  align-self: center;
+  flex: 0 0 80%;
 }
 #hand div {
   flex: 0 0 25%;
-  width: 100%;
+}
+#deck {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 .card {
   background-image: url("../img/cardback.gif");
@@ -92,14 +90,22 @@ main {
   border: 1px solid #black;
   box-shadow: 1px 2px 3px 2px #e0e4e8;
   border-radius: 3px;
-
-  flex: 1 0 25%;
-  align-self: center;
   }
 footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #222;
+  width: 100vw;
+  height: 20vh;
+}
+#footer {
+  display: inline-flex;
   background-color: #222;
   flex: 0 0 5vh;
   width: 100vw;
+  text-align: center; 
+  align-items: center;
 }
 
 .front {
@@ -113,9 +119,7 @@ footer {
 }
 .red { color: red; }
 .black { color: black; }
-.suit {
-  font-size: 5.5em;
-}
+.suit { font-size: 5.5em; }
 .spotA1 { position: absolute; left: 0.40em; top: 0.3em; }
 .spotA2 { position: absolute; left: 0.40em; top: 1.3em; }
 .spotA3 { position: absolute; left: 0.40em; top: 2.0em; }
