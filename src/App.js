@@ -5,6 +5,7 @@ import Gameplay from './components/Gameplay'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import Deck from './components/Deck'
+import Instructions from './components/Instructions'
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
         <main>
           <Gameplay />
           <Deck />
+          <Instructions />
         </main>
         <footer>
           <Footer />

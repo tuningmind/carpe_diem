@@ -29,28 +29,27 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-
-  flex: 0 0 30vh;
+  flex: 0 0 20vh;
 }
 main {
   flex: 1 0 auto;
 }
 #gameplay {
   width: 100%;
-
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   align-contents: center;
+  padding: 20px;
 }
 #display {
   width:  3.75em;
   height: 5.00em;
   font-size: 1.3em;
   border: 1px solid black;
-  box-shadow: 1px 2px 3px 2px #e0e4e8;
+  box-shadow: 1px 2px 3px 5px #e0e4e8;
   border-radius: 3px;
    
   flex: 0 0 20%;
@@ -76,17 +75,20 @@ main {
 #deck {
   display: inline-flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   height: 2.5em;
-  width: 100vw;
+  width: 80vw;
 }
 .deckcard {
   display: inline-flex;
   flex-flow: row wrap;
-  height: 2.5em;
-  width: 1.9em;
+  /*height: 1.1em;*/
+  /*width: 1.9em;*/
+  height: 16px;
+  width: 12px;
   border: 1px solid black;
-  background-color: #243010;
+  background-image: url("../img/cardback.gif");
+  background-repeat: norepeat;
 }
 .card {
   background-image: url("../img/cardback.gif");
@@ -99,12 +101,32 @@ main {
   box-shadow: 1px 2px 3px 2px #e0e4e8;
   border-radius: 3px;
   }
+h3 {
+  display: flex;
+  justify-content: center;
+}
+#instructions {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  p {
+    font-size: .7em;
+    padding: 3px;
+  }
+}
+.instructions {
+  border: 1px solid lightgray;
+  border-top: none;
+  border-bottom: none;
+  padding: 5px;
+}
 footer {
   display: flex;
   justify-content: center;
   background-color: #222;
   width: 100vw;
-  height: 20vh;
+  height: 10vh;
 }
 #footer {
   display: inline-flex;
@@ -119,6 +141,7 @@ footer {
 }
 .front {
   background-color: white;
+  position: relative;
   color: black;
   width: 100%;
   height: 100%;

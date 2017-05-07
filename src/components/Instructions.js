@@ -18,7 +18,8 @@ class Instructions extends Component {
             <div key={i} 
                  className='instructions'
                  >
-                  {instr}
+                  {instr} 
+              <p>More text will go here</p>
             </div>)
           } 
         </div>
