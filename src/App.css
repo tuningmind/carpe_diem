@@ -5,11 +5,12 @@
 
 body {
   font-family: sans-serif;
-  background-color: #243010;
+  background-color: #2d3d14;
   height: 100vh;
   width: 100vw;
   color: white;
-  font-size: 3vw; }
+  font-size: 3vw;
+  letter-spacing: .1em; }
 
 #myapp {
   display: flex;
@@ -71,16 +72,15 @@ main {
   flex-direction: row;
   flex-wrap: nowrap;
   height: 2.5em;
-  width: 100vw;
-  background-color: #2d3d14; }
+  width: 100vw; }
 
 .deckcard {
   display: inline-flex;
   flex-flow: row wrap;
   height: 2.5em;
   width: 1.9em;
-  background-color: #243010;
-  border: 1px solid black; }
+  border: 1px solid black;
+  background-color: #243010; }
 
 .card {
   background-image: url("../img/cardback.gif");
@@ -95,7 +95,6 @@ main {
 
 footer {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   background-color: #222;
   width: 100vw;
@@ -105,9 +104,12 @@ footer {
   display: inline-flex;
   background-color: #222;
   flex: 0 0 5vh;
-  width: 100vw;
-  text-align: center;
-  align-items: center; }
+  align-items: center;
+  justify-content: space-around;
+  align-content: stretch; }
+
+.footlink {
+  margin: auto 2vw; }
 
 .front {
   background-color: white;
