@@ -2,20 +2,11 @@ import React, { Component } from 'react'
 
 class Deck extends Component {
 
-  makedeck() {
-    let deck = []
-    for (var i = 1; i < 53; i++) {
-      deck.push(
-        "<div className='deckcard'></div>")
-    }
-    return deck.join("")
-  }
-  
-
   render() {
+    const numbers = [1,2,3,4,]
     return (
       <div id="deck">
-        
+        {numbers.map((number, i) => <div key={i} className='deckcard'></div>)} 
       </div>
     )
   }
