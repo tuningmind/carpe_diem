@@ -1,26 +1,50 @@
 import React, { Component } from 'react'
-import Spots from './Spots.js'
+import Cards from './Cards'
 
 class Hand extends Component {
 
   render () {
+    const classnames1 = Cards[1].classnames
+    const classnames2 = Cards[2].classnames
+    const classnames3 = Cards[3].classnames
+    const classnames4 = Cards[4].classnames
     return (
       <div id="hand">
         <div className="card">
-          <div className="spotB1">♠</div>
-          <div className="spotB5">♠</div>
+          {
+            classnames1.map( (classname, i) => 
+              ( 
+                <div key={i} className={classname}>{Cards[1].suit}</div>
+              )
+            )
+          }
         </div>
         <div className="card">
-          <div className="spotB1">♣</div>
-          <div className="spotB5">♣</div>
+          {
+            classnames2.map( (classname, i) => 
+              ( 
+                <div key={i} className={classname}>{Cards[2].suit}</div>
+              )
+            )
+          }
         </div>
         <div className="card">
-          <div className="spotB1 red">♥</div>
-          <div className="spotB5 red">♥</div>
+          {
+            classnames3.map( (classname, i) => 
+              ( 
+                <div key={i} className={classname}>{Cards[2].suit}</div>
+              )
+            )
+          }
        </div>
         <div className="card">
-          <div className="spotB1 red">♦</div>
-          <div className="spotB5 red">♦</div>
+          {
+            classnames4.map( (classname, i) => 
+              ( 
+                <div key={i} className={classname}>{Cards[3].suit}</div>
+              )
+            )
+          }
         </div>
       </div>
     )
