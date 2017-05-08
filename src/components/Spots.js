@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Card from './Card'
 
 const spotDivs = {
   1:  [
@@ -59,9 +58,10 @@ class Spots extends Component {
     let suit = suits[this.props.suit]
     return (
       <div id="spots">
-          spotClassNames.map((classname, i) => {
+      {spotClassNames.map((classname, i) => {
           (<div key={i} className={classname}>{suit}</div>)
           })
+      }
       </div>
     )
   }
