@@ -2,15 +2,15 @@ import React, { Component } from 'react'
 import Hand from './Hand'
 import Display from './Display'
 
-class Gameplay extends Component {
+class Gameboard extends Component {
 
   render () {
     return (
-      <div id="gameplay">
+      <div id="gameboard">
         <Display />
         <Hand />
       </div>
     )
   }
 }
-module.exports = Gameplay 
+module.exports = Gameboard

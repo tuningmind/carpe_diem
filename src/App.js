@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './App.css'
 
-import Gameplay from './components/Gameplay'
+import Gameboard from './components/Gameboard'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import Deck from './components/Deck'
@@ -15,7 +15,7 @@ class App extends Component {
           <Header />
         </header>
         <main>
-          <Gameplay />
+          <Gameboard />
           <Deck />
           <Instructions />
         </main>

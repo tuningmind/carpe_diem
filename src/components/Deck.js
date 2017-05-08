@@ -9,7 +9,8 @@ class Deck extends Component {
     }
     return (
       <div id="deck">
-        {numbers.map((number, i) => <div key={i} className='deckcard'></div>)} 
+        {numbers.map((number, i) => <div key={i} 
+                   className='progress'></div>)} 
       </div>
     )
   }
