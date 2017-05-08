@@ -17,6 +17,7 @@ class App extends Component {
         <main>
           <Gameboard />
           <Deck />
+          <h4>Instructions</h4>
           <Instructions />
         </main>
         <footer>
