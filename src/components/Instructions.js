@@ -29,14 +29,22 @@ class Instructions extends Component {
 
     return (
       <table id="instructions">
+        <thead>
           {instructionCategories.map((category, i) => 
-            <tr key={i} className='instructionCategory'>
-                  <tr>
+            (<tr key={i} className='instructionCategory'>
                     <td>{category.name}</td>
-                    <td>{category.words}</td>
-                  </tr>
-             </tr>
+             </tr>)
           )} 
+        </thead>
+        <tbody>
+          {instructionCategories.map((category, i) => 
+            (<tr key={i} className='instructionCategory'>
+                    <td>{category.words}</td>
+             </tr>)
+          )} 
+        </tbody>
+
+      
       </table>
     )
   }

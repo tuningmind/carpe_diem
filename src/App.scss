@@ -102,6 +102,12 @@ main {
   padding: 5px;
   text-align: center;
 }
+thead {
+  display: table-header-group;
+}
+tr {
+  display: table-row;
+}
 td {
   text-align: left;
   border: 1px dotted;

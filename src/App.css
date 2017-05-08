@@ -59,10 +59,11 @@ main {
   box-shadow: 1px 2px 3px 2px #e0e4e8;
   border-radius: 3px;
   background-color: lightgray; }
-  #display p {
-    box-shadow: inset 3px 2px 4px 0px gray;
-    background-color: lightgray;
-    color: gray; }
+
+#display p {
+  box-shadow: inset 3px 2px 4px 0px gray;
+  background-color: lightgray;
+  color: gray; }
 
 #hand {
   display: flex; }
@@ -100,6 +101,12 @@ main {
 .instructionCategory {
   padding: 5px;
   text-align: center; }
+
+thead {
+  display: table-header-group; }
+
+tr {
+  display: table-row; }
 
 td {
   text-align: left;
