@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Spots from './Spots.js'
 
 class Hand extends Component {
 

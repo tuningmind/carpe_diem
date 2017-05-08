@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class Front extends Component {
+class Card extends Component {
 
   constructor(props) {
     super(props){
@@ -41,7 +41,8 @@ class Front extends Component {
           "diamonds": 0,
           "clubs":   -1,
           "spades":  -3
-        }
+        }, 
+        spotDivs: Spots(suit={this.state.suit}, rank={this.state.suit})
 
       }
     }
@@ -59,9 +60,9 @@ class Front extends Component {
 
   render () {
     return (
-      <div className="front">
+      <div className="card">
       </div>
     )
   }
 }
-module.exports = Front
+module.exports = Card 
