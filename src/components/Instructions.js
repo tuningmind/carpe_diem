@@ -9,20 +9,15 @@ class Instructions extends Component {
     const time = 'You get 5 time units each day. Card 1 consumes 1 time unit to play. Card 2 consumes 2 time units, Card 3 consumes 3, Card 4 consumes 4. That leaves you one left over each day, and you may freelance (trade time for money) or recuperate (trade time for energy)'
     const days = 'You have thirteen days to play. Each day consumes 1 energy and 1 dollar in addition to your other choices.'
 
-    const instructions = ["energy", "dollars", "victory points", "time", "days" ]
+    const instructionCategories = ["energy", "dollars", "victory points", "time", "days" ]
     return (
-      <div id="instr">
-        <h3>Instructions</h3>
-        <div id="instructions">
-          {instructions.map((instr, i) => 
-            <div key={i} 
-                 className='instructions'
-                 >
-                  {instr} 
-              <p>More text will go here</p>
+      <div id="instructions">
+        <h4>Instructions</h4>
+          {instructionCategories.map((categoryName, i) => 
+            (<div key={i} className='instructionCategory'>
+                  {categoryName} 
             </div>)
-          } 
-        </div>
+          )} 
       </div>
     )
   }

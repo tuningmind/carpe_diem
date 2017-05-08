@@ -3,21 +3,20 @@
   padding: 0;
   box-sizing: border-box; }
 
-body {
+a {
+  color: gray; }
+
+div #myapp {
   font-family: sans-serif;
   background-color: #2d3d14;
-  height: 100vh;
-  width: 100vw;
   color: white;
-  font-size: 3vw;
-  letter-spacing: .1em; }
-
-#myapp {
+  font-size: 2vw;
+  letter-spacing: .1em;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center; }
+  justify-content: space-between; }
 
 header {
   background-color: #222;
@@ -31,9 +30,12 @@ header {
   flex: 0 0 20vh; }
 
 main {
-  flex: 1 0 auto; }
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 #gameboard {
+  font-size: 2em;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -59,9 +61,7 @@ main {
   align-self: center; }
 
 #hand {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap; }
+  display: flex; }
 
 .card {
   position: relative;
@@ -79,7 +79,8 @@ main {
 #deck {
   display: inline-flex;
   flex-wrap: wrap;
-  margin: 0 auto; }
+  font-size: 2em;
+  max-width: 18.75em; }
 
 .progress {
   height: 16px;
@@ -87,24 +88,16 @@ main {
   border: 1px solid black;
   background-image: url("../img/cardback.gif"); }
 
-h3 {
-  display: flex;
-  justify-content: center; }
-
 #instructions {
   display: flex;
-  flex-flow: row wrap;
   justify-content: center; }
 
-#instructions p {
-  font-size: .7em;
-  padding: 3px; }
-
-.instructions {
+.instructionCategory {
   border: 1px solid lightgray;
   border-top: none;
   border-bottom: none;
-  padding: 5px; }
+  padding: 5px;
+  text-align: center; }
 
 footer {
   display: flex;
