@@ -6,7 +6,7 @@ const Cards = [
     energy: -3,
     victoryPoints: 50,
     classnames: 
-          ['spotB3 red']
+          ['spotB3 red ace']
   },
   {
     suit: "♥",
@@ -96,7 +96,7 @@ const Cards = [
     energy: -3,
     victoryPoints: 50,
     classnames: 
-          ['spotB3']
+          ['spotB3 ace']
   },
   {
     suit: "♣",
@@ -186,7 +186,7 @@ const Cards = [
     energy: -3,
     victoryPoints: 50,
     classnames: 
-          ['spotB3 red']
+          ['spotB3 red ace']
   },
   {
     suit: "♦",
@@ -276,7 +276,7 @@ const Cards = [
     energy: -3,
     victoryPoints: 50,
     classnames: 
-          ['spotB3']
+          ['spotB3 ace']
   },
   {
     suit: "♠",
