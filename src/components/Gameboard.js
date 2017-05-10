@@ -8,7 +8,9 @@ class Gameboard extends Component {
     return (
       <div id="gameboard">
         <Display />
-        <Hand />
+        <Hand hand={this.props.hand}
+              chooseCard={this.props.chooseCard} 
+              randomize={this.props.randomize}/>
       </div>
     )
   }
