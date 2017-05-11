@@ -110,6 +110,17 @@ const Cards = [
           ['spotA1 red', 'spotA2 red', 'spotA4 red', 'spotA5 red','spotB2 red', 'spotB4 red', 'spotC1 red', 'spotC2 red', 'spotC4 red', 'spotC5 red']
   },
   {
+    suit: "♥",
+    rank: 11,
+    dollars: 11,
+    energy: -3,
+    victoryPoints: 40,
+    index: 'J',
+    color: 'red index',
+    classnames: 
+          ['spotA1 red', 'spotA5 red']
+  },
+  {
     suit: "♣",
     rank: 1,
     dollars: -5,

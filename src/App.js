@@ -4,7 +4,6 @@ import './App.css'
 import Gameboard from './components/Gameboard'
 import Footer from './components/Footer'
 import Header from './components/Header'
-import Progress from './components/Progress'
 import Instructions from './components/Instructions'
 import Cards from './components/Cards'
 
@@ -57,8 +56,6 @@ class App extends Component {
           <Gameboard hand={this.makeHand(Cards)}
                      setUsed={this.setUsed.bind(this)}
                      />
-          <Progress />
-          <h4>Instructions</h4>
           <Instructions />
         </main>
         <footer>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Card from './Card'
 
 class Hand extends Component {
 
@@ -19,23 +20,13 @@ class Hand extends Component {
     const card2 = hand[1]
     const card3 = hand[2]
     const card4 = hand[3]
-    const classnames1 = card1.classnames
     const classnames2 = card2.classnames
     const classnames3 = card3.classnames
     const classnames4 = card4.classnames
 
     return (
       <div id="hand">
-        <div className="card">
-          {<div className={card1.color}>{card1.rank}<br />{card1.suit}</div>}
-          {
-            classnames1.map( (classname, i) => 
-              ( 
-                <div key={i} className={classname}>{card1.suit}</div>
-              )
-            )
-          }
-        </div>
+        <Card card={card1}/>
         <div className="card">
           {<div className={card2.color}>{card2.rank}<br />{card2.suit}</div>}
           {
