@@ -5,6 +5,8 @@ const Cards = [
     dollars: -5,
     energy: -3,
     victoryPoints: 50,
+    index: "A",
+    color: 'red index',
     classnames: 
           ['spotB3 red ace']
   },
@@ -14,6 +16,8 @@ const Cards = [
     dollars: 2,
     energy: -3,
     victoryPoints: 0,
+    index: 2,
+    color: 'red index',
     classnames: 
           ['spotB1 red','spotB5 red']
   },
@@ -23,6 +27,8 @@ const Cards = [
     dollars: 3,
     energy: -3,
     victoryPoints: 0,
+    index: 3,
+    color: 'red index',
     classnames: 
           ['spotB1 red','spotB3 red','spotB5 red']
   },
@@ -32,6 +38,8 @@ const Cards = [
     dollars: 4,
     energy: -3,
     victoryPoints: 0,
+    index: 4,
+    color: 'red index',
     classnames: 
           ['spotA1 red','spotA5 red','spotC1 red','spotC5 red']
   },
@@ -41,6 +49,8 @@ const Cards = [
     dollars: 5,
     energy: -3,
     victoryPoints: 0,
+    index: 5,
+    color: 'red index',
     classnames: 
           ['spotA1 red','spotA5 red','spotB3 red','spotC1 red','spotC5 red']
   },
@@ -50,6 +60,8 @@ const Cards = [
     dollars: 6,
     energy: -3,
     victoryPoints: 0,
+    index: 6,
+    color: 'red index',
     classnames: 
           ['spotA1 red','spotA3 red','spotA5 red','spotC1 red','spotC3 red','spotC5 red']
   },
@@ -59,6 +71,8 @@ const Cards = [
     dollars: 7,
     energy: -3,
     victoryPoints: 0,
+    index: 7,
+    color: 'red index',
     classnames: 
           ['spotA1 red','spotA3 red','spotA5 red','spotB2 red','spotC1 red','spotC3 red','spotC5 red']
   },
@@ -68,6 +82,8 @@ const Cards = [
     dollars: 8,
     energy: -3,
     victoryPoints: 0,
+    index: 8,
+    color: 'red index',
     classnames: 
           ['spotA1 red','spotA3 red','spotA5 red','spotB2 red','spotB4 red','spotC1 red','spotC3 red','spotC5 red']
   },
@@ -77,6 +93,8 @@ const Cards = [
     dollars: 9,
     energy: -3,
     victoryPoints: 0,
+    index: 9,
+    color: 'red index',
     classnames: 
           ['spotA1 red', 'spotA2 red', 'spotA4 red','spotA5 red','spotB3 red','spotC1 red', 'spotC2 red', 'spotC4 red','spotC5 red']
   },
@@ -86,6 +104,8 @@ const Cards = [
     dollars: 10,
     energy: -3,
     victoryPoints: 0,
+    index: 10,
+    color: 'red index',
     classnames: 
           ['spotA1 red', 'spotA2 red', 'spotA4 red', 'spotA5 red','spotB2 red', 'spotB4 red', 'spotC1 red', 'spotC2 red', 'spotC4 red', 'spotC5 red']
   },
@@ -95,6 +115,7 @@ const Cards = [
     dollars: -5,
     energy: -3,
     victoryPoints: 50,
+    color: 'black index',
     classnames: 
           ['spotB3 ace']
   },
@@ -104,6 +125,7 @@ const Cards = [
     dollars: 2,
     energy: -3,
     victoryPoints: 0,
+    color: 'black index',
     classnames: 
           ['spotB1','spotB5']
   },
@@ -113,6 +135,7 @@ const Cards = [
     dollars: 3,
     energy: -3,
     victoryPoints: 0,
+    color: 'black index',
     classnames: 
           ['spotB1','spotB3','spotB5']
   },
@@ -122,6 +145,7 @@ const Cards = [
     dollars: 4,
     energy: -3,
     victoryPoints: 0,
+    color: 'black index',
     classnames: 
           ['spotA1','spotA5','spotC1','spotC5']
   },
@@ -131,6 +155,7 @@ const Cards = [
     dollars: 5,
     energy: -3,
     victoryPoints: 0,
+    color: 'black index',
     classnames: 
           ['spotA1','spotA5','spotB3','spotC1','spotC5']
   },
@@ -140,6 +165,7 @@ const Cards = [
     dollars: 6,
     energy: -3,
     victoryPoints: 0,
+    color: 'black index',
     classnames: 
           ['spotA1','spotA3','spotA5','spotC1','spotC3','spotC5']
   },
@@ -149,6 +175,7 @@ const Cards = [
     dollars: 7,
     energy: -3,
     victoryPoints: 0,
+    color: 'black index',
     classnames: 
           ['spotA1','spotA3','spotA5','spotB2','spotC1','spotC3','spotC5']
   },
@@ -158,6 +185,7 @@ const Cards = [
     dollars: 8,
     energy: -3,
     victoryPoints: 0,
+    color: 'black index',
     classnames: 
           ['spotA1','spotA3','spotA5','spotB2','spotB4','spotC1','spotC3','spotC5']
   },
@@ -167,6 +195,7 @@ const Cards = [
     dollars: 9,
     energy: -3,
     victoryPoints: 0,
+    color: 'black index',
     classnames: 
           ['spotA1', 'spotA2', 'spotA4','spotA5','spotB3','spotC1', 'spotC2', 'spotC4','spotC5']
   },
@@ -176,6 +205,7 @@ const Cards = [
     dollars: 10,
     energy: -3,
     victoryPoints: 0,
+    color: 'black index',
     classnames: 
           ['spotA1', 'spotA2', 'spotA4', 'spotA5','spotB2', 'spotB4', 'spotC1', 'spotC2', 'spotC4', 'spotC5']
   },
@@ -185,6 +215,7 @@ const Cards = [
     dollars: -5,
     energy: -3,
     victoryPoints: 50,
+    color: 'red index',
     classnames: 
           ['spotB3 red ace']
   },
@@ -194,6 +225,7 @@ const Cards = [
     dollars: 2,
     energy: -3,
     victoryPoints: 0,
+    color: 'red index',
     classnames: 
           ['spotB1 red','spotB5 red']
   },
@@ -203,6 +235,7 @@ const Cards = [
     dollars: 3,
     energy: -3,
     victoryPoints: 0,
+    color: 'red index',
     classnames: 
           ['spotB1 red','spotB3 red','spotB5 red']
   },
@@ -212,6 +245,7 @@ const Cards = [
     dollars: 4,
     energy: -3,
     victoryPoints: 0,
+    color: 'red index',
     classnames: 
           ['spotA1 red','spotA5 red','spotC1 red','spotC5 red']
   },
@@ -221,6 +255,7 @@ const Cards = [
     dollars: 5,
     energy: -3,
     victoryPoints: 0,
+    color: 'red index',
     classnames: 
           ['spotA1 red','spotA5 red','spotB3 red','spotC1 red','spotC5 red']
   },
@@ -230,6 +265,7 @@ const Cards = [
     dollars: 6,
     energy: -3,
     victoryPoints: 0,
+    color: 'red index',
     classnames: 
           ['spotA1 red','spotA3 red','spotA5 red','spotC1 red','spotC3 red','spotC5 red']
   },
@@ -239,6 +275,7 @@ const Cards = [
     dollars: 7,
     energy: -3,
     victoryPoints: 0,
+    color: 'red index',
     classnames: 
           ['spotA1 red','spotA3 red','spotA5 red','spotB2 red','spotC1 red','spotC3 red','spotC5 red']
   },
@@ -248,6 +285,7 @@ const Cards = [
     dollars: 8,
     energy: -3,
     victoryPoints: 0,
+    color: 'red index',
     classnames: 
           ['spotA1 red','spotA3 red','spotA5 red','spotB2 red','spotB4 red','spotC1 red','spotC3 red','spotC5 red']
   },
@@ -257,6 +295,7 @@ const Cards = [
     dollars: 9,
     energy: -3,
     victoryPoints: 0,
+    color: 'red index',
     classnames: 
           ['spotA1 red', 'spotA2 red', 'spotA4 red','spotA5 red','spotB3 red','spotC1 red', 'spotC2 red', 'spotC4 red','spotC5 red']
   },
@@ -266,6 +305,7 @@ const Cards = [
     dollars: 10,
     energy: -3,
     victoryPoints: 0,
+    color: 'red index',
     classnames: 
           ['spotA1 red', 'spotA2 red', 'spotA4 red', 'spotA5 red','spotB2 red', 'spotB4 red', 'spotC1 red', 'spotC2 red', 'spotC4 red', 'spotC5 red']
   },
@@ -275,6 +315,7 @@ const Cards = [
     dollars: -5,
     energy: -3,
     victoryPoints: 50,
+    color: 'black index',
     classnames: 
           ['spotB3 ace']
   },
@@ -284,6 +325,7 @@ const Cards = [
     dollars: 2,
     energy: -3,
     victoryPoints: 0,
+    color: 'black index',
     classnames: 
           ['spotB1','spotB5']
   },
@@ -293,6 +335,7 @@ const Cards = [
     dollars: 3,
     energy: -3,
     victoryPoints: 0,
+    color: 'black index',
     classnames: 
           ['spotB1','spotB3','spotB5']
   },
@@ -302,6 +345,7 @@ const Cards = [
     dollars: 4,
     energy: -3,
     victoryPoints: 0,
+    color: 'black index',
     classnames: 
           ['spotA1','spotA5','spotC1','spotC5']
   },
@@ -311,6 +355,7 @@ const Cards = [
     dollars: 5,
     energy: -3,
     victoryPoints: 0,
+    color: 'black index',
     classnames: 
           ['spotA1','spotA5','spotB3','spotC1','spotC5']
   },
@@ -320,6 +365,7 @@ const Cards = [
     dollars: 6,
     energy: -3,
     victoryPoints: 0,
+    color: 'black index',
     classnames: 
           ['spotA1','spotA3','spotA5','spotC1','spotC3','spotC5']
   },
@@ -329,6 +375,7 @@ const Cards = [
     dollars: 7,
     energy: -3,
     victoryPoints: 0,
+    color: 'black index',
     classnames: 
           ['spotA1','spotA3','spotA5','spotB2','spotC1','spotC3','spotC5']
   },
@@ -338,6 +385,7 @@ const Cards = [
     dollars: 8,
     energy: -3,
     victoryPoints: 0,
+    color: 'black index',
     classnames: 
           ['spotA1','spotA3','spotA5','spotB2','spotB4','spotC1','spotC3','spotC5']
   },
@@ -347,6 +395,7 @@ const Cards = [
     dollars: 9,
     energy: -3,
     victoryPoints: 0,
+    color: 'black index',
     classnames: 
           ['spotA1', 'spotA2', 'spotA4','spotA5','spotB3','spotC1', 'spotC2', 'spotC4','spotC5']
   },
@@ -356,6 +405,7 @@ const Cards = [
     dollars: 10,
     energy: -3,
     victoryPoints: 0,
+    color: 'black index',
     classnames: 
           ['spotA1', 'spotA2', 'spotA4', 'spotA5','spotB2', 'spotB4', 'spotC1', 'spotC2', 'spotC4', 'spotC5']
   }

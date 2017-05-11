@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class Deck extends Component {
+class Progress extends Component {
 
   render() {
     const numbers = []
@@ -8,7 +8,7 @@ class Deck extends Component {
       numbers.push(i)
     }
     return (
-      <div id="deck">
+      <div id="progress">
         {numbers.map((number, i) => <div key={i} 
                    className='progress'></div>)} 
       </div>
@@ -16,4 +16,4 @@ class Deck extends Component {
   }
 }
 
-module.exports = Deck
+module.exports = Progress 
