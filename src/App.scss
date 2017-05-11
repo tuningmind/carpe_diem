@@ -135,17 +135,17 @@ footer {
 .suit { font-size: 5.5em; }
 .spotA1 { position: absolute; left: 0.40em; top: 0.3em; }
 .spotA2 { position: absolute; left: 0.40em; top: 1.3em; }
-.spotA3 { position: absolute; left: 0.40em; top: 2.0em; }
+.spotA3 { position: absolute; left: 0.40em; top: 1.8em; }
 .spotA4 { position: absolute; left: 0.40em; top: 2.3em; }
 .spotA5 { position: absolute; left: 0.40em; top: 3.3em; }
 .spotB1 { position: absolute; left: 1.35em; top: 0.3em; }
-.spotB2 { position: absolute; left: 1.35em; top: 1.3em; }
-.spotB3 { position: absolute; left: 1.35em; top: 2.0em; }
-.spotB4 { position: absolute; left: 1.35em; top: 2.3em; }
+.spotB2 { position: absolute; left: 1.35em; top: 0.8em; }
+.spotB3 { position: absolute; left: 1.35em; top: 1.8em; }
+.spotB4 { position: absolute; left: 1.35em; top: 2.8em; }
 .spotB5 { position: absolute; left: 1.35em; top: 3.3em; }
 .spotC1 { position: absolute; left: 2.30em; top: 0.3em; }
 .spotC2 { position: absolute; left: 2.30em; top: 1.3em; }
-.spotC3 { position: absolute; left: 2.30em; top: 2.0em; }
+.spotC3 { position: absolute; left: 2.30em; top: 1.8em; }
 .spotC4 { position: absolute; left: 2.30em; top: 2.3em; }
 .spotC5 { position: absolute; left: 2.30em; top: 3.3em; }
 
@@ -159,10 +159,10 @@ footer {
 }
 
 .ace {
-  font-size: 300%;
+  font-size: 150%;
   position: absolute;
-  left: 0.325em;
-  top:  0.250em;
+  left: 0.725em;
+  top:  0.750em;
 }
 
 .index {
@@ -172,4 +172,7 @@ footer {
   position: absolute;
   left: 0.25em;
   top:  0.25em;
+}
+@media (min-width: 800px) {
+  font-size: 17px;
 }

@@ -59,10 +59,11 @@ main {
   box-shadow: 1px 2px 3px 2px #e0e4e8;
   border-radius: 3px;
   background-color: lightgray; }
-  #display p {
-    box-shadow: inset 3px 2px 4px 0px gray;
-    background-color: lightgray;
-    color: gray; }
+
+#display p {
+  box-shadow: inset 3px 2px 4px 0px gray;
+  background-color: lightgray;
+  color: gray; }
 
 #hand {
   display: flex; }
@@ -151,7 +152,7 @@ footer {
 .spotA3 {
   position: absolute;
   left: 0.40em;
-  top: 2.0em; }
+  top: 1.8em; }
 
 .spotA4 {
   position: absolute;
@@ -171,17 +172,17 @@ footer {
 .spotB2 {
   position: absolute;
   left: 1.35em;
-  top: 1.3em; }
+  top: 0.8em; }
 
 .spotB3 {
   position: absolute;
   left: 1.35em;
-  top: 2.0em; }
+  top: 1.8em; }
 
 .spotB4 {
   position: absolute;
   left: 1.35em;
-  top: 2.3em; }
+  top: 2.8em; }
 
 .spotB5 {
   position: absolute;
@@ -201,7 +202,7 @@ footer {
 .spotC3 {
   position: absolute;
   left: 2.30em;
-  top: 2.0em; }
+  top: 1.8em; }
 
 .spotC4 {
   position: absolute;
@@ -222,10 +223,10 @@ footer {
   height: 4.0em; }
 
 .ace {
-  font-size: 300%;
+  font-size: 150%;
   position: absolute;
-  left: 0.325em;
-  top: 0.250em; }
+  left: 0.725em;
+  top: 0.750em; }
 
 .index {
   font-size: 50%;
@@ -234,3 +235,6 @@ footer {
   position: absolute;
   left: 0.25em;
   top: 0.25em; }
+
+@media (min-width: 800px) {
+  font-size: 17px; }

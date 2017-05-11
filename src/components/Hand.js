@@ -2,9 +2,18 @@ import React, { Component } from 'react'
 
 class Hand extends Component {
 
+  constructor() {
+    super()
+    this.callSetUsed = this.callSetUsed.bind(this)
+  }
+
+  callSetUsed() {
+    let hand = this.props.hand
+    hand.forEach((card) => { this.props.setUsed(card) })
+  }
 
   render () {
-    console.log("this.props.hand: ", this.props.hand)
+
     let hand = this.props.hand
     const classnames1 = hand[0].classnames
     const classnames2 = hand[1].classnames

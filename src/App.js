@@ -24,25 +24,23 @@ class App extends Component {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-  chooseCard() {
-    let newIndex = this.randomize(1, 40)
-    console.log("newIndex: ", newIndex)
-    // let cardInUsed = this.state.used.indexOf(newIndex) > -1
-    // if (cardInUsed) { this.randomize(1, 48) }
-    // let revisedUsed = this.state.used
-    // this.setState({used: revisedUsed}) 
-    // revisedUsed.push(newIndex)
-    return newIndex
+  setUsed(card) {
+    let revisedUsed = this.state.used
+    revisedUsed.push(card)
+    this.setState({used: revisedUsed}) 
+    console.log("this.state.used: ", this.state.used)
   }
 
   makeHand(Cards) {
-    // choose four cards here and send them down to Hand
-    console.log("Cards inside makeHand call: ", Cards)
     let fourrandoms = []
+    let number
+    let cardInUsed
     for (let i=0; i<4; i++) {
-      fourrandoms.push(this.randomize(1,40))
+      number = this.randomize(1,38)
+      cardInUsed = this.state.used.indexOf(number) > -1
+      if (cardInUsed) { number = this.randomize(1,38) }
+      fourrandoms.push(number)
     }
-    console.log("fourrandoms: ", fourrandoms)
     let hand = fourrandoms.map((cardIndex) => (
       Cards[cardIndex]
     ))
@@ -50,7 +48,6 @@ class App extends Component {
   }
 
   render() {
-    console.log("Cards inside render: ", Cards)
     return (
       <div id="myapp">
         <header>
@@ -58,7 +55,8 @@ class App extends Component {
         </header>
         <main>
           <Gameboard hand={this.makeHand(Cards)}
-                     randomize={this.randomize.bind(this)}/>
+                     setUsed={this.setUsed.bind(this)}
+                     />
           <Deck />
           <h4>Instructions</h4>
           <Instructions />
