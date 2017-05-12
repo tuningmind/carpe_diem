@@ -58,11 +58,10 @@ main {
   box-shadow: 1px 2px 3px 2px #e0e4e8;
   border-radius: 3px;
   background-color: lightgray; }
-
-#display p {
-  box-shadow: inset 3px 2px 4px 0px gray;
-  background-color: lightgray;
-  color: gray; }
+  #display p {
+    box-shadow: inset 3px 2px 4px 0px gray;
+    background-color: lightgray;
+    color: gray; }
 
 #hand {
   display: flex; }
@@ -90,7 +89,7 @@ main {
   height: 16px;
   width: 12px;
   border: 1px solid black;
-  background-image: url("../img/cardback.gif");
+  background-image: url("%PUBLIC_URL%/img/cardback.gif");
   padding: 14px 10px;
   margin: 1px; }
 
