@@ -4,8 +4,7 @@ class Card extends Component {
 
   render() {
     const card = this.props.card
-    const classnames = this.props.card.classnames
-    console.log("classnames: ", classnames)
+    const classnames = card.classnames
     return (
         <div className="card">
           {<div className={card.color}>{card.rank}<br />{card.suit}</div>}

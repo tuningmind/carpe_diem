@@ -5,12 +5,10 @@ class Hand extends Component {
 
   constructor() {
     super()
-    this.callSetUsed = this.callSetUsed.bind(this)
   }
 
   callSetUsed() {
     let hand = this.props.hand
-    hand.forEach((card) => { this.props.setUsed(card) })
   }
 
   render () {
@@ -20,43 +18,13 @@ class Hand extends Component {
     const card2 = hand[1]
     const card3 = hand[2]
     const card4 = hand[3]
-    const classnames2 = card2.classnames
-    const classnames3 = card3.classnames
-    const classnames4 = card4.classnames
 
     return (
       <div id="hand">
         <Card card={card1}/>
-        <div className="card">
-          {<div className={card2.color}>{card2.rank}<br />{card2.suit}</div>}
-          {
-            classnames2.map( (classname, i) => 
-              ( 
-                <div key={i} className={classname}>{card2.suit}</div>
-              )
-            )
-          }
-        </div>
-        <div className="card">
-          {<div className={card3.color}>{card3.rank}<br />{card3.suit}</div>}
-          {
-            classnames3.map( (classname, i) => 
-              ( 
-                <div key={i} className={classname}>{card3.suit}</div>
-              )
-            )
-          }
-       </div>
-        <div className="card">
-          {<div className={card4.color}>{card4.rank}<br />{card4.suit}</div>}
-          {
-            classnames4.map( (classname, i) => 
-              ( 
-                <div key={i} className={classname}>{card4.suit}</div>
-              )
-            )
-          }
-        </div>
+        <Card card={card2}/>
+        <Card card={card3}/>
+        <Card card={card4}/>
       </div>
     )
   }

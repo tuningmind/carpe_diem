@@ -7,9 +7,7 @@ const Gameboard = (props) => {
     return (
       <div id="gameboard">
         <Display />
-        <Hand hand={props.hand}
-              setUsed={props.setUsed.bind(this)}
-              />
+        <Hand hand={props.hand}/>
       </div>
     )
 }

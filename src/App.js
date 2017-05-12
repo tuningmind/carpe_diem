@@ -15,6 +15,25 @@ class App extends Component {
       used: []
     }
   }
+  
+  getInitialState() {
+    return (
+      this.state = {used: this.makeFour}
+    )
+  }
+
+  makeFour() {
+    let fourRandoms = []
+    let number
+    let cardInUsed
+    for (let i=0; i<4; i++) {
+      number = this.randomize(1,38)
+      cardInUsed = this.state.used.indexOf(number) > -1
+      if (cardInUsed) { number = this.randomize(1,38) }
+      fourRandoms.push(number)
+    }
+    return fourRandoms
+  }
 
   randomize(min, max) {
     // getRandomIntInclusive
@@ -24,26 +43,16 @@ class App extends Component {
   }
 
   setUsed(card) {
-    let revisedUsed = this.state.used
+    const revisedUsed = this.state.used
     revisedUsed.push(card)
     this.setState({used: revisedUsed}) 
-    console.log("this.state.used: ", this.state.used)
   }
 
-  makeHand(Cards) {
-    let fourrandoms = []
-    let number
-    let cardInUsed
-    for (let i=0; i<4; i++) {
-      number = this.randomize(1,38)
-      cardInUsed = this.state.used.indexOf(number) > -1
-      if (cardInUsed) { number = this.randomize(1,38) }
-      fourrandoms.push(number)
-    }
-    let hand = fourrandoms.map((cardIndex) => (
+  makeHand(fourRandoms) {
+    return (
+      fourRandoms.map((cardIndex) => (
       Cards[cardIndex]
-    ))
-    return hand
+    )))
   }
 
   render() {
@@ -53,9 +62,7 @@ class App extends Component {
           <Header />
         </header>
         <main>
-          <Gameboard hand={this.makeHand(Cards)}
-                     setUsed={this.setUsed.bind(this)}
-                     />
+          <Gameboard hand={this.makeHand([5, 8, 24, 37])} />
           <Instructions />
         </main>
         <footer>
