@@ -14,6 +14,7 @@ h5 {
   text-decoration: underline;
 }
 div #myapp {
+  min-height: 100vh;
   font-family: sans-serif;
   background-color: #2d3d14;
   color: white;
@@ -128,12 +129,12 @@ footer {
   justify-content: center;
   background-color: #222;
   width: 100vw;
-  height: 5em;
+  min-height: 4em;
 }
 #footer {
   display: inline-flex;
   background-color: #222;
-  flex: 1 0 3em;
+  flex: 1 1 3em;
   align-items: center;
   justify-content: space-around;
   align-content: stretch;
@@ -184,16 +185,26 @@ footer {
   top:  0.20em;
 }
 @media only screen and (max-width: 400px) {
+  div #myapp {
+    min-height: 100vh;
+    font-size: 0.9em;
+  }
   #gameboard {
     font-size: 10px;
+  }
+  #footer {
+    flex-direction: column;
   }
 }
 @media only screen and (max-width: 600px) {
   #gameboard {
     font-size: 12px;
   }
+  #footer {
+    flex-direction: column;
+  }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 759) {
   #gameboard {
     font-size: 14px;
   }
