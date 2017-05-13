@@ -39,6 +39,14 @@ main {
   align-items: center;
   flex: 0 0 auto;
 }
+img {
+  width:  2.55em;
+  height: 3.8em;
+  left: 0.7em;
+  top: 0.6em;
+  position: absolute;
+  border: none;
+}
 #gameboard {
   font-size: 1.9em;
   width: 100%;
@@ -70,8 +78,8 @@ main {
 .card {
   position: relative;
   color: black;
-  width:  3.85em;
-  height: 5.10em;
+  width:  4.15em;
+  height: 5.3em;
   border-radius: 3px;
   background-color: white;
   box-shadow: 1px 2px 3px 2px #e0e4e8;
@@ -131,11 +139,11 @@ footer {
 }
 .red { color: red; }
 .black { color: black; }
-.spotA1 { position: absolute; left: 0.50em; top: 0.3em; }
-.spotA2 { position: absolute; left: 0.50em; top: 1.3em; }
-.spotA3 { position: absolute; left: 0.50em; top: 1.8em; }
-.spotA4 { position: absolute; left: 0.50em; top: 2.3em; }
-.spotA5 { position: absolute; left: 0.50em; top: 3.3em; }
+.spotA1 { position: absolute; left: 0.60em; top: 0.3em; }
+.spotA2 { position: absolute; left: 0.60em; top: 1.3em; }
+.spotA3 { position: absolute; left: 0.60em; top: 1.8em; }
+.spotA4 { position: absolute; left: 0.60em; top: 2.3em; }
+.spotA5 { position: absolute; left: 0.60em; top: 3.3em; }
 .spotB1 { position: absolute; left: 1.45em; top: 0.3em; }
 .spotB2 { position: absolute; left: 1.45em; top: 1.0em; }
 .spotB3 { position: absolute; left: 1.45em; top: 1.8em; }

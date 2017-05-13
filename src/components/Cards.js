@@ -130,6 +130,7 @@ const Cards = [
     victoryPoints: 20,
     index: 'Q',
     color: 'red index',
+    src: './img/queen.gif',
     classnames: 
           ['spotA1 red', 'spotC5 red']
   },
@@ -141,6 +142,7 @@ const Cards = [
     victoryPoints: 30,
     index: 'K',
     color: 'red index',
+    src: './img/king.gif',
     classnames: 
           ['spotA1 red', 'spotC5 red']
   },
@@ -265,6 +267,7 @@ const Cards = [
     victoryPoints: 10,
     index: 'J',
     color: 'black index',
+    src: './img/jack.gif',
     classnames: 
           ['spotA1', 'spotC5']
   },
@@ -276,6 +279,7 @@ const Cards = [
     victoryPoints: 20,
     index: 'Q',
     color: 'black index',
+    src: './img/queen.gif',
     classnames: 
           ['spotA1', 'spotC5']
   },
@@ -287,6 +291,7 @@ const Cards = [
     victoryPoints: 30,
     index: 'K',
     color: 'black index',
+    src: './img/king.gif',
     classnames: 
           ['spotA1', 'spotC5']
   },
@@ -411,6 +416,7 @@ const Cards = [
     victoryPoints: 10,
     index: 'J',
     color: 'red index',
+    src: './img/jack.gif',
     classnames: 
           ['spotA1 red', 'spotC5 red']
   },
@@ -422,6 +428,7 @@ const Cards = [
     victoryPoints: 20,
     index: 'Q',
     color: 'red index',
+    src: './img/queen.gif',
     classnames: 
           ['spotA1 red', 'spotC5 red']
   },
@@ -433,6 +440,7 @@ const Cards = [
     victoryPoints: 30,
     index: 'K',
     color: 'red index',
+    src: './img/king.gif',
     classnames: 
           ['spotA1 red', 'spotC5 red']
   },
@@ -557,6 +565,7 @@ const Cards = [
     victoryPoints: 10,
     index: 'J',
     color: 'black index',
+    src: './img/jack.gif',
     classnames: 
           ['spotA1', 'spotA2', 'spotA4', 'spotA5','spotB2', 'spotB4', 'spotC1', 'spotC2', 'spotC4', 'spotC5']
   },
@@ -568,6 +577,7 @@ const Cards = [
     victoryPoints: 20,
     index: 'Q',
     color: 'black index',
+    src: './img/queen.gif',
     classnames: 
           ['spotA1', 'spotC5']
   },
@@ -579,6 +589,7 @@ const Cards = [
     victoryPoints: 30,
     index: 'K',
     color: 'black index',
+    src: './img/king.gif',
     classnames: 
           ['spotA1', 'spotC5']
   },

@@ -10,7 +10,7 @@ class Card extends Component {
     return (
         <div className="card">
           <div className={card.color}>{card.index}<br />{card.suit}</div>
-          {(card.src) ? <img src={card.src} alt='' /> : <img src='' alt='' /> }
+          {(card.src) ? <img src={card.src} alt='' /> : <img src='./img/white.png' alt='' /> }
            
           {
             classnames.map( (classname, i) => 

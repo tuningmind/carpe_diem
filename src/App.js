@@ -62,7 +62,7 @@ class App extends Component {
           <Header />
         </header>
         <main>
-          <Gameboard hand={this.makeHand([10, 9, 11, 40])} />
+          <Gameboard hand={this.makeHand([10, 12, 11, 40])} />
           <Instructions />
         </main>
         <footer>
