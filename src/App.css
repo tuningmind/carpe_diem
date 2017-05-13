@@ -4,7 +4,8 @@
   box-sizing: border-box; }
 
 a {
-  color: gray; }
+  color: gray;
+  text-decoration: none; }
 
 h1, h2, h3, h4, h5 {
   padding: 8px; }
@@ -31,12 +32,13 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  flex: 0 0 20vh; }
+  flex: 0 0 8em; }
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-contents: center;
   flex: 0 0 auto; }
 
 img {
@@ -126,12 +128,12 @@ footer {
   justify-content: center;
   background-color: #222;
   width: 100vw;
-  height: 10vh; }
+  height: 5em; }
 
 #footer {
   display: inline-flex;
   background-color: #222;
-  flex: 0 0 5vh;
+  flex: 1 0 3em;
   align-items: center;
   justify-content: space-around;
   align-content: stretch; }
@@ -147,27 +149,27 @@ footer {
 
 .spotA1 {
   position: absolute;
-  left: 0.60em;
-  top: 0.3em; }
+  left: 0.50em;
+  top: 0.2em; }
 
 .spotA2 {
   position: absolute;
-  left: 0.60em;
+  left: 0.50em;
   top: 1.3em; }
 
 .spotA3 {
   position: absolute;
-  left: 0.60em;
+  left: 0.50em;
   top: 1.8em; }
 
 .spotA4 {
   position: absolute;
-  left: 0.60em;
+  left: 0.50em;
   top: 2.4em; }
 
 .spotA5 {
   position: absolute;
-  left: 0.60em;
+  left: 0.50em;
   top: 3.5em; }
 
 .spotB1 {
@@ -198,7 +200,7 @@ footer {
 .spotC1 {
   position: absolute;
   left: 2.60em;
-  top: 0.3em; }
+  top: 0.2em; }
 
 .spotC2 {
   position: absolute;
