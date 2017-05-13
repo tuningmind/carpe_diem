@@ -6,46 +6,42 @@ class Instructions extends Component {
     const energy = 'Hearts: +1 energy points'
     const dollars = 'Numbered cards get their number in dollar points'
     const victory = 'Face cards get victory points: Ace gets 10, Jack gets 20'
-    // const time = 'You get 5 time units each day. Card 1 consumes 1 time unit to play. Card 2 consumes 2 time units, Card 3 consumes 3, Card 4 consumes 4. That leaves you one left over each day, and you may freelance (trade time for money) or recuperate (trade time for energy)'
-    // const days = 'You have thirteen days to play. Each day consumes 1 energy and 1 dollar in addition to your other choices.'
+    const time = 'You get 5 time units each day. Card 1 consumes 1 time unit to play. Card 2 consumes 2 time units, Card 3 consumes 3, Card 4 consumes 4. That leaves you one left over each day, and you may freelance (trade time for money) or recuperate (trade time for energy)'
+    const days = 'You have thirteen days to play. Each day consumes 1 energy and 1 dollar in addition to your other choices.'
 
-    const instructionCategories = [
+    const instructionElements = [
       {
-        name: "energy", 
-        words: energy
+        category: "energy", 
+        instruction: energy
       }, 
       {
-        name: "dollars", 
-        words: dollars
+        category: "dollars", 
+        instruction: dollars
       },
       {
-        name: "victory points",
-        words: victory
+        category: "victory points",
+        instruction: victory
       },
       {
-        name: "time", 
-        words: "days"
-      }]
+        category: "time", 
+        instruction: time
+      },
+      {
+        category: "days", 
+        instruction: days
+      }
+    ]
 
     return (
-      <table id="instructions">
-        <thead>
-          {instructionCategories.map((category, i) => 
-            (<tr key={i} className='instructionCategory'>
-                    <td>{category.name}</td>
-             </tr>)
+      <div id="instructions">
+          {instructionElements.map((element, i) => 
+            (<div key={i} className='instructionElement'>
+               <div className='instructionCategory'>{element.category}</div>
+               <div className='instruction'>{element.instruction}</div>
+             </div>
+            )
           )} 
-        </thead>
-        <tbody>
-          {instructionCategories.map((category, i) => 
-            (<tr key={i} className='instructionCategory'>
-                    <td>{category.words}</td>
-             </tr>)
-          )} 
-        </tbody>
-
-      
-      </table>
+      </div>
     )
   }
 }

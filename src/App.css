@@ -93,36 +93,32 @@ img {
 .card div {
   flex: 0 0 25%; }
 
-#progress {
-  display: inline-flex;
-  flex-wrap: wrap;
-  font-size: 2em;
-  max-width: 18.75em; }
-
-.progress {
-  height: 16px;
-  width: 12px;
-  border: 1px solid black;
-  background-image: url("%PUBLIC_URL%/img/cardback.gif");
-  padding: 14px 10px;
-  margin: 1px; }
-
 #instructions {
-  max-width: 60%; }
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: space-around; }
+
+.instructionElement {
+  width: 20.75em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap; }
 
 .instructionCategory {
+  width: 4.15em;
+  min-width: 4.15em;
   padding: 5px;
-  text-align: center; }
+  text-align: center;
+  flex: 1 0 auto; }
 
-thead {
-  display: table-header-group; }
-
-tr {
-  display: table-row; }
-
-td {
-  text-align: left;
-  border: 1px dotted; }
+.instruction {
+  flex: 4 0 auto;
+  flex-wrap: wrap;
+  width: 16.6em;
+  min-width: 16.6em; }
 
 footer {
   display: flex;
