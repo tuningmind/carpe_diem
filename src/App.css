@@ -40,8 +40,8 @@ main {
   flex: 0 0 auto; }
 
 img {
-  width: 2.55em;
-  height: 3.8em;
+  width: 2.75em;
+  height: 4em;
   left: 0.7em;
   top: 0.6em;
   position: absolute;
@@ -163,62 +163,62 @@ footer {
 .spotA4 {
   position: absolute;
   left: 0.60em;
-  top: 2.3em; }
+  top: 2.4em; }
 
 .spotA5 {
   position: absolute;
   left: 0.60em;
-  top: 3.3em; }
+  top: 3.5em; }
 
 .spotB1 {
   position: absolute;
-  left: 1.45em;
+  left: 1.55em;
   top: 0.3em; }
 
 .spotB2 {
   position: absolute;
-  left: 1.45em;
-  top: 1.0em; }
+  left: 1.55em;
+  top: 0.9em; }
 
 .spotB3 {
   position: absolute;
-  left: 1.45em;
+  left: 1.55em;
   top: 1.8em; }
 
 .spotB4 {
   position: absolute;
-  left: 1.45em;
-  top: 2.8em; }
+  left: 1.55em;
+  top: 2.9em; }
 
 .spotB5 {
   position: absolute;
-  left: 1.45em;
-  top: 3.3em; }
+  left: 1.55em;
+  top: 3.5em; }
 
 .spotC1 {
   position: absolute;
-  left: 2.40em;
+  left: 2.60em;
   top: 0.3em; }
 
 .spotC2 {
   position: absolute;
-  left: 2.40em;
+  left: 2.60em;
   top: 1.3em; }
 
 .spotC3 {
   position: absolute;
-  left: 2.40em;
+  left: 2.60em;
   top: 1.8em; }
 
 .spotC4 {
   position: absolute;
-  left: 2.40em;
-  top: 2.3em; }
+  left: 2.60em;
+  top: 2.4em; }
 
 .spotC5 {
   position: absolute;
-  left: 2.40em;
-  top: 3.3em; }
+  left: 2.60em;
+  top: 3.5em; }
 
 .face {
   border: 1px solid black;
@@ -231,8 +231,8 @@ footer {
 .ace {
   font-size: 150%;
   position: absolute;
-  left: 0.725em;
-  top: 0.750em; }
+  left: 0.825em;
+  top: 0.95em; }
 
 .index {
   font-size: 40%;
