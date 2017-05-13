@@ -62,7 +62,6 @@ img {
 #display {
   width: 4.15em;
   height: 5.30em;
-  border: 1px solid black;
   box-shadow: 1px 2px 3px 2px #e0e4e8;
   border-radius: 3px;
   background-color: lightgray; }
@@ -70,10 +69,14 @@ img {
 #display p {
   box-shadow: inset 3px 2px 4px 0px gray;
   background-color: lightgray;
-  color: gray; }
+  color: gray;
+  padding-left: 0.4em;
+  height: 1.35em;
+  border-radius: 3px; }
 
 #hand {
-  display: flex; }
+  display: flex;
+  box-shadow: 1px 2px 3px 2px #e0e4e8; }
 
 .card {
   position: relative;
@@ -82,8 +85,7 @@ img {
   height: 5.3em;
   border-radius: 3px;
   background-color: white;
-  box-shadow: 1px 2px 3px 2px #e0e4e8;
-  border: 3px double grey; }
+  border: 1px solid #909090; }
 
 .card div {
   flex: 0 0 25%; }
