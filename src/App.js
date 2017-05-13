@@ -29,7 +29,7 @@ class App extends Component {
     for (let i=0; i<4; i++) {
       number = this.randomize(1,38)
       cardInUsed = this.state.used.indexOf(number) > -1
-      if (cardInUsed) { number = this.randomize(1,38) }
+      if (cardInUsed) { number = this.randomize(0,51) }
       fourRandoms.push(number)
     }
     return fourRandoms
@@ -56,13 +56,15 @@ class App extends Component {
   }
 
   render() {
+    let four = this.makeFour()
+    let hand = this.makeHand(four)
     return (
       <div id="myapp">
         <header>
           <Header />
         </header>
         <main>
-          <Gameboard hand={this.makeHand([10, 12, 11, 40])} />
+          <Gameboard hand={hand}/>
           <Instructions />
         </main>
         <footer>

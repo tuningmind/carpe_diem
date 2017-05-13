@@ -3,17 +3,9 @@ import Card from './Card'
 
 class Hand extends Component {
 
-  constructor() {
-    super()
-  }
-
-  callSetUsed() {
-    let hand = this.props.hand
-  }
-
   render () {
-
     let hand = this.props.hand
+    console.log("hand: ", hand)
     const card1 = hand[0]
     const card2 = hand[1]
     const card3 = hand[2]
