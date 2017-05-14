@@ -247,21 +247,48 @@ footer {
   left: 0.20em;
   top: 0.20em; }
 
-@media only screen and (max-width: 360px) {
+@media screen and (max-width: 400px) {
   div #myapp {
     min-height: 100vh;
-    font-size: 0.7em; }
+    font-size: 0.7em;
+    background-color: cornflowerblue; }
   #gameboard {
-    font-size: 0.7em; }
+    font-size: 0.9em; }
   #footer {
     flex-direction: column; } }
 
-@media only screen and (max-width: 550px) {
+@media screen and (max-width: 500px) {
+  div #myapp {
+    background-color: purple; }
   #gameboard {
-    font-size: 1.6em; }
+    font-size: 1.0em; }
   #footer {
     flex-direction: column; } }
 
-@media only screen and (max-width: 759) {
+@media screen and (max-width: 600px) {
+  div #myapp {
+    background-color: crimson; }
+  #gameboard {
+    font-size: 1.2em; }
+  #footer {
+    flex-direction: column; } }
+
+@media screen and (max-width: 700px) {
+  div #myapp {
+    background-color: darkorange; }
+  #gameboard {
+    font-size: 1.4em; }
+  #footer {
+    flex-direction: column; } }
+
+@media screen and (max-width: 800px) {
+  div #myapp {
+    background-color: olive; }
+  #gameboard {
+    font-size: 1.6em; } }
+
+@media screen and (max-width: 900px) {
+  div #myapp {
+    background-color: goldenrod; }
   #gameboard {
     font-size: 1.8em; } }
