@@ -67,14 +67,13 @@ img {
   box-shadow: 1px 2px 3px 2px #e0e4e8;
   border-radius: 3px;
   background-color: lightgray; }
-
-#display p {
-  box-shadow: inset 3px 2px 4px 0px gray;
-  background-color: lightgray;
-  color: gray;
-  padding-left: 0.4em;
-  height: 1.35em;
-  border-radius: 3px; }
+  #display p {
+    box-shadow: inset 3px 2px 4px 0px gray;
+    background-color: lightgray;
+    color: gray;
+    padding-left: 0.4em;
+    height: 1.35em;
+    border-radius: 3px; }
 
 #hand {
   display: flex;
@@ -104,13 +103,29 @@ img {
   min-width: 8.15em;
   padding: 5px;
   text-align: center;
-  border: 1px dotted white; }
+  border: 1px dotted white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
 
 .instructionDiv {
   display: inline-flex;
-  flex-wrap: wrap;
   min-width: 21.6em;
-  border: 1px dotted white; }
+  border: 1px dotted white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+.category {
+  border: 1px dotted white;
+  flex: 0 0 20%;
+  height: 100%; }
+
+.instruction {
+  border: 1px dotted white;
+  flex: 0 0 20%;
+  height: 100%;
+  padding: 2em; }
 
 footer {
   display: flex;
@@ -233,12 +248,12 @@ footer {
   left: 0.20em;
   top: 0.20em; }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 360px) {
   div #myapp {
     min-height: 100vh;
     font-size: 0.9em; }
   #gameboard {
-    font-size: 10px; }
+    font-size: 0.9em; }
   #footer {
     flex-direction: column; } }
 
@@ -250,4 +265,4 @@ footer {
 
 @media only screen and (max-width: 759) {
   #gameboard {
-    font-size: 14px; } }
+    font-size: 1.8em; } }
