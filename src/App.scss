@@ -67,11 +67,12 @@ img {
   box-shadow: 1px 2px 3px 2px #e0e4e8;
   border-radius: 3px;
   background-color: lightgray;
+  text-align: right;
   p {
     box-shadow: inset 3px 2px 4px 0px gray;
     background-color: lightgray;
     color: gray;
-    padding-left: 0.4em;
+    padding-right: 0.4em;
     height: 1.35em;
     border-radius: 3px;
   }
@@ -99,32 +100,22 @@ img {
   flex-wrap: nowrap;
   align-items: stretch;
 }
-.categoryDiv {
-  min-width: 8.15em;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.instructionDiv {
-  display: inline-flex;
-  min-width: 21.6em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-instelem {
+.instelem {
   display: flex;
   flex-direction: row;
 }
 .category {
-  flex: 0 0 20%;
+  flex: 1 1 20%;
   height: 100%;
+  padding: 10px;
+  align-self: flex-start;
+  text-align: right;
 }
 .instruction {
-  flex: 0 0 20%;
+  flex: 1 1 80%;
   height: 100%;
-  padding: 2em;
+  padding: 10px;
+  align-self: flex-start;
 }
 footer {
   display: flex;
