@@ -5,9 +5,8 @@ class Card extends Component {
     super()
     this.callSetUsed = this.callSetUsed.bind(this)
   }
-  callSetUsed = () => {
-    console.log("callSetUsed called")
-    this.props.setUsed(this.props.four)
+  callSetUsed = (e) => {
+    this.props.setUsed(e, this.props.four)
   }
 
   render() {
@@ -15,10 +14,19 @@ class Card extends Component {
     const classnames = card.classnames
     return (
         <div className="card"
-          onClick={(e) => this.callSetUsed()} 
+          onClick={
+            (e) => this.callSetUsed(e)
+          } 
         >
-          <div className={card.color}>{card.index}<br />{card.suit}</div>
-          {(card.src) ? <img src={card.src} alt='' /> : <img src='./img/white.png' alt='' /> }
+          <div className={card.color}>
+            {card.corner}
+              <br />
+            {card.suit}
+          </div>
+
+          {(card.src) 
+            ? <img src={card.src} alt='' /> 
+            : <img src='./img/white.png' alt='' /> }
            
           {
             classnames.map( (classname, i) => 

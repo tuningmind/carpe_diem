@@ -21,7 +21,7 @@ class App extends Component {
     let number
     let cardInUsed
     for (let i=0; i<4; i++) {
-      number = this.randomize(1,38)
+      number = this.randomize(0,51)
       cardInUsed = fourRandoms.indexOf(number) > -1
       if (cardInUsed) { number = this.randomize(0,51) }
       fourRandoms.push(number)
@@ -43,11 +43,15 @@ class App extends Component {
     )))
   }
 
-  setUsed(four) {
-    console.log("inside setUsed")
-    const revisedUsed = this.state.used
-    revisedUsed.concat(four)
-    this.setState({used: revisedUsed})
+  setUsed(e, four) {
+    console.log("e: ", e)
+    const used = this.state.used
+
+    four.forEach((current) => {
+      used.push(current)
+    })
+      console.log("used: ", used)
+    this.setState({used: used})
   }
 
   render() {
