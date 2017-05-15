@@ -16,19 +16,13 @@ class App extends Component {
     }
   }
   
-  getInitialState() {
-    return (
-      this.state = {used: this.makeFour}
-    )
-  }
-
   makeFour() {
     let fourRandoms = []
     let number
     let cardInUsed
     for (let i=0; i<4; i++) {
       number = this.randomize(1,38)
-      cardInUsed = this.state.used.indexOf(number) > -1
+      cardInUsed = fourRandoms.indexOf(number) > -1
       if (cardInUsed) { number = this.randomize(0,51) }
       fourRandoms.push(number)
     }
@@ -40,12 +34,6 @@ class App extends Component {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
-  setUsed(card) {
-    const revisedUsed = this.state.used
-    revisedUsed.push(card)
-    this.setState({used: revisedUsed}) 
   }
 
   makeHand(fourRandoms) {

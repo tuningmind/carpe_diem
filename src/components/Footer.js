@@ -18,6 +18,10 @@ class Footer extends Component {
              the cost of scarcity</a>
         </p>
         <p className="footlink">
+          <a href="https://prezi.com/oiuoajhnaaya/scarcity-why-so-little-means-so-much/">
+             a cool prezi</a>
+        </p>
+        <p className="footlink">
           <a href="https://github.com/tuningmind/carpe_diem">
              tuningmind</a>
         </p>
