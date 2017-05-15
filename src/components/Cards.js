@@ -1,6 +1,7 @@
 const Cards = [
   /**HEARTS**/
   {
+    index: 0,
     suit: "♥",
     rank: 1,
     dollars: -5,
@@ -12,6 +13,7 @@ const Cards = [
           ['spotB3 red ace']
   },
   {
+    index: 1,
     suit: "♥",
     rank: 2,
     dollars: 2,
@@ -23,6 +25,7 @@ const Cards = [
           ['spotB1 red','spotB5 red']
   },
   {
+    index: 2,
     suit: "♥",
     rank: 3,
     dollars: 3,
@@ -34,6 +37,7 @@ const Cards = [
           ['spotB1 red','spotB3 red','spotB5 red']
   },
   {
+    index: 3,
     suit: "♥",
     rank: 4,
     dollars: 4,
@@ -45,6 +49,7 @@ const Cards = [
           ['spotA1 red','spotA5 red','spotC1 red','spotC5 red']
   },
   {
+    index: 4,
     suit: "♥",
     rank: 5,
     dollars: 5,
@@ -56,6 +61,7 @@ const Cards = [
           ['spotA1 red','spotA5 red','spotB3 red','spotC1 red','spotC5 red']
   },
   {
+    index: 5,
     suit: "♥",
     rank: 6,
     dollars: 6,
@@ -67,6 +73,7 @@ const Cards = [
           ['spotA1 red','spotA3 red','spotA5 red','spotC1 red','spotC3 red','spotC5 red']
   },
   {
+    index: 6,
     suit: "♥",
     rank: 7,
     dollars: 7,
@@ -78,6 +85,7 @@ const Cards = [
           ['spotA1 red','spotA3 red','spotA5 red','spotB2 red','spotC1 red','spotC3 red','spotC5 red']
   },
   {
+    index: 7,
     suit: "♥",
     rank: 8,
     dollars: 8,
@@ -89,6 +97,7 @@ const Cards = [
           ['spotA1 red','spotA3 red','spotA5 red','spotB2 red','spotB4 red','spotC1 red','spotC3 red','spotC5 red']
   },
   {
+    index: 8,
     suit: "♥",
     rank: 9,
     dollars: 9,
@@ -100,6 +109,7 @@ const Cards = [
           ['spotA1 red', 'spotA2 red', 'spotA4 red','spotA5 red','spotB3 red','spotC1 red', 'spotC2 red', 'spotC4 red','spotC5 red']
   },
   {
+    index: 9,
     suit: "♥",
     rank: 10,
     dollars: 10,
@@ -111,6 +121,7 @@ const Cards = [
           ['spotA1 red', 'spotA2 red', 'spotA4 red', 'spotA5 red','spotB2 red', 'spotB4 red', 'spotC1 red', 'spotC2 red', 'spotC4 red', 'spotC5 red']
   },
   {
+    index: 10,
     suit: "♥",
     rank: 11,
     dollars: 0,
@@ -123,6 +134,7 @@ const Cards = [
           ['spotA1 red', 'spotC5 red']
   },
   {
+    index: 11,
     suit: "♥",
     rank: 12,
     dollars: 0,
@@ -135,6 +147,7 @@ const Cards = [
           ['spotA1 red', 'spotC5 red']
   },
   {
+    index: 12,
     suit: "♥",
     rank: 13,
     dollars: 0,
@@ -150,6 +163,7 @@ const Cards = [
   /****************CLUBS**********************************/
 
   {
+    index: 13,
     suit: "♣",
     rank: 1,
     dollars: -5,
@@ -161,6 +175,7 @@ const Cards = [
           ['spotB3 ace']
   },
   {
+    index: 14,
     suit: "♣",
     rank: 2,
     dollars: 2,
@@ -172,6 +187,7 @@ const Cards = [
           ['spotB1','spotB5']
   },
   {
+    index: 15,
     suit: "♣",
     rank: 3,
     dollars: 3,
@@ -183,6 +199,7 @@ const Cards = [
           ['spotB1','spotB3','spotB5']
   },
   {
+    index: 16,
     suit: "♣",
     rank: 4,
     dollars: 4,
@@ -194,6 +211,7 @@ const Cards = [
           ['spotA1','spotA5','spotC1','spotC5']
   },
   {
+    index: 17,
     suit: "♣",
     rank: 5,
     dollars: 5,
@@ -205,6 +223,7 @@ const Cards = [
           ['spotA1','spotA5','spotB3','spotC1','spotC5']
   },
   {
+    index: 18,
     suit: "♣",
     rank: 6,
     dollars: 6,
@@ -216,6 +235,7 @@ const Cards = [
           ['spotA1','spotA3','spotA5','spotC1','spotC3','spotC5']
   },
   {
+    index: 19,
     suit: "♣",
     rank: 7,
     dollars: 7,
@@ -227,6 +247,7 @@ const Cards = [
           ['spotA1','spotA3','spotA5','spotB2','spotC1','spotC3','spotC5']
   },
   {
+    index: 20,
     suit: "♣",
     rank: 8,
     dollars: 8,
@@ -238,6 +259,7 @@ const Cards = [
           ['spotA1','spotA3','spotA5','spotB2','spotB4','spotC1','spotC3','spotC5']
   },
   {
+    index: 21,
     suit: "♣",
     rank: 9,
     dollars: 9,
@@ -249,6 +271,7 @@ const Cards = [
           ['spotA1', 'spotA2', 'spotA4','spotA5','spotB3','spotC1', 'spotC2', 'spotC4','spotC5']
   },
   {
+    index: 22,
     suit: "♣",
     rank: 10,
     dollars: 10,
@@ -260,6 +283,7 @@ const Cards = [
           ['spotA1', 'spotA2', 'spotA4', 'spotA5','spotB2', 'spotB4', 'spotC1', 'spotC2', 'spotC4', 'spotC5']
   },
   {
+    index: 23,
     suit: "♣",
     rank: 11,
     dollars: 0,
@@ -272,6 +296,7 @@ const Cards = [
           ['spotA1', 'spotC5']
   },
   {
+    index: 24,
     suit: "♣",
     rank: 12,
     dollars: 0,
@@ -284,6 +309,7 @@ const Cards = [
           ['spotA1', 'spotC5']
   },
   {
+    index: 25,
     suit: "♣",
     rank: 13,
     dollars: 0,
@@ -299,6 +325,7 @@ const Cards = [
   /**************** DIAMONDS *******************/
 
   {
+    index: 26,
     suit: "♦",
     rank: 1,
     dollars: -5,
@@ -310,6 +337,7 @@ const Cards = [
           ['spotB3 red ace']
   },
   {
+    index: 27,
     suit: "♦",
     rank: 2,
     dollars: 2,
@@ -321,6 +349,7 @@ const Cards = [
           ['spotB1 red','spotB5 red']
   },
   {
+    index: 28,
     suit: "♦",
     rank: 3,
     dollars: 3,
@@ -332,6 +361,7 @@ const Cards = [
           ['spotB1 red','spotB3 red','spotB5 red']
   },
   {
+    index: 29,
     suit: "♦",
     rank: 4,
     dollars: 4,
@@ -343,6 +373,7 @@ const Cards = [
           ['spotA1 red','spotA5 red','spotC1 red','spotC5 red']
   },
   {
+    index: 30,
     suit: "♦",
     rank: 5,
     dollars: 5,
@@ -354,6 +385,7 @@ const Cards = [
           ['spotA1 red','spotA5 red','spotB3 red','spotC1 red','spotC5 red']
   },
   {
+    index: 31,
     suit: "♦",
     rank: 6,
     dollars: 6,
@@ -365,6 +397,7 @@ const Cards = [
           ['spotA1 red','spotA3 red','spotA5 red','spotC1 red','spotC3 red','spotC5 red']
   },
   {
+    index: 32,
     suit: "♦",
     rank: 7,
     dollars: 7,
@@ -376,6 +409,7 @@ const Cards = [
           ['spotA1 red','spotA3 red','spotA5 red','spotB2 red','spotC1 red','spotC3 red','spotC5 red']
   },
   {
+    index: 33,
     suit: "♦",
     rank: 8,
     dollars: 8,
@@ -387,6 +421,7 @@ const Cards = [
           ['spotA1 red','spotA3 red','spotA5 red','spotB2 red','spotB4 red','spotC1 red','spotC3 red','spotC5 red']
   },
   {
+    index: 34,
     suit: "♦",
     rank: 9,
     dollars: 9,
@@ -398,6 +433,7 @@ const Cards = [
           ['spotA1 red', 'spotA2 red', 'spotA4 red','spotA5 red','spotB3 red','spotC1 red', 'spotC2 red', 'spotC4 red','spotC5 red']
   },
   {
+    index: 35,
     suit: "♦",
     rank: 10,
     dollars: 10,
@@ -409,6 +445,7 @@ const Cards = [
           ['spotA1 red', 'spotA2 red', 'spotA4 red', 'spotA5 red','spotB2 red', 'spotB4 red', 'spotC1 red', 'spotC2 red', 'spotC4 red', 'spotC5 red']
   },
   {
+    index: 36,
     suit: "♦",
     rank: 11,
     dollars: 0,
@@ -421,6 +458,7 @@ const Cards = [
           ['spotA1 red', 'spotC5 red']
   },
   {
+    index: 37,
     suit: "♦",
     rank: 12,
     dollars: 0,
@@ -433,6 +471,7 @@ const Cards = [
           ['spotA1 red', 'spotC5 red']
   },
   {
+    index: 38,
     suit: "♦",
     rank: 13,
     dollars: 0,
@@ -448,6 +487,7 @@ const Cards = [
   /**************** SPADES *******************/
 
   {
+    index: 39,
     suit: "♠",
     rank: 1,
     dollars: -5,
@@ -459,6 +499,7 @@ const Cards = [
           ['spotB3 ace']
   },
   {
+    index: 40,
     suit: "♠",
     rank: 2,
     dollars: 2,
@@ -470,6 +511,7 @@ const Cards = [
           ['spotB1','spotB5']
   },
   {
+    index: 41,
     suit: "♠",
     rank: 3,
     dollars: 3,
@@ -481,6 +523,7 @@ const Cards = [
           ['spotB1','spotB3','spotB5']
   },
   {
+    index: 42,
     suit: "♠",
     rank: 4,
     dollars: 4,
@@ -492,6 +535,7 @@ const Cards = [
           ['spotA1','spotA5','spotC1','spotC5']
   },
   {
+    index: 43,
     suit: "♠",
     rank: 5,
     dollars: 5,
@@ -503,6 +547,7 @@ const Cards = [
           ['spotA1','spotA5','spotB3','spotC1','spotC5']
   },
   {
+    index: 44,
     suit: "♠",
     rank: 6,
     dollars: 6,
@@ -514,6 +559,7 @@ const Cards = [
           ['spotA1','spotA3','spotA5','spotC1','spotC3','spotC5']
   },
   {
+    index: 45,
     suit: "♠",
     rank: 7,
     dollars: 7,
@@ -525,6 +571,7 @@ const Cards = [
           ['spotA1','spotA3','spotA5','spotB2','spotC1','spotC3','spotC5']
   },
   {
+    index: 46,
     suit: "♠",
     rank: 8,
     dollars: 8,
@@ -536,6 +583,7 @@ const Cards = [
           ['spotA1','spotA3','spotA5','spotB2','spotB4','spotC1','spotC3','spotC5']
   },
   {
+    index: 47,
     suit: "♠",
     rank: 9,
     dollars: 9,
@@ -547,6 +595,7 @@ const Cards = [
           ['spotA1', 'spotA2', 'spotA4','spotA5','spotB3','spotC1', 'spotC2', 'spotC4','spotC5']
   },
   {
+    index: 48,
     suit: "♠",
     rank: 10,
     dollars: 10,
@@ -558,6 +607,7 @@ const Cards = [
           ['spotA1', 'spotA2', 'spotA4', 'spotA5','spotB2', 'spotB4', 'spotC1', 'spotC2', 'spotC4', 'spotC5']
   },
   {
+    index: 49,
     suit: "♠",
     rank: 11,
     dollars: 0,
@@ -570,6 +620,7 @@ const Cards = [
           ['spotA1', 'spotA2', 'spotA4', 'spotA5','spotB2', 'spotB4', 'spotC1', 'spotC2', 'spotC4', 'spotC5']
   },
   {
+    index: 50,
     suit: "♠",
     rank: 12,
     dollars: 0,
@@ -582,6 +633,7 @@ const Cards = [
           ['spotA1', 'spotC5']
   },
   {
+    index: 51,
     suit: "♠",
     rank: 13,
     dollars: 0,

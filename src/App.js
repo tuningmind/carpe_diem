@@ -43,14 +43,10 @@ class App extends Component {
     )))
   }
 
-  setUsed(e, four) {
-    console.log("e: ", e)
+  setUsed(cardIndex) {
     const used = this.state.used
-
-    four.forEach((current) => {
-      used.push(current)
-    })
-      console.log("used: ", used)
+    used.push(cardIndex)
+    console.log("used: ", used)
     this.setState({used: used})
   }
 
