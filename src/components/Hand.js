@@ -3,7 +3,6 @@ import Card from './Card'
 
 class Hand extends Component {
 
-
   render () {
     let hand = this.props.hand
     const card1 = hand[0]
@@ -13,7 +12,11 @@ class Hand extends Component {
 
     return (
       <div id="hand">
-        <Card card={card1}/>
+        <Card 
+          card={card1}
+          four={this.props.four}
+          setUsed={this.props.setUsed}
+        />
         <Card card={card2}/>
         <Card card={card3}/>
         <Card card={card4}/>

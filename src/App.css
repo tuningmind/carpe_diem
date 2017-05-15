@@ -98,6 +98,10 @@ img {
 .card div {
   flex: 0 0 25%; }
 
+.card:active,
+.card:hover {
+  background-color: #F5FFFA; }
+
 #instructions {
   width: 30em;
   display: flex;
