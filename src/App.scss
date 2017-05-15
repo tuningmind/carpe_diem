@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
 }
 a {
   color: gray;
@@ -10,13 +11,10 @@ a {
 h1, h2, h3, h4, h5 {
   padding: 8px;
   color: white;
-}
-h5 {
-  text-decoration: underline;
+  font-weight: 100;
 }
 div #myapp {
   min-height: 100vh;
-  font-family: sans-serif;
   background-color: #2d3d14;
   background-color: darkolivegreen;
   background-color: #465927;
@@ -30,6 +28,7 @@ div #myapp {
   justify-content: space-between;
 }
 header {
+  letter-spacing: .1em;
   background-color: #181F1C;
   width: 100vw;
   display: flex;
@@ -39,7 +38,7 @@ header {
   align-items: center;
   text-align: center;
   flex: 0 0 8em;
-  p {
+  h5 {
     color: white;
   }
 }
@@ -107,6 +106,9 @@ img {
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: stretch;
+  font-size: 1.05em;
+  line-height: 1.2;
+  letter-spacing: .05em;
 }
 .instelem {
   display: flex;

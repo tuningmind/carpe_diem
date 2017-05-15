@@ -7,7 +7,7 @@ class Footer extends Component {
       <div id="footer">
         <p className="footlink">
           <a href="https://thezvi.wordpress.com/2015/03/17/carpe-diem-the-optimization-game-level-1/">
-             credits</a>
+             origin of the game</a>
         </p>
         <p className="footlink">
           <a href="https://thezvi.wordpress.com/2015/05/01/carpe-diem-the-problem-of-scarcity-and-abundance/">
@@ -18,13 +18,8 @@ class Footer extends Component {
              the cost of scarcity</a>
         </p>
         <p className="footlink">
-          <a href="#">links</a>
-        </p>
-        <p className="footlink">
-          <a href="#">links</a>
-        </p>
-        <p className="footlink">
-          <a href="#">links</a>
+          <a href="https://github.com/tuningmind/carpe_diem">
+             tuningmind</a>
         </p>
       </div>
     )
