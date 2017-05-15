@@ -3,6 +3,7 @@ import Card from './Card'
 
 class Hand extends Component {
 
+
   render () {
     let hand = this.props.hand
     const card1 = hand[0]

@@ -37,9 +37,8 @@ header {
   align-items: center;
   text-align: center;
   flex: 0 0 8em; }
-
-header h5 {
-  color: white; }
+  header h5 {
+    color: white; }
 
 main {
   display: flex;
@@ -74,15 +73,14 @@ img {
   border-radius: 5px;
   background-color: lightgray;
   text-align: right; }
-
-#display p {
-  box-shadow: inset 3px 2px 4px 0px gray;
-  background-color: lightgray;
-  color: gray;
-  padding-right: 0.4em;
-  padding-top: 0.25em;
-  height: 1.35em;
-  border-radius: 5px; }
+  #display p {
+    box-shadow: inset 3px 2px 4px 0px gray;
+    background-color: lightgray;
+    color: gray;
+    padding-right: 0.4em;
+    padding-top: 0.25em;
+    height: 1.35em;
+    border-radius: 5px; }
 
 #hand {
   display: flex; }

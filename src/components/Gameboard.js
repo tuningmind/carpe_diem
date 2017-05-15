@@ -7,7 +7,9 @@ const Gameboard = (props) => {
     return (
       <div id="gameboard">
         <Display />
-        <Hand hand={props.hand}/>
+        <Hand hand={props.hand}
+          setused={props.setUsed}
+         />
       </div>
     )
 }

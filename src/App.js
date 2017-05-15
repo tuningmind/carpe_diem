@@ -14,6 +14,7 @@ class App extends Component {
     this.state = {
       used: []
     }
+    this.setUsed = this.setUsed.bind(this)
   }
   
   makeFour() {
@@ -43,6 +44,12 @@ class App extends Component {
     )))
   }
 
+  setUsed(four) {
+    const revisedUsed = this.state.used
+    revisedUsed.concat(four)
+    this.setState({used: revisedUsed})
+  }
+
   render() {
     let four = this.makeFour()
     let hand = this.makeHand(four)
@@ -52,7 +59,10 @@ class App extends Component {
           <Header />
         </header>
         <main>
-          <Gameboard hand={hand}/>
+          <Gameboard 
+            hand={hand}
+            setused={this.setUsed}
+          />
           <Instructions />
         </main>
         <footer>
