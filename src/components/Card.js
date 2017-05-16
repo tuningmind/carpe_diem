@@ -6,7 +6,7 @@ class Card extends Component {
     this.callSetUsed = this.callSetUsed.bind(this)
   }
   callSetUsed = () => {
-    this.props.setUsed(this.props.card.index)
+    this.props.setUsed(this.props.four)
   }
 
   render() {
@@ -15,7 +15,7 @@ class Card extends Component {
     return (
         <div className="card"
           onClick={
-            () => this.callSetUsed(card.index)
+            () => this.callSetUsed()
           } 
         >
           <div className={card.color}>

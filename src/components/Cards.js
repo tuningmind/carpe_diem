@@ -644,6 +644,6 @@ const Cards = [
     src: './img/king.gif',
     classnames: 
           ['spotA1', 'spotC5']
-  },
+  }
 ]
 module.exports = Cards

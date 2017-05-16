@@ -9,7 +9,6 @@ const Gameboard = (props) => {
         <Display />
         <Hand 
           hand={props.hand}
-          four={props.four}
           setUsed={props.setUsed}
          />
       </div>
