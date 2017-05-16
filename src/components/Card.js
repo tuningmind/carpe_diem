@@ -3,10 +3,10 @@ import React, { Component } from 'react'
 class Card extends Component {
   constructor() {
     super()
-    this.callSetUsed = this.callSetUsed.bind(this)
+    this.callMakeHand = this.callMakeHand.bind(this)
   }
-  callSetUsed = () => {
-    this.props.setUsed(this.props.four)
+  callMakeHand = () => {
+    this.props.makeHand()
   }
 
   render() {
@@ -15,7 +15,7 @@ class Card extends Component {
     return (
         <div className="card"
           onClick={
-            () => this.callSetUsed()
+            () => this.callMakeHand()
           } 
         >
           <div className={card.color}>

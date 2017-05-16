@@ -12,7 +12,13 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      unused: [ 
+      unused: this.shuffledeck()
+    }
+  }
+
+  shuffledeck() {
+    let array = 
+              [ 
                 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 
                10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
                20, 21, 22, 23, 24, 25, 26, 27, 28, 29,
@@ -20,37 +26,27 @@ class App extends Component {
                40, 41, 42, 43, 44, 45, 46, 47, 48, 49,
                50, 51
               ]
+    let counter = array.length
+    while (counter > 0) {
+      let index = Math.floor(Math.random() * counter)
+      counter--
+      let temp = array[counter]
+      array[counter] = array[index]
+      array[index] = temp
     }
+    return array
   }
 
-  getRandomNum(unused) {
-    let randomize= (min, max) => {
-      // getRandomIntInclusive
-      min = Math.ceil(min);
-      max = Math.floor(max);
-      return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
-    let number = randomize(0, 51)
-    let cardUsed = unused.indexOf(number) === -1
-    if (cardUsed) { number = randomize(0, 51) }
-    if (cardUsed) { number = randomize(0, 51) }
-    return number 
+  gameOver() {
+    console.log("game over")
   }
 
   makeHand() {
-    let random = this.getRandomNum
-    let hand = [1,2,3,4].map((num) => (Cards[random(this.state.unused)]))
-    return hand 
-  }
-
-  setUsed(four) {
     const unused = this.state.unused
-    four.map((num) => {
-      let toremove = unused.indexOf(num)
-      return unused.splice(toremove, 1)
-    })
-    this.setState({unused: unused})
+    let handNumbers = unused.splice(-4, 4)
+    if (unused.length < 1) {this.gameOver()}
     console.log("unused: ", unused)
+    return handNumbers.map((num) => Cards[num]) 
   }
 
   render() {
@@ -63,7 +59,7 @@ class App extends Component {
         <main>
           <Gameboard 
             hand={hand}
-            setUsed={this.setUsed.bind(this)}
+            makeHand={this.makeHand.bind(this)}
           />
           <Instructions />
         </main>

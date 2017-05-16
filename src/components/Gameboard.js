@@ -9,7 +9,7 @@ const Gameboard = (props) => {
         <Display />
         <Hand 
           hand={props.hand}
-          setUsed={props.setUsed}
+          makeHand={props.makeHand}
          />
       </div>
     )
