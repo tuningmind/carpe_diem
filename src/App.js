@@ -12,7 +12,8 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      unused: this.shuffledeck()
+      unused: this.shuffledeck(),
+      hand: []
     }
   }
 
@@ -37,20 +38,29 @@ class App extends Component {
     return array
   }
 
+  makeHand(deck) {
+    console.log("deck inside makeHand: ", deck)
+    let handNumbers = deck.splice(-4, 4)
+    let handArray = handNumbers.map((num) => Cards[num]) 
+    this.setState({
+      hand: handArray
+    })
+    return handArray
+  }
+
+  componentDidMount() {
+    const deck = this.state.unused
+    this.setState({
+      hand: this.makeHand(deck)
+    })
+  }
+
   gameOver() {
     console.log("game over")
   }
 
-  makeHand() {
-    const unused = this.state.unused
-    let handNumbers = unused.splice(-4, 4)
-    if (unused.length < 1) {this.gameOver()}
-    console.log("unused: ", unused)
-    return handNumbers.map((num) => Cards[num]) 
-  }
-
   render() {
-    let hand = this.makeHand()
+
     return (
       <div id="myapp">
         <header>
@@ -58,7 +68,8 @@ class App extends Component {
         </header>
         <main>
           <Gameboard 
-            hand={hand}
+            hand={this.state.hand}
+            unused={this.state.unused}
             makeHand={this.makeHand.bind(this)}
           />
           <Instructions />

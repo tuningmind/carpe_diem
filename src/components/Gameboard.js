@@ -8,6 +8,7 @@ const Gameboard = (props) => {
       <div id="gameboard">
         <Display />
         <Hand 
+          unused={props.unused}
           hand={props.hand}
           makeHand={props.makeHand}
          />

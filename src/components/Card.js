@@ -6,7 +6,7 @@ class Card extends Component {
     this.callMakeHand = this.callMakeHand.bind(this)
   }
   callMakeHand = () => {
-    this.props.makeHand()
+    this.props.makeHand(this.props.unused)
   }
 
   render() {
@@ -15,7 +15,10 @@ class Card extends Component {
     return (
         <div className="card"
           onClick={
-            () => this.callMakeHand()
+            () => {
+              this.callMakeHand()
+              console.log("card.index: ", card.index)
+            }
           } 
         >
           <div className={card.color}>
