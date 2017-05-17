@@ -617,7 +617,7 @@ const Cards = [
     color: 'black corner',
     src: './img/jack.gif',
     classnames: 
-          ['spotA1', 'spotA2', 'spotA4', 'spotA5','spotB2', 'spotB4', 'spotC1', 'spotC2', 'spotC4', 'spotC5']
+          ['spotA1', 'spotC5']
   },
   {
     index: 50,

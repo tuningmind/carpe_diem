@@ -6,12 +6,15 @@ const Gameboard = (props) => {
 
     return (
       <div id="gameboard">
-        <Display />
+        <Display 
+          energy={props.energy}
+        />
         <Hand 
+          calc={props.calc}
           unused={props.unused}
           hand={props.hand}
           makeHand={props.makeHand}
-         />
+        />
       </div>
     )
 }

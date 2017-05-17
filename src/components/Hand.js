@@ -5,10 +5,12 @@ class Hand extends Component {
 
   render () {
     let hand = this.props.hand
+    let calc = this.props.calc
     let unused = this.props.unused 
     let cardJsx = hand.map((card, i) => {
        return (
           <Card 
+            calc={calc}
             unused={unused}
             className="card"
             key={i} 

@@ -13,8 +13,25 @@ class App extends Component {
     super(props)
     this.state = {
       unused: this.shuffledeck(),
-      hand: []
+      hand: [],
+      energy: 3,
+      dollars: 8,
+      day: 1,
+      time: 0
     }
+  }
+
+  calc(card) {
+    this.setState ({
+      energy: this.state.energy + card.energy,
+      dollars: this.state.dollars + card.dollars + card.victoryPoints,
+      time: 4 - this.state.hand.indexOf(card),
+      victory: this.state.victory + card.victoryPoints
+    })
+    console.log("this.state.energy: ", this.state.energy)
+    console.log("this.state.dollars: ", this.state.dollars)
+    console.log("this.state.time: ", this.state.time)
+    console.log("this.state.victory: ", this.state.victory)
   }
 
   shuffledeck() {
@@ -68,9 +85,11 @@ class App extends Component {
         </header>
         <main>
           <Gameboard 
+            energy={this.state.energy}
             hand={this.state.hand}
             unused={this.state.unused}
             makeHand={this.makeHand.bind(this)}
+            calc={this.calc.bind(this)}
           />
           <Instructions />
         </main>

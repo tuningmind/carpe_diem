@@ -4,9 +4,13 @@ class Card extends Component {
   constructor() {
     super()
     this.callMakeHand = this.callMakeHand.bind(this)
+    this.callCalc = this.callCalc.bind(this)
   }
   callMakeHand = () => {
     this.props.makeHand(this.props.unused)
+  }
+  callCalc = (card) => {
+    this.props.calc(card)
   }
 
   render() {
@@ -17,6 +21,7 @@ class Card extends Component {
           onClick={
             () => {
               this.callMakeHand()
+              this.callCalc(card)
               console.log("card.index: ", card.index)
             }
           } 
