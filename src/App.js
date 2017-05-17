@@ -16,8 +16,8 @@ class App extends Component {
       hand: [],
       energy: 3,
       dollars: 8,
-      day: 1,
-      time: 0
+      day: 13,
+      time: 5
     }
   }
 
@@ -26,12 +26,8 @@ class App extends Component {
       energy: this.state.energy + card.energy,
       dollars: this.state.dollars + card.dollars + card.victoryPoints,
       time: 4 - this.state.hand.indexOf(card),
-      victory: this.state.victory + card.victoryPoints
+      day: this.state.day-1
     })
-    console.log("this.state.energy: ", this.state.energy)
-    console.log("this.state.dollars: ", this.state.dollars)
-    console.log("this.state.time: ", this.state.time)
-    console.log("this.state.victory: ", this.state.victory)
   }
 
   shuffledeck() {
@@ -86,6 +82,9 @@ class App extends Component {
         <main>
           <Gameboard 
             energy={this.state.energy}
+            dollars={this.state.dollars}
+            time={this.state.time}
+            day={this.state.day}
             hand={this.state.hand}
             unused={this.state.unused}
             makeHand={this.makeHand.bind(this)}

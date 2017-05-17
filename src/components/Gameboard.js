@@ -8,6 +8,9 @@ const Gameboard = (props) => {
       <div id="gameboard">
         <Display 
           energy={props.energy}
+          dollars={props.dollars}
+          time={props.time}
+          day={props.day}
         />
         <Hand 
           calc={props.calc}

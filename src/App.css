@@ -74,6 +74,7 @@ img {
   background-color: lightgray;
   text-align: right; }
   #display p {
+    font-size: .9em;
     box-shadow: inset 3px 2px 4px 0px gray;
     background-color: lightgray;
     color: gray;
