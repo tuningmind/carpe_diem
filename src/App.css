@@ -37,8 +37,9 @@ header {
   align-items: center;
   text-align: center;
   flex: 0 0 8em; }
-  header h5 {
-    color: white; }
+
+header h5 {
+  color: white; }
 
 main {
   display: flex;
@@ -73,15 +74,16 @@ img {
   border-radius: 5px;
   background-color: lightgray;
   text-align: right; }
-  #display p {
-    font-size: .9em;
-    box-shadow: inset 3px 2px 4px 0px gray;
-    background-color: lightgray;
-    color: gray;
-    padding-right: 0.4em;
-    padding-top: 0.25em;
-    height: 1.35em;
-    border-radius: 5px; }
+
+#display p {
+  font-size: .9em;
+  box-shadow: inset 3px 2px 4px 0px gray;
+  background-color: lightgray;
+  color: gray;
+  padding-right: 0.4em;
+  padding-top: 0.25em;
+  height: 1.35em;
+  border-radius: 5px; }
 
 #hand {
   display: flex; }
@@ -251,29 +253,32 @@ footer {
   left: 0.20em;
   top: 0.20em; }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   div #myapp {
-    min-height: 100vh;
     font-size: 0.7em;
     background-color: cornflowerblue; }
   #gameboard {
-    font-size: 0.9em; }
+    font-size: 0.7em; }
   #footer {
     flex-direction: column; } }
 
 @media screen and (max-width: 500px) {
   div #myapp {
-    background-color: purple; }
+    min-height: 100vh;
+    background-color: purple;
+    font-size: 0.7em; }
   #gameboard {
-    font-size: 1.0em; }
+    font-size: 0.7em; }
   #footer {
     flex-direction: column; } }
 
 @media screen and (max-width: 600px) {
   div #myapp {
-    background-color: crimson; }
+    background-color: crimson;
+    min-height: 100vh;
+    font-size: 0.7em; }
   #gameboard {
-    font-size: 1.2em; }
+    font-size: 0.7em; }
   #footer {
     flex-direction: column; } }
 
@@ -281,7 +286,7 @@ footer {
   div #myapp {
     background-color: darkorange; }
   #gameboard {
-    font-size: 1.4em; }
+    font-size: 1.2em; }
   #footer {
     flex-direction: column; } }
 
@@ -289,7 +294,7 @@ footer {
   div #myapp {
     background-color: olive; }
   #gameboard {
-    font-size: 1.6em; }
+    font-size: 1.4em; }
   #footer {
     flex-direction: column; } }
 
@@ -297,4 +302,4 @@ footer {
   div #myapp {
     background-color: goldenrod; }
   #gameboard {
-    font-size: 1.8em; } }
+    font-size: 1.6em; } }

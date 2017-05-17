@@ -22,12 +22,17 @@ class App extends Component {
   }
 
   calc(card) {
-    this.setState ({
+    let newTotals = {
       energy: this.state.energy + card.energy,
-      dollars: this.state.dollars + card.dollars + card.victoryPoints,
+      dollars: this.state.dollars + card.dollars,
       time: 4 - this.state.hand.indexOf(card),
       day: this.state.day-1
-    })
+    }
+    return newTotals
+  }
+
+  updateDisplay() {
+    this.setState(this.calc())
   }
 
   shuffledeck() {
@@ -66,6 +71,9 @@ class App extends Component {
     this.setState({
       hand: this.makeHand(deck)
     })
+  }
+
+  shouldComponentMount() {
   }
 
   gameOver() {
