@@ -23,7 +23,10 @@ class Card extends Component {
   callCalc = (card) => {
     if (this.unplayableCard(card)) {
       this.props.showMessage('This card is unplayable. Try another card')
-    } else { this.props.calc(card) }
+    } else { 
+      this.props.calc(card) 
+      this.props.showMessage('')
+    }
   }
 
   render() {
