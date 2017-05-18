@@ -17,6 +17,12 @@ const Gameboard = (props) => {
           unused={props.unused}
           hand={props.hand}
           makeHand={props.makeHand}
+          showMessage={props.showMessage}
+          energy={props.energy}
+          dollars={props.dollars}
+          time={props.time}
+          day={props.day}
+          victory={props.victory}
         />
       </div>
     )

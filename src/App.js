@@ -16,8 +16,12 @@ class App extends Component {
       hand: [],
       energy: 3,
       dollars: 8,
+      victory: 0,
       day: 13,
-      time: 5
+      time: 5,
+      nsf: false,
+      tired: false,
+      msg: ''
     }
   }
 
@@ -26,13 +30,26 @@ class App extends Component {
       energy: this.state.energy + card.energy,
       dollars: this.state.dollars + card.dollars,
       time: 4 - this.state.hand.indexOf(card),
-      day: this.state.day-1
+      day: this.state.day-1,
+      victory: this.state.victory + card.victory
     }
-    return newTotals
+
+    this.setState(newTotals)
   }
 
-  updateDisplay() {
-    this.setState(this.calc())
+  showMessage(msg) {
+    this.setState({msg: msg})
+  }
+
+  unplayableCard(card) {
+    let unplayablecard = false 
+    if (this.state.energy + card.energy -1 < 0) {
+      unplayablecard = true 
+    }
+    if (this.state.dollars + card.dollars -4 < 0) {
+      unplayablecard = true 
+    }
+    return unplayablecard
   }
 
   shuffledeck() {
@@ -57,7 +74,7 @@ class App extends Component {
   }
 
   makeHand(deck) {
-    console.log("deck inside makeHand: ", deck)
+    console.log("deck inside makeHand: ", this.deck)
     let handNumbers = deck.splice(-4, 4)
     let handArray = handNumbers.map((num) => Cards[num]) 
     this.setState({
@@ -67,9 +84,9 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const deck = this.state.unused
+    
     this.setState({
-      hand: this.makeHand(deck)
+      hand: this.makeHand(this.state.unused)
     })
   }
 
@@ -93,11 +110,17 @@ class App extends Component {
             dollars={this.state.dollars}
             time={this.state.time}
             day={this.state.day}
+            victory={this.state.victory}
             hand={this.state.hand}
             unused={this.state.unused}
             makeHand={this.makeHand.bind(this)}
             calc={this.calc.bind(this)}
+            unplayableCard={this.unplayableCard.bind(this)}
+            showMessage={this.showMessage.bind(this)}
           />
+          <div id="msg">
+            
+          </div>
           <Instructions />
         </main>
         <footer>

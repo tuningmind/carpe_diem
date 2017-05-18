@@ -3,26 +3,45 @@ import React, { Component } from 'react'
 class Card extends Component {
   constructor() {
     super()
-    this.callMakeHand = this.callMakeHand.bind(this)
-    this.callCalc = this.callCalc.bind(this)
+    this.callMakeHand =   this.callMakeHand.bind(this)
+    this.callCalc =       this.callCalc.bind(this)
   }
-  callMakeHand = () => {
-    this.props.makeHand(this.props.unused)
+  callMakeHand = (unused) => {
+    this.props.makeHand(unused)
+  }
+  unplayableCard(card) {
+    let unplayablecard = false 
+    if (this.props.energy + card.energy -1 < 0) {
+      unplayablecard = true 
+    }
+    if (this.props.dollars + card.dollars -4 < 0) {
+      unplayablecard = true 
+    }
+    console.log("unplayable: ", unplayablecard)
+    return unplayablecard
   }
   callCalc = (card) => {
-    this.props.calc(card)
+    if (this.unplayableCard(card)) {
+      this.props.showMessage('This card is unplayable. Try another card')
+    } else { this.props.calc(card) }
   }
 
   render() {
     const card = this.props.card
     const classnames = card.classnames
+    let unused = this.props.unused
+    let dollars = this.props.dollars
+    let energy = this.props.energy
+    let time = this.props.time
+    let day = this.props.day
+    let victory = this.props.victory
     return (
         <div className="card"
           onClick={
             () => {
-              this.callMakeHand()
+              this.callMakeHand(unused)
               this.callCalc(card)
-              console.log("card.index: ", card.index)
+              this.unplayableCard(card)
             }
           } 
         >

@@ -89,6 +89,13 @@ img {
 #hand {
   display: flex;
 }
+#msg {
+  width: 30em;
+  text-align: center;
+  font-size: 2em;
+  min-height: 2em;
+  padding-bottom: 0.5em;
+}
 .overlay {
   background:rgba(0,0,0,.75);
 }
