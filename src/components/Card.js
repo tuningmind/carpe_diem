@@ -17,7 +17,6 @@ class Card extends Component {
     if (this.props.dollars + card.dollars -4 < 0) {
       unplayablecard = true 
     }
-    console.log("unplayable: ", unplayablecard)
     return unplayablecard
   }
   callCalc = (card) => {
@@ -33,18 +32,12 @@ class Card extends Component {
     const card = this.props.card
     const classnames = card.classnames
     let unused = this.props.unused
-    let dollars = this.props.dollars
-    let energy = this.props.energy
-    let time = this.props.time
-    let day = this.props.day
-    let victory = this.props.victory
     return (
         <div className="card"
           onClick={
             () => {
-              this.callMakeHand(unused)
               this.callCalc(card)
-              this.unplayableCard(card)
+              this.callMakeHand(unused)
             }
           } 
         >

@@ -16,11 +16,9 @@ class App extends Component {
       hand: [],
       energy: 3,
       dollars: 8,
-      victory: 0,
-      day: 13,
       time: 5,
-      nsf: false,
-      tired: false,
+      day: 13,
+      victory: 0,
       msg: ''
     }
   }
@@ -33,6 +31,7 @@ class App extends Component {
       day: this.state.day-1,
       victory: this.state.victory + card.victory
     }
+    console.log("newTotals: ", newTotals)
 
     this.setState(newTotals)
   }
@@ -74,7 +73,6 @@ class App extends Component {
   }
 
   makeHand(deck) {
-    console.log("deck inside makeHand: ", this.deck)
     let handNumbers = deck.splice(-4, 4)
     let handArray = handNumbers.map((num) => Cards[num]) 
     this.setState({

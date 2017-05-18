@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 class Display extends Component {
 
   render () {
+    console.log("this.energy inside display: ", this.energy)
     return (
       <div id="display">
         <p id="energy">{this.energy} energy</p>
