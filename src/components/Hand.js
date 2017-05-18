@@ -21,6 +21,7 @@ class Hand extends Component {
             time={this.props.time}
             day={this.props.day}
             victory={this.props.victory}
+            cardchosen={this.props.cardchosen}
           />
         )
       }

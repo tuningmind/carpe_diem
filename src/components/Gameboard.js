@@ -23,6 +23,7 @@ const Gameboard = (props) => {
           time={props.time}
           day={props.day}
           victory={props.victory}
+          cardchosen={props.cardchosen}
         />
       </div>
     )

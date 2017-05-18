@@ -9,6 +9,11 @@ class Card extends Component {
   callMakeHand = (unused) => {
     this.props.makeHand(unused)
   }
+  callCalc = (card) => {
+    this.props.calc(card) 
+    this.props.showMessage('This is a message.')
+    console.log("days at callCalc: ", this.props.day)
+  }
   unplayableCard(card) {
     let unplayablecard = false 
     if (this.props.energy + card.energy -1 < 0) {
@@ -19,19 +24,12 @@ class Card extends Component {
     }
     return unplayablecard
   }
-  callCalc = (card) => {
-    if (this.unplayableCard(card)) {
-      this.props.showMessage('This card is unplayable. Try another card')
-    } else { 
-      this.props.calc(card) 
-      this.props.showMessage('')
-    }
-  }
 
   render() {
-    const card = this.props.card
-    const classnames = card.classnames
     let unused = this.props.unused
+    let card = this.props.cardchosen
+    let classnames = card.classnames
+
     return (
         <div className="card"
           onClick={

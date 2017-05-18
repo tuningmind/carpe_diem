@@ -14,12 +14,13 @@ class App extends Component {
     this.state = {
       unused: this.shuffledeck(),
       hand: [],
+      cardchosen: {},
       energy: 3,
       dollars: 8,
       time: 5,
       day: 13,
       victory: 0,
-      msg: ''
+      msg: 'Initial message.'
     }
   }
 
@@ -29,26 +30,18 @@ class App extends Component {
       dollars: this.state.dollars + card.dollars,
       time: 4 - this.state.hand.indexOf(card),
       day: this.state.day-1,
-      victory: this.state.victory + card.victory
+      victory: this.state.victory + card.victory,
+      hand: this.state.hand,
+      unused: this.state.unused,
+      cardchosen: card
     }
-    console.log("newTotals: ", newTotals)
 
     this.setState(newTotals)
+    console.log("totals just sent to setState: ", newTotals)
   }
 
   showMessage(msg) {
     this.setState({msg: msg})
-  }
-
-  unplayableCard(card) {
-    let unplayablecard = false 
-    if (this.state.energy + card.energy -1 < 0) {
-      unplayablecard = true 
-    }
-    if (this.state.dollars + card.dollars -4 < 0) {
-      unplayablecard = true 
-    }
-    return unplayablecard
   }
 
   shuffledeck() {
@@ -82,13 +75,9 @@ class App extends Component {
   }
 
   componentDidMount() {
-    
     this.setState({
       hand: this.makeHand(this.state.unused)
     })
-  }
-
-  shouldComponentMount() {
   }
 
   gameOver() {
@@ -113,7 +102,6 @@ class App extends Component {
             unused={this.state.unused}
             makeHand={this.makeHand.bind(this)}
             calc={this.calc.bind(this)}
-            unplayableCard={this.unplayableCard.bind(this)}
             showMessage={this.showMessage.bind(this)}
           />
           <div id="msg">
