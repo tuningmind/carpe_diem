@@ -27,7 +27,7 @@ class Card extends Component {
 
   render() {
     let unused = this.props.unused
-    let card = this.props.cardchosen
+    let card = this.props.card
     let classnames = card.classnames
 
     return (

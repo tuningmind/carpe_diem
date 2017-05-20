@@ -12,7 +12,7 @@ class Hand extends Component {
             key={i} 
             calc={this.props.calc}
             unused={this.props.unused}
-            card={this.props.hand[i]}
+            card={card}
             hand={this.props.hand}
             makeHand={this.props.makeHand}
             showMessage={this.props.showMessage}
