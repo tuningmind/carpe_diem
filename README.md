@@ -43,14 +43,6 @@ You may not make a move that will result in negative values.
 
 Play till you run out of cards or no cards are playable. Game lasts up to 13 days.
 
-## Other notes
-This is an initial effort. Design suggestions are welcome.
-
-TODO:
-Provide error handling for accidentally entering unallowed values.
-Currently there is no exception handling; if you enter a value that is not
-allowed, an error will be thrown and you will have to start over.
-
 ## License
 Copyright (c) 2015 tuningmind, Zvi Mowshowitz
 

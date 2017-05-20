@@ -1,20 +1,24 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif; }
 
 a {
-  color: gray; }
+  color: gray;
+  text-decoration: none; }
 
 h1, h2, h3, h4, h5 {
-  padding: 8px; }
-
-h5 {
-  text-decoration: underline; }
+  padding: 8px;
+  color: white;
+  font-weight: 100; }
 
 div #myapp {
-  font-family: sans-serif;
+  min-height: 100vh;
   background-color: #2d3d14;
+  background-color: darkolivegreen;
+  background-color: #465927;
+  background-color: #2a3517;
   color: white;
   font-size: 18px;
   display: flex;
@@ -23,7 +27,8 @@ div #myapp {
   justify-content: space-between; }
 
 header {
-  background-color: #222;
+  letter-spacing: .1em;
+  background-color: #181F1C;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -31,7 +36,10 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  flex: 0 0 20vh; }
+  flex: 0 0 8em; }
+
+header h5 {
+  color: white; }
 
 main {
   display: flex;
@@ -40,8 +48,8 @@ main {
   flex: 0 0 auto; }
 
 img {
-  width: 2.55em;
-  height: 3.8em;
+  width: 2.75em;
+  height: 4em;
   left: 0.7em;
   top: 0.6em;
   position: absolute;
@@ -63,75 +71,85 @@ img {
   width: 4.15em;
   height: 5.30em;
   box-shadow: 1px 2px 3px 2px #e0e4e8;
-  border-radius: 3px;
-  background-color: lightgray; }
+  border-radius: 5px;
+  background-color: lightgray;
+  text-align: right; }
 
 #display p {
+  font-size: .9em;
   box-shadow: inset 3px 2px 4px 0px gray;
   background-color: lightgray;
   color: gray;
-  padding-left: 0.4em;
+  padding-right: 0.4em;
+  padding-top: 0.25em;
   height: 1.35em;
-  border-radius: 3px; }
+  border-radius: 5px; }
 
 #hand {
-  display: flex;
-  box-shadow: 1px 2px 3px 2px #e0e4e8; }
+  display: flex; }
+
+#msg {
+  width: 30em;
+  text-align: center;
+  font-size: 2em;
+  min-height: 2em;
+  padding-bottom: 0.5em; }
+
+.overlay {
+  background: rgba(0, 0, 0, 0.75); }
 
 .card {
+  box-shadow: 1px 2px 3px 2px #e0e4e8;
   position: relative;
   color: black;
   width: 4.15em;
   height: 5.3em;
-  border-radius: 3px;
+  border-radius: 5px;
   background-color: white;
   border: 1px solid #909090; }
 
 .card div {
   flex: 0 0 25%; }
 
-#progress {
-  display: inline-flex;
-  flex-wrap: wrap;
-  font-size: 2em;
-  max-width: 18.75em; }
-
-.progress {
-  height: 16px;
-  width: 12px;
-  border: 1px solid black;
-  background-image: url("%PUBLIC_URL%/img/cardback.gif");
-  padding: 14px 10px;
-  margin: 1px; }
-
 #instructions {
-  max-width: 60%; }
+  width: 30em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  font-size: 1.35em;
+  line-height: 1.2;
+  letter-spacing: .05em; }
 
-.instructionCategory {
-  padding: 5px;
-  text-align: center; }
+.instelem {
+  display: flex;
+  flex-direction: row; }
 
-thead {
-  display: table-header-group; }
+.category {
+  flex: 1 1 20%;
+  height: 100%;
+  padding: 10px;
+  align-self: flex-start;
+  text-align: right; }
 
-tr {
-  display: table-row; }
-
-td {
-  text-align: left;
-  border: 1px dotted; }
+.instruction {
+  flex: 1 1 80%;
+  height: 100%;
+  padding: 10px;
+  align-self: flex-start; }
 
 footer {
   display: flex;
   justify-content: center;
-  background-color: #222;
+  background-color: #181F1C;
+  font-size: 1.5em;
   width: 100vw;
-  height: 10vh; }
+  min-height: 4em; }
 
 #footer {
   display: inline-flex;
-  background-color: #222;
-  flex: 0 0 5vh;
+  background-color: #181F1C;
+  flex: 1 1 3em;
   align-items: center;
   justify-content: space-around;
   align-content: stretch; }
@@ -147,78 +165,78 @@ footer {
 
 .spotA1 {
   position: absolute;
-  left: 0.60em;
-  top: 0.3em; }
+  left: 0.50em;
+  top: 0.2em; }
 
 .spotA2 {
   position: absolute;
-  left: 0.60em;
+  left: 0.50em;
   top: 1.3em; }
 
 .spotA3 {
   position: absolute;
-  left: 0.60em;
+  left: 0.50em;
   top: 1.8em; }
 
 .spotA4 {
   position: absolute;
-  left: 0.60em;
-  top: 2.3em; }
+  left: 0.50em;
+  top: 2.4em; }
 
 .spotA5 {
   position: absolute;
-  left: 0.60em;
-  top: 3.3em; }
+  left: 0.50em;
+  top: 3.5em; }
 
 .spotB1 {
   position: absolute;
-  left: 1.45em;
+  left: 1.55em;
   top: 0.3em; }
 
 .spotB2 {
   position: absolute;
-  left: 1.45em;
-  top: 1.0em; }
+  left: 1.55em;
+  top: 0.9em; }
 
 .spotB3 {
   position: absolute;
-  left: 1.45em;
+  left: 1.55em;
   top: 1.8em; }
 
 .spotB4 {
   position: absolute;
-  left: 1.45em;
-  top: 2.8em; }
+  left: 1.55em;
+  top: 2.9em; }
 
 .spotB5 {
   position: absolute;
-  left: 1.45em;
-  top: 3.3em; }
+  left: 1.55em;
+  top: 3.5em; }
 
 .spotC1 {
   position: absolute;
-  left: 2.40em;
-  top: 0.3em; }
+  left: 2.60em;
+  top: 0.2em; }
 
 .spotC2 {
   position: absolute;
-  left: 2.40em;
+  left: 2.60em;
   top: 1.3em; }
 
 .spotC3 {
   position: absolute;
-  left: 2.40em;
+  left: 2.60em;
   top: 1.8em; }
 
 .spotC4 {
   position: absolute;
-  left: 2.40em;
-  top: 2.3em; }
+  left: 2.60em;
+  top: 2.4em; }
 
 .spotC5 {
   position: absolute;
-  left: 2.40em;
-  top: 3.3em; }
+  left: 2.60em;
+  top: 3.5em; }
 
 .face {
   border: 1px solid black;
@@ -231,10 +249,10 @@ footer {
 .ace {
   font-size: 150%;
   position: absolute;
-  left: 0.725em;
-  top: 0.750em; }
+  left: 0.825em;
+  top: 0.95em; }
 
-.index {
+.corner {
   font-size: 40%;
   font-weight: bold;
   text-align: center;
@@ -242,14 +260,53 @@ footer {
   left: 0.20em;
   top: 0.20em; }
 
-@media only screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
+  div #myapp {
+    font-size: 0.7em;
+    background-color: cornflowerblue; }
   #gameboard {
-    font-size: 10px; } }
+    font-size: 0.7em; }
+  #footer {
+    flex-direction: column; } }
 
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
+  div #myapp {
+    min-height: 100vh;
+    background-color: purple;
+    font-size: 0.7em; }
   #gameboard {
-    font-size: 12px; } }
+    font-size: 0.7em; }
+  #footer {
+    flex-direction: column; } }
 
-@media only screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
+  div #myapp {
+    background-color: crimson;
+    min-height: 100vh;
+    font-size: 0.7em; }
   #gameboard {
-    font-size: 14px; } }
+    font-size: 0.7em; }
+  #footer {
+    flex-direction: column; } }
+
+@media screen and (max-width: 700px) {
+  div #myapp {
+    background-color: darkorange; }
+  #gameboard {
+    font-size: 1.2em; }
+  #footer {
+    flex-direction: column; } }
+
+@media screen and (max-width: 800px) {
+  div #myapp {
+    background-color: olive; }
+  #gameboard {
+    font-size: 1.4em; }
+  #footer {
+    flex-direction: column; } }
+
+@media screen and (max-width: 900px) {
+  div #myapp {
+    background-color: goldenrod; }
+  #gameboard {
+    font-size: 1.6em; } }

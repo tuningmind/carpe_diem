@@ -6,8 +6,25 @@ const Gameboard = (props) => {
 
     return (
       <div id="gameboard">
-        <Display />
-        <Hand hand={props.hand}/>
+        <Display 
+          energy={props.energy}
+          dollars={props.dollars}
+          time={props.time}
+          day={props.day}
+        />
+        <Hand 
+          calc={props.calc}
+          unused={props.unused}
+          hand={props.hand}
+          makeHand={props.makeHand}
+          showMessage={props.showMessage}
+          energy={props.energy}
+          dollars={props.dollars}
+          time={props.time}
+          day={props.day}
+          victory={props.victory}
+          cardchosen={props.cardchosen}
+        />
       </div>
     )
 }

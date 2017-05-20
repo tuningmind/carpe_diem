@@ -12,59 +12,101 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      used: []
+      unused: this.shuffledeck(),
+      hand: [],
+      cardchosen: {},
+      energy: 3,
+      dollars: 8,
+      time: 5,
+      day: 13,
+      victory: 0,
+      msg: 'Initial message.'
     }
   }
-  
-  getInitialState() {
-    return (
-      this.state = {used: this.makeFour}
-    )
-  }
 
-  makeFour() {
-    let fourRandoms = []
-    let number
-    let cardInUsed
-    for (let i=0; i<4; i++) {
-      number = this.randomize(1,38)
-      cardInUsed = this.state.used.indexOf(number) > -1
-      if (cardInUsed) { number = this.randomize(0,51) }
-      fourRandoms.push(number)
+  calc(card) {
+    let newTotals = {
+      energy: this.state.energy + card.energy,
+      dollars: this.state.dollars + card.dollars,
+      time: 4 - this.state.hand.indexOf(card),
+      day: this.state.day-1,
+      victory: this.state.victory + card.victory,
+      hand: this.state.hand,
+      unused: this.state.unused,
+      cardchosen: card
     }
-    return fourRandoms
+
+    this.setState(newTotals)
+    console.log("totals just sent to setState: ", newTotals)
   }
 
-  randomize(min, max) {
-    // getRandomIntInclusive
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+  showMessage(msg) {
+    this.setState({msg: msg})
   }
 
-  setUsed(card) {
-    const revisedUsed = this.state.used
-    revisedUsed.push(card)
-    this.setState({used: revisedUsed}) 
+  shuffledeck() {
+    let array = 
+              [ 
+                0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 
+               10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+               20, 21, 22, 23, 24, 25, 26, 27, 28, 29,
+               30, 31, 32, 33, 34, 35, 36, 37, 38, 39,
+               40, 41, 42, 43, 44, 45, 46, 47, 48, 49,
+               50, 51
+              ]
+    let counter = array.length
+    while (counter > 0) {
+      let index = Math.floor(Math.random() * counter)
+      counter--
+      let temp = array[counter]
+      array[counter] = array[index]
+      array[index] = temp
+    }
+    return array
   }
 
-  makeHand(fourRandoms) {
-    return (
-      fourRandoms.map((cardIndex) => (
-      Cards[cardIndex]
-    )))
+  makeHand(deck) {
+    let handNumbers = deck.splice(-4, 4)
+    let handArray = handNumbers.map((num) => Cards[num]) 
+    this.setState({
+      hand: handArray
+    })
+    return handArray
+  }
+
+  componentDidMount() {
+    this.setState({
+      hand: this.makeHand(this.state.unused)
+    })
+  }
+
+  gameOver() {
+    console.log("game over")
   }
 
   render() {
-    let four = this.makeFour()
-    let hand = this.makeHand(four)
+
     return (
       <div id="myapp">
         <header>
           <Header />
         </header>
         <main>
-          <Gameboard hand={hand}/>
+          <Gameboard 
+            energy={this.state.energy}
+            dollars={this.state.dollars}
+            time={this.state.time}
+            day={this.state.day}
+            victory={this.state.victory}
+            hand={this.state.hand}
+            unused={this.state.unused}
+            makeHand={this.makeHand.bind(this)}
+            calc={this.calc.bind(this)}
+            showMessage={this.showMessage.bind(this)}
+          />
+          <div id="msg">
+            
+          </div>
           <Instructions />
         </main>
         <footer>

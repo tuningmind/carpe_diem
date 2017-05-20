@@ -5,17 +5,31 @@ class Hand extends Component {
 
   render () {
     let hand = this.props.hand
-    const card1 = hand[0]
-    const card2 = hand[1]
-    const card3 = hand[2]
-    const card4 = hand[3]
+    let cardJsx = hand.map((card, i) => {
+       return (
+          <Card 
+            className="card"
+            key={i} 
+            calc={this.props.calc}
+            unused={this.props.unused}
+            card={card}
+            hand={this.props.hand}
+            makeHand={this.props.makeHand}
+            showMessage={this.props.showMessage}
+            energy={this.props.energy}
+            dollars={this.props.dollars}
+            time={this.props.time}
+            day={this.props.day}
+            victory={this.props.victory}
+            cardchosen={this.props.cardchosen}
+          />
+        )
+      }
+    )
 
     return (
       <div id="hand">
-        <Card card={card1}/>
-        <Card card={card2}/>
-        <Card card={card3}/>
-        <Card card={card4}/>
+        {cardJsx}  
       </div>
     )
   }
