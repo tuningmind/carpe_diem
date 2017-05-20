@@ -27,13 +27,14 @@ class App extends Component {
   calc(card) {
     let newTotals = {
       energy: this.state.energy + card.energy,
-      dollars: this.state.dollars + card.dollars,
+      dollars: this.state.dollars + card.dollars - 4,
       time: 4 - this.state.hand.indexOf(card),
       day: this.state.day-1,
       victory: this.state.victory + card.victory,
       hand: this.state.hand,
       unused: this.state.unused,
       cardchosen: card
+
     }
 
     this.setState(newTotals)
@@ -105,7 +106,7 @@ class App extends Component {
             showMessage={this.showMessage.bind(this)}
           />
           <div id="msg">
-            
+            {this.state.msg}
           </div>
           <Instructions />
         </main>

@@ -11,10 +11,8 @@ class Card extends Component {
   }
   callCalc = (card) => {
     this.props.calc(card) 
-    this.props.showMessage('This is a message.')
-    console.log("days at callCalc: ", this.props.day)
   }
-  unplayableCard(card) {
+  unplayable(card) {
     let unplayablecard = false 
     if (this.props.energy + card.energy -1 < 0) {
       unplayablecard = true 
@@ -34,6 +32,9 @@ class Card extends Component {
         <div className="card"
           onClick={
             () => {
+              if (this.unplayable) {
+              this.props.showMessage("unplayable")
+              } 
               this.callCalc(card)
               this.callMakeHand(unused)
             }

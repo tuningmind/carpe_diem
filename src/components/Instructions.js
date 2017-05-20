@@ -21,7 +21,7 @@ class Instructions extends Component {
                      'Card 4 consumes 4 time units.', 
                      'That leaves you at least one time unit left over each day, and you may freelance (trade time for money) or recuperate (trade time for energy).'].map((elem, i) => (<div key={i}>{elem}</div>))
     const days = [   'You have thirteen days to play.', 
-                     'Each day consumes 1 energy and 1 dollar in addition to your other choices.'].map((elem, i) => (<div key={i}>{elem}</div>))
+                     'Each day consumes 1 energy and 4 dollar in addition to your other choices.'].map((elem, i) => (<div key={i}>{elem}</div>))
     const instructionElement = [
       {
         name: "energy",
