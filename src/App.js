@@ -14,31 +14,25 @@ class App extends Component {
     this.state = {
       unused: this.shuffledeck(),
       hand: [],
-      cardchosen: {},
       energy: 3,
       dollars: 8,
       time: 5,
       day: 13,
       victory: 0,
-      msg: 'Initial message.'
+      msg: 'Seize the card'
     }
   }
 
-  calc(card) {
+
+  applyCard(card) {
     let newTotals = {
       energy: this.state.energy + card.energy,
       dollars: this.state.dollars + card.dollars - 4,
       time: 4 - this.state.hand.indexOf(card),
       day: this.state.day-1,
       victory: this.state.victory + card.victory,
-      hand: this.state.hand,
-      unused: this.state.unused,
-      cardchosen: card
-
     }
-
     this.setState(newTotals)
-    console.log("totals just sent to setState: ", newTotals)
   }
 
   showMessage(msg) {
@@ -81,9 +75,6 @@ class App extends Component {
     })
   }
 
-  gameOver() {
-    console.log("game over")
-  }
 
   render() {
 
@@ -94,15 +85,9 @@ class App extends Component {
         </header>
         <main>
           <Gameboard 
-            energy={this.state.energy}
-            dollars={this.state.dollars}
-            time={this.state.time}
-            day={this.state.day}
-            victory={this.state.victory}
-            hand={this.state.hand}
-            unused={this.state.unused}
+            gamestate={this.state}
             makeHand={this.makeHand.bind(this)}
-            calc={this.calc.bind(this)}
+            applyCard={this.applyCard.bind(this)}
             showMessage={this.showMessage.bind(this)}
           />
           <div id="msg">

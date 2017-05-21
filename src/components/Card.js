@@ -4,39 +4,47 @@ class Card extends Component {
   constructor() {
     super()
     this.callMakeHand =   this.callMakeHand.bind(this)
-    this.callCalc =       this.callCalc.bind(this)
+    this.callApplyCard=       this.callApplyCard.bind(this)
   }
   callMakeHand = (unused) => {
     this.props.makeHand(unused)
   }
-  callCalc = (card) => {
-    this.props.calc(card) 
-  }
-  unplayable(card) {
-    let unplayablecard = false 
-    if (this.props.energy + card.energy -1 < 0) {
-      unplayablecard = true 
-    }
-    if (this.props.dollars + card.dollars -4 < 0) {
-      unplayablecard = true 
-    }
-    return unplayablecard
+  callApplyCard = (card) => {
+    this.props.applyCard(card) 
   }
 
+  isPlayableCard = (card) => {
+    if ((this.props.gamestate.energy + card.energy - 1 < 0) && (this.props.gamestate.dollars + card.dollars -4 < 0)) {
+      card.tired = true
+      card.nsf = true
+      card.playable = false
+    }
+    else if (this.props.gamestate.dollars + card.dollars - 4 < 0) {
+      card.nsf = true
+      card.playable = false
+    }
+    else if (this.props.gamestate.energy + card.energy -1 < 0) {
+      card.tired = true
+      card.playable = false
+    }
+    console.log("card.tired: ", card.tired)
+    console.log("card.nsf: ", card.nsf)
+    console.log("card.playable: ", card.playable)
+    return card.playable
+  }
+
+
   render() {
-    let unused = this.props.unused
     let card = this.props.card
-    let classnames = card.classnames
+    let gamestate = this.props.gamestate
 
     return (
         <div className="card"
           onClick={
             () => {
-              if (this.unplayable) {
-              this.props.showMessage("unplayable")
-              } 
-              this.callCalc(card)
-              this.callMakeHand(unused)
+              this.isPlayableCard(card)
+              this.callApplyCard(card)
+              this.callMakeHand(gamestate.unused)
             }
           } 
         >
@@ -51,7 +59,7 @@ class Card extends Component {
             : <img src='./img/white.png' alt='' /> }
            
           {
-            classnames.map( (classname, i) => 
+            card.classnames.map( (classname, i) => 
               ( 
                 <div key={i} className={classname}>{card.suit}</div>
               )

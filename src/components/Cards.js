@@ -9,6 +9,10 @@ const Cards = [
     victory: 50,
     corner: "A",
     color: 'red corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotB3 red ace']
   },
@@ -21,6 +25,10 @@ const Cards = [
     victory: 0,
     corner: 2,
     color: 'red corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotB1 red','spotB5 red']
   },
@@ -33,6 +41,10 @@ const Cards = [
     victory: 0,
     corner: 3,
     color: 'red corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotB1 red','spotB3 red','spotB5 red']
   },
@@ -45,6 +57,10 @@ const Cards = [
     victory: 0,
     corner: 4,
     color: 'red corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotA1 red','spotA5 red','spotC1 red','spotC5 red']
   },
@@ -57,6 +73,10 @@ const Cards = [
     victory: 0,
     corner: 5,
     color: 'red corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotA1 red','spotA5 red','spotB3 red','spotC1 red','spotC5 red']
   },
@@ -69,6 +89,10 @@ const Cards = [
     victory: 0,
     corner: 6,
     color: 'red corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotA1 red','spotA3 red','spotA5 red','spotC1 red','spotC3 red','spotC5 red']
   },
@@ -81,6 +105,10 @@ const Cards = [
     victory: 0,
     corner: 7,
     color: 'red corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotA1 red','spotA3 red','spotA5 red','spotB2 red','spotC1 red','spotC3 red','spotC5 red']
   },
@@ -93,6 +121,10 @@ const Cards = [
     victory: 0,
     corner: 8,
     color: 'red corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotA1 red','spotA3 red','spotA5 red','spotB2 red','spotB4 red','spotC1 red','spotC3 red','spotC5 red']
   },
@@ -105,6 +137,10 @@ const Cards = [
     victory: 0,
     corner: 9,
     color: 'red corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotA1 red', 'spotA2 red', 'spotA4 red','spotA5 red','spotB3 red','spotC1 red', 'spotC2 red', 'spotC4 red','spotC5 red']
   },
@@ -117,6 +153,10 @@ const Cards = [
     victory: 0,
     corner: 10,
     color: 'red corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotA1 red', 'spotA2 red', 'spotA4 red', 'spotA5 red','spotB2 red', 'spotB4 red', 'spotC1 red', 'spotC2 red', 'spotC4 red', 'spotC5 red']
   },
@@ -129,6 +169,10 @@ const Cards = [
     victory: 10,
     corner: 'J',
     color: 'red corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     src: './img/jack.gif',
     classnames: 
           ['spotA1 red', 'spotC5 red']
@@ -142,6 +186,10 @@ const Cards = [
     victory: 20,
     corner: 'Q',
     color: 'red corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     src: './img/queen.gif',
     classnames: 
           ['spotA1 red', 'spotC5 red']
@@ -155,6 +203,10 @@ const Cards = [
     victory: 30,
     corner: 'K',
     color: 'red corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     src: './img/king.gif',
     classnames: 
           ['spotA1 red', 'spotC5 red']
@@ -171,6 +223,10 @@ const Cards = [
     victory: 50,
     corner: 'A',
     color: 'black corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotB3 ace']
   },
@@ -183,6 +239,10 @@ const Cards = [
     victory: 0,
     corner: 2,
     color: 'black corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotB1','spotB5']
   },
@@ -195,6 +255,10 @@ const Cards = [
     victory: 0,
     corner: 3,
     color: 'black corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotB1','spotB3','spotB5']
   },
@@ -207,6 +271,10 @@ const Cards = [
     victory: 0,
     corner: 4,
     color: 'black corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotA1','spotA5','spotC1','spotC5']
   },
@@ -219,6 +287,10 @@ const Cards = [
     victory: 0,
     corner: 5,
     color: 'black corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotA1','spotA5','spotB3','spotC1','spotC5']
   },
@@ -231,6 +303,10 @@ const Cards = [
     victory: 0,
     corner: 6,
     color: 'black corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotA1','spotA3','spotA5','spotC1','spotC3','spotC5']
   },
@@ -243,6 +319,10 @@ const Cards = [
     victory: 0,
     corner: 7,
     color: 'black corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotA1','spotA3','spotA5','spotB2','spotC1','spotC3','spotC5']
   },
@@ -255,6 +335,10 @@ const Cards = [
     victory: 0,
     corner: 8,
     color: 'black corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotA1','spotA3','spotA5','spotB2','spotB4','spotC1','spotC3','spotC5']
   },
@@ -267,6 +351,10 @@ const Cards = [
     victory: 0,
     corner: 9,
     color: 'black corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotA1', 'spotA2', 'spotA4','spotA5','spotB3','spotC1', 'spotC2', 'spotC4','spotC5']
   },
@@ -279,6 +367,10 @@ const Cards = [
     victory: 0,
     corner: 10,
     color: 'black corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotA1', 'spotA2', 'spotA4', 'spotA5','spotB2', 'spotB4', 'spotC1', 'spotC2', 'spotC4', 'spotC5']
   },
@@ -291,6 +383,10 @@ const Cards = [
     victory: 10,
     corner: 'J',
     color: 'black corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     src: './img/jack.gif',
     classnames: 
           ['spotA1', 'spotC5']
@@ -304,6 +400,10 @@ const Cards = [
     victory: 20,
     corner: 'Q',
     color: 'black corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     src: './img/queen.gif',
     classnames: 
           ['spotA1', 'spotC5']
@@ -317,6 +417,10 @@ const Cards = [
     victory: 30,
     corner: 'K',
     color: 'black corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     src: './img/king.gif',
     classnames: 
           ['spotA1', 'spotC5']
@@ -333,6 +437,10 @@ const Cards = [
     victory: 50,
     corner: 'A',
     color: 'red corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotB3 red ace']
   },
@@ -345,6 +453,10 @@ const Cards = [
     victory: 0,
     corner: 2,
     color: 'red corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotB1 red','spotB5 red']
   },
@@ -357,6 +469,10 @@ const Cards = [
     victory: 0,
     corner: 3,
     color: 'red corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotB1 red','spotB3 red','spotB5 red']
   },
@@ -369,6 +485,10 @@ const Cards = [
     victory: 0,
     corner: 4,
     color: 'red corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotA1 red','spotA5 red','spotC1 red','spotC5 red']
   },
@@ -381,6 +501,10 @@ const Cards = [
     victory: 0,
     corner: 5,
     color: 'red corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotA1 red','spotA5 red','spotB3 red','spotC1 red','spotC5 red']
   },
@@ -393,6 +517,10 @@ const Cards = [
     victory: 0,
     corner: 6,
     color: 'red corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotA1 red','spotA3 red','spotA5 red','spotC1 red','spotC3 red','spotC5 red']
   },
@@ -405,6 +533,10 @@ const Cards = [
     victory: 0,
     corner: 7,
     color: 'red corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotA1 red','spotA3 red','spotA5 red','spotB2 red','spotC1 red','spotC3 red','spotC5 red']
   },
@@ -417,6 +549,10 @@ const Cards = [
     victory: 0,
     corner: 8,
     color: 'red corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotA1 red','spotA3 red','spotA5 red','spotB2 red','spotB4 red','spotC1 red','spotC3 red','spotC5 red']
   },
@@ -429,6 +565,10 @@ const Cards = [
     victory: 0,
     corner: 9,
     color: 'red corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotA1 red', 'spotA2 red', 'spotA4 red','spotA5 red','spotB3 red','spotC1 red', 'spotC2 red', 'spotC4 red','spotC5 red']
   },
@@ -441,6 +581,10 @@ const Cards = [
     victory: 0,
     corner: 10,
     color: 'red corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotA1 red', 'spotA2 red', 'spotA4 red', 'spotA5 red','spotB2 red', 'spotB4 red', 'spotC1 red', 'spotC2 red', 'spotC4 red', 'spotC5 red']
   },
@@ -453,6 +597,10 @@ const Cards = [
     victory: 10,
     corner: 'J',
     color: 'red corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     src: './img/jack.gif',
     classnames: 
           ['spotA1 red', 'spotC5 red']
@@ -466,6 +614,10 @@ const Cards = [
     victory: 20,
     corner: 'Q',
     color: 'red corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     src: './img/queen.gif',
     classnames: 
           ['spotA1 red', 'spotC5 red']
@@ -479,6 +631,10 @@ const Cards = [
     victory: 30,
     corner: 'K',
     color: 'red corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     src: './img/king.gif',
     classnames: 
           ['spotA1 red', 'spotC5 red']
@@ -495,6 +651,10 @@ const Cards = [
     victory: 50,
     corner: 'A',
     color: 'black corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotB3 ace']
   },
@@ -507,6 +667,10 @@ const Cards = [
     victory: 0,
     corner: 2,
     color: 'black corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotB1','spotB5']
   },
@@ -519,6 +683,10 @@ const Cards = [
     victory: 0,
     corner: 3,
     color: 'black corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotB1','spotB3','spotB5']
   },
@@ -530,6 +698,10 @@ const Cards = [
     energy: -3,
     victory: 0,
     color: 'black corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     corner: 4,
     classnames: 
           ['spotA1','spotA5','spotC1','spotC5']
@@ -543,6 +715,10 @@ const Cards = [
     victory: 0,
     corner: 5,
     color: 'black corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotA1','spotA5','spotB3','spotC1','spotC5']
   },
@@ -555,6 +731,10 @@ const Cards = [
     victory: 0,
     corner: 6,
     color: 'black corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotA1','spotA3','spotA5','spotC1','spotC3','spotC5']
   },
@@ -567,6 +747,10 @@ const Cards = [
     victory: 0,
     corner: 7,
     color: 'black corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotA1','spotA3','spotA5','spotB2','spotC1','spotC3','spotC5']
   },
@@ -579,6 +763,10 @@ const Cards = [
     victory: 0,
     corner: 8,
     color: 'black corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotA1','spotA3','spotA5','spotB2','spotB4','spotC1','spotC3','spotC5']
   },
@@ -591,6 +779,10 @@ const Cards = [
     victory: 0,
     corner: 9,
     color: 'black corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotA1', 'spotA2', 'spotA4','spotA5','spotB3','spotC1', 'spotC2', 'spotC4','spotC5']
   },
@@ -603,6 +795,10 @@ const Cards = [
     victory: 0,
     corner: 10,
     color: 'black corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     classnames: 
           ['spotA1', 'spotA2', 'spotA4', 'spotA5','spotB2', 'spotB4', 'spotC1', 'spotC2', 'spotC4', 'spotC5']
   },
@@ -615,6 +811,10 @@ const Cards = [
     victory: 10,
     corner: 'J',
     color: 'black corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     src: './img/jack.gif',
     classnames: 
           ['spotA1', 'spotC5']
@@ -628,6 +828,10 @@ const Cards = [
     victory: 20,
     corner: 'Q',
     color: 'black corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     src: './img/queen.gif',
     classnames: 
           ['spotA1', 'spotC5']
@@ -641,6 +845,10 @@ const Cards = [
     victory: 30,
     corner: 'K',
     color: 'black corner',
+    nsf: false,
+    tired: false,
+    playable: true, 
+    time: 0,
     src: './img/king.gif',
     classnames: 
           ['spotA1', 'spotC5']
