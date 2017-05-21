@@ -61,11 +61,14 @@ class App extends Component {
   }
 
   makeHand(deck) {
-    let handNumbers = deck.splice(-4, 4)
+    let handNumbers = deck.slice(-4)
     let handArray = handNumbers.map((num) => Cards[num]) 
+    let unused = deck.slice(0, deck.length -4)
     this.setState({
-      hand: handArray
+      hand: handArray,
+      unused: unused
     })
+    console.log("unused: ", unused)
     return handArray
   }
 

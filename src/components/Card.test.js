@@ -13,7 +13,7 @@ describe('Card', () => {
     }
   })
 
-  it('', () => {
+  it('removes four cards from deck and creates new hand of four cards', () => {
 
   })
 })
