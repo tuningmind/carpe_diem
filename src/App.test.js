@@ -30,10 +30,6 @@ describe('App', () => {
     const gameboard = app.find('Gameboard')
     const hand = gameboard.prop('makeHand')(unused)
     expect(hand.length).toBe(4)
-    console.log(hand)
   })
 
-  it('', () => {
-
-  })
 })

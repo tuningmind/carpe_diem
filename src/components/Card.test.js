@@ -9,11 +9,20 @@ describe('Card', () => {
 
   beforeEach(() => {
     props = {
-
+      gamestate: {},
+      applyCard: jest.fn(),
+      card: {
+        classnames: []
+      },
+      makeHand: jest.fn(),
+      showMessage: jest.fn()
     }
   })
 
   it('removes four cards from deck and creates new hand of four cards', () => {
-
+    const card = setup()
+    // const hand = card.prop('onClick')()
+    const hand = card.simulate('click')
+    expect(props.makeHand).toHaveBeenCalled()
   })
 })
