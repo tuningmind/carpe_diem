@@ -32,4 +32,16 @@ describe('App', () => {
     expect(hand.length).toBe(4)
   })
 
+  it('correctly calculates energy', () => {
+    const app = setup()
+    const card = {
+      energy: 1
+    }
+    const startingEnergy = app.state('energy')
+    const gameboard = app.find('Gameboard')
+    gameboard.prop('applyCard')(card)
+    const endingEnergy = app.state('energy')
+    expect(endingEnergy).toBe(startingEnergy + card.energy)
+  })
+
 })

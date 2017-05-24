@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import './App.css'
 
-import Gameboard from './components/Gameboard'
-import Footer from './components/Footer'
 import Header from './components/Header'
-import Instructions from './components/Instructions'
+import Display from './components/Display'
+import Hand from './components/Hand'
 import Cards from './components/Cards'
+import Instructions from './components/Instructions'
+import Footer from './components/Footer'
 
 class App extends Component {
 
@@ -23,16 +24,32 @@ class App extends Component {
     }
   }
 
-
   applyCard(card) {
     let newTotals = {
-      energy: this.state.energy + card.energy,
+      energy: this.state.energy + card.energy - 1,
       dollars: this.state.dollars + card.dollars - 4,
       time: 4 - this.state.hand.indexOf(card),
       day: this.state.day-1,
       victory: this.state.victory + card.victory,
     }
     this.setState(newTotals)
+  }
+
+  makeHand(deck) {
+    let handNumbers = deck.slice(-4)
+    let handArray = handNumbers.map((num) => Cards[num]) 
+    let unused = deck.slice(0, deck.length -4)
+    this.setState({
+      hand: handArray,
+      unused: unused
+    })
+    return handArray
+  }
+
+  componentDidMount() {
+    this.setState({
+      hand: this.makeHand(this.state.unused)
+    })
   }
 
   showMessage(msg) {
@@ -60,25 +77,6 @@ class App extends Component {
     return array
   }
 
-  makeHand(deck) {
-    let handNumbers = deck.slice(-4)
-    let handArray = handNumbers.map((num) => Cards[num]) 
-    let unused = deck.slice(0, deck.length -4)
-    this.setState({
-      hand: handArray,
-      unused: unused
-    })
-    console.log("unused: ", unused)
-    return handArray
-  }
-
-  componentDidMount() {
-    this.setState({
-      hand: this.makeHand(this.state.unused)
-    })
-  }
-
-
   render() {
 
     return (
@@ -87,12 +85,15 @@ class App extends Component {
           <Header />
         </header>
         <main>
-          <Gameboard 
-            gamestate={this.state}
-            makeHand={this.makeHand.bind(this)}
-            applyCard={this.applyCard.bind(this)}
-            showMessage={this.showMessage.bind(this)}
-          />
+           <div id="gameboard"> 
+            <Display gamestate={this.state} />
+            <Hand 
+              gamestate={this.state}
+              makeHand={this.makeHand.bind(this)}
+              applyCard={this.applyCard.bind(this)}
+              showMessage={this.showMessage.bind(this)}
+            />
+          </div>
           <div id="msg">
             {this.state.msg}
           </div>

@@ -4,7 +4,7 @@ class Card extends Component {
   constructor() {
     super()
     this.callMakeHand =   this.callMakeHand.bind(this)
-    this.callApplyCard=       this.callApplyCard.bind(this)
+    this.callApplyCard =  this.callApplyCard.bind(this)
   }
   callMakeHand = (unused) => {
     this.props.makeHand(unused)
@@ -14,22 +14,26 @@ class Card extends Component {
   }
 
   isPlayableCard = (card) => {
+    let msg
     if ((this.props.gamestate.energy + card.energy - 1 < 0) && (this.props.gamestate.dollars + card.dollars -4 < 0)) {
       card.tired = true
       card.nsf = true
       card.playable = false
+      msg = "This card is not playable because energy and dollars are too low" 
     }
     else if (this.props.gamestate.dollars + card.dollars - 4 < 0) {
       card.nsf = true
       card.playable = false
+      msg = "This card is not playable because dollars are too low"
     }
     else if (this.props.gamestate.energy + card.energy -1 < 0) {
       card.tired = true
       card.playable = false
+      msg = "This card is not playable because energy is too low"
     }
+    this.props.showMessage(msg)
     console.log("card.tired: ", card.tired)
     console.log("card.nsf: ", card.nsf)
-    console.log("card.playable: ", card.playable)
     return card.playable
   }
 
@@ -42,9 +46,9 @@ class Card extends Component {
         <div className="card"
           onClick={
             () => {
-              this.isPlayableCard(card)
-              this.callApplyCard(card)
-              this.callMakeHand(gamestate.unused)
+              if (this.isPlayableCard(card)) {
+                this.callApplyCard(card)
+                this.callMakeHand(gamestate.unused) }
             }
           } 
         >

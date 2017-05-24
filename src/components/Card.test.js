@@ -9,7 +9,9 @@ describe('Card', () => {
 
   beforeEach(() => {
     props = {
-      gamestate: {},
+      gamestate: { 
+        unused: []
+      },
       applyCard: jest.fn(),
       card: {
         classnames: []
@@ -23,6 +25,6 @@ describe('Card', () => {
     const card = setup()
     // const hand = card.prop('onClick')()
     const hand = card.simulate('click')
-    expect(props.makeHand).toHaveBeenCalled()
+    expect(props.makeHand).toHaveBeenCalledWith(props.gamestate.unused)
   })
 })
