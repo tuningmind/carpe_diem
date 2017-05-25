@@ -20,8 +20,10 @@ class App extends Component {
       time: 5,
       day: 13,
       victory: 0,
-      msg: 'Seize the card'
+      msg: 'Seize the card',
+      playableHand: true
     }
+    this.isPlayableCard = this.isPlayableCard.bind(this)
   }
 
   applyCard(card) {
@@ -29,10 +31,34 @@ class App extends Component {
       energy: this.state.energy + card.energy - 1,
       dollars: this.state.dollars + card.dollars - 4,
       time: 4 - this.state.hand.indexOf(card),
-      day: this.state.day-1,
+      day: this.state.day - 1,
       victory: this.state.victory + card.victory,
     }
     this.setState(newTotals)
+  }
+
+  setHandPlayability (hand) {
+    // return false only if no cards are playable
+    let playable = hand.some(element === true) 
+
+    this.setState({playableHand: playable})
+  }
+
+  isPlayableCard (card) {
+    if ((this.state.energy + card.energy - 1 < 0) && (this.state.dollars + card.dollars -4 < 0)) {
+      card.tired = true
+      card.nsf = true
+      card.playable = false
+    }
+    else if (this.state.dollars + card.dollars - 4 < 0) {
+      card.nsf = true
+      card.playable = false
+    }
+    else if (this.state.energy + card.energy -1 < 0) {
+      card.tired = true
+      card.playable = false
+    }
+    return card.playable
   }
 
   makeHand(deck) {
@@ -92,6 +118,8 @@ class App extends Component {
               makeHand={this.makeHand.bind(this)}
               applyCard={this.applyCard.bind(this)}
               showMessage={this.showMessage.bind(this)}
+              isPlayableCard={this.isPlayableCard.bind(this)}
+              setHandPlayability={this.setHandPlayability.bind(this)}
             />
           </div>
           <div id="msg">

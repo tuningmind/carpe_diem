@@ -3,40 +3,28 @@ import React, { Component } from 'react'
 class Card extends Component {
   constructor() {
     super()
-    this.callMakeHand =   this.callMakeHand.bind(this)
-    this.callApplyCard =  this.callApplyCard.bind(this)
-  }
-  callMakeHand = (unused) => {
-    this.props.makeHand(unused)
-  }
-  callApplyCard = (card) => {
-    this.props.applyCard(card) 
+    this.playCard = this.playCard.bind(this)
   }
 
-  isPlayableCard = (card) => {
+  playCard = (card) => {
+    this.props.isPlayableCard(card)
+    this.props.applyCard(card)
+    this.props.makeHand(this.props.gamestate.unused)
+  }
+
+  unplayableMessage = (card) => {
     let msg
-    if ((this.props.gamestate.energy + card.energy - 1 < 0) && (this.props.gamestate.dollars + card.dollars -4 < 0)) {
-      card.tired = true
-      card.nsf = true
-      card.playable = false
+    if (card.tired && card.nsf) {
       msg = "This card is not playable because energy and dollars are too low" 
     }
-    else if (this.props.gamestate.dollars + card.dollars - 4 < 0) {
-      card.nsf = true
-      card.playable = false
+    else if (card.nsf) {
       msg = "This card is not playable because dollars are too low"
     }
-    else if (this.props.gamestate.energy + card.energy -1 < 0) {
-      card.tired = true
-      card.playable = false
+    else if (card.tired) {
       msg = "This card is not playable because energy is too low"
     }
     this.props.showMessage(msg)
-    console.log("card.tired: ", card.tired)
-    console.log("card.nsf: ", card.nsf)
-    return card.playable
   }
-
 
   render() {
     let card = this.props.card
@@ -46,11 +34,13 @@ class Card extends Component {
         <div className="card"
           onClick={
             () => {
-              if (this.isPlayableCard(card)) {
-                this.callApplyCard(card)
-                this.callMakeHand(gamestate.unused) }
+              this.props.setHandPlayability(gamestate.hand)
+              if (gamestate.playableHand) {
+                this.playCard(card)
+                console.log("playableHand: ", gamestate.playableHand)
+              } else {this.unplayableMessage(card)}
             }
-          } 
+          }
         >
           <div className={card.color}>
             {card.corner}
