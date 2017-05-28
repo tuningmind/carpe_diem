@@ -7,7 +7,6 @@ class Card extends Component {
   }
 
   playCard = (card) => {
-    this.props.isPlayableCard(card)
     this.props.applyCard(card)
     this.props.makeHand(this.props.gamestate.unused)
   }
@@ -34,11 +33,7 @@ class Card extends Component {
         <div className="card"
           onClick={
             () => {
-              this.props.setHandPlayability(gamestate.hand)
-              if (gamestate.playableHand) {
                 this.playCard(card)
-                console.log("playableHand: ", gamestate.playableHand)
-              } else {this.unplayableMessage(card)}
             }
           }
         >

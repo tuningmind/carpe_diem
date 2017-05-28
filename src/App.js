@@ -39,9 +39,11 @@ class App extends Component {
 
   setHandPlayability (hand) {
     // return false only if no cards are playable
-    let playable = hand.some(element === true) 
-
+    let playable = hand.some((card) => {
+      return this.isPlayableCard(card)
+    }) 
     this.setState({playableHand: playable})
+    console.log("hand.playable: ", this.state.playableHand)
   }
 
   isPlayableCard (card) {
@@ -65,6 +67,7 @@ class App extends Component {
     let handNumbers = deck.slice(-4)
     let handArray = handNumbers.map((num) => Cards[num]) 
     let unused = deck.slice(0, deck.length -4)
+    this.setHandPlayability(handArray)
     this.setState({
       hand: handArray,
       unused: unused
