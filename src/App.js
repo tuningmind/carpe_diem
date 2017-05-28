@@ -37,7 +37,7 @@ class App extends Component {
     this.setState(newTotals)
   }
 
-  setHandPlayability (hand) {
+  setHandPlayability(hand) {
     // return false only if no cards are playable
     let playable = hand.some((card) => {
       return this.isPlayableCard(card)
@@ -46,21 +46,19 @@ class App extends Component {
     console.log("hand.playable: ", this.state.playableHand)
   }
 
-  isPlayableCard (card) {
+  isPlayableCard(card) {
     if ((this.state.energy + card.energy - 1 < 0) && (this.state.dollars + card.dollars -4 < 0)) {
-      card.tired = true
-      card.nsf = true
-      card.playable = false
+      return false
     }
     else if (this.state.dollars + card.dollars - 4 < 0) {
-      card.nsf = true
-      card.playable = false
+      return false
     }
     else if (this.state.energy + card.energy -1 < 0) {
-      card.tired = true
-      card.playable = false
+      return false
     }
-    return card.playable
+    else {
+      return true
+    }
   }
 
   makeHand(deck) {
@@ -121,7 +119,7 @@ class App extends Component {
               makeHand={this.makeHand.bind(this)}
               applyCard={this.applyCard.bind(this)}
               showMessage={this.showMessage.bind(this)}
-              isPlayableCard={this.isPlayableCard.bind(this)}
+              isPlayableCard={this.isPlayableCard}
               setHandPlayability={this.setHandPlayability.bind(this)}
             />
           </div>

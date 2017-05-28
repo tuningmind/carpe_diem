@@ -4,6 +4,20 @@ class Card extends Component {
   constructor() {
     super()
     this.playCard = this.playCard.bind(this)
+    this.setTired = this.setTired.bind(this)
+    this.setNsf = this.setNsf.bind(this)
+  }
+  
+  setTired(card) {
+    if (this.props.gamestate.energy + card.energy -1 < 0) {
+      card.tired = true
+    }
+  }
+
+  setNsf(card) {
+    if (this.props.gamestate.dollars + card.dollars -1 < 0) {
+      card.nsf = true
+    }
   }
 
   playCard = (card) => {
@@ -27,13 +41,19 @@ class Card extends Component {
 
   render() {
     let card = this.props.card
-    let gamestate = this.props.gamestate
 
     return (
         <div className="card"
           onClick={
             () => {
+              this.props.showMessage('')
+              if (this.props.isPlayableCard(card)) {
                 this.playCard(card)
+              } else {
+                this.setTired(card)
+                this.setNsf(card)
+                this.unplayableMessage(card)
+              }
             }
           }
         >

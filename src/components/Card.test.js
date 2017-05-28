@@ -28,9 +28,9 @@ describe('Card', () => {
     expect(props.makeHand).toHaveBeenCalledWith(props.gamestate.unused)
   })
 
-  it('does not apply clicked card if clicked card is unplayable', () => {
+  it('does not apply unplayable card', () => {
     const card = setup()
     const hand = card.simulate('click')
-    expect(props.isPlayableCard).toHaveBeenCalledWith(props.card)
+    expect(props.isPlayableCard(card)).toHaveBeenCalledWith(props.card)
   })
 })
