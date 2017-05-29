@@ -43,7 +43,7 @@ class App extends Component {
       return this.isPlayableCard(card)
     }) 
     this.setState({playableHand: playable})
-    console.log("hand.playable: ", this.state.playableHand)
+    console.log("playableHand was just updated, to ", this.state.playableHand)
   }
 
   isPlayableCard(card) {
@@ -120,7 +120,6 @@ class App extends Component {
               applyCard={this.applyCard.bind(this)}
               showMessage={this.showMessage.bind(this)}
               isPlayableCard={this.isPlayableCard}
-              setHandPlayability={this.setHandPlayability.bind(this)}
             />
           </div>
           <div id="msg">

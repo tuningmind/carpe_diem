@@ -16,7 +16,6 @@ class Hand extends Component {
             makeHand={this.props.makeHand}
             showMessage={this.props.showMessage}
             isPlayableCard={this.props.isPlayableCard}
-            setHandPlayability={this.props.setHandPlayability}
           />
         )
       }
