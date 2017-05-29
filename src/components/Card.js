@@ -28,7 +28,7 @@ class Card extends Component {
   unplayableMessage = (card) => {
     let msg
     if (this.props.gamestate.playableHand === false) {
-      msg = "None of these cards are playable.\nClick any card to get the next hand."
+      msg = "None of these cards are playable. Click any card to get the next hand."
     }
     else if (card.tired && card.nsf) {
       msg = "This card is not playable because energy and dollars are too low" 
@@ -55,6 +55,7 @@ class Card extends Component {
               } else {
                 if (!this.props.gamestate.playableHand) {
                   this.unplayableMessage(card)
+                  this.props.makeHand(this.props.gamestate.unused)
                 } else {
                   this.setTired(card)
                   this.setNsf(card)

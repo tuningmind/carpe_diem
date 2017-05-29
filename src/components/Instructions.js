@@ -10,7 +10,7 @@ class Instructions extends Component {
                      'Clubs give -1 energy points.',
                      'Spades give -3 energy points.'].map((elem, i) => (<div key={i}>{elem}</div>))
     const dollars = ['Numbered cards give you their number in dollar points.', 
-                     'Face cards cost 5 dollars to choose.'].map((elem, i) => (<div key={i}>{elem}</div>))
+                     'Face cards and Aces cost 5 dollars to choose.'].map((elem, i) => (<div key={i}>{elem}</div>))
     const victory = ['Face cards give victory points.', 
                      'Victory points are changed directly to dollars at the end of the game and are not playable during the game.',
                      'Jack gives 10 victory points.', 
