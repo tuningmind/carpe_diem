@@ -17,20 +17,24 @@ describe('Card', () => {
         classnames: []
       },
       makeHand: jest.fn(),
-      showMessage: jest.fn()
+      showMessage: jest.fn(),
+      isPlayableCard: jest.fn()
     }
   })
 
-  it('removes four cards from deck and creates new hand of four cards', () => {
+  it('removes four cards from deck \
+      and creates new hand of four cards', () => {
     const card = setup()
     // const hand = card.prop('onClick')()
     const hand = card.simulate('click')
-    expect(props.makeHand).toHaveBeenCalledWith(props.gamestate.unused)
+    expect(props.makeHand)
+      .toHaveBeenCalledWith(props.gamestate.unused)
   })
 
   it('does not apply unplayable card', () => {
     const card = setup()
     const hand = card.simulate('click')
-    expect(props.isPlayableCard(card)).toHaveBeenCalledWith(props.card)
+    expect(props.isPlayableCard(props.card))
+      .toHaveBeenCalledWith(props.card)
   })
 })
