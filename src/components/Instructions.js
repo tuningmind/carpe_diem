@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 class Instructions extends Component {
 
   render () {
+    const days = [   'You have thirteen days to play.', 
+                     'Each day consumes 1 energy and 4 dollars in addition to other points.'].map((elem, i) => (<div key={i}>{elem}</div>))
     const energy = [ 'Hearts give +1 energy points.', 
                      'Diamonds give 0 energy points.',
                      'Clubs give -1 energy points.',
@@ -21,9 +23,11 @@ class Instructions extends Component {
                      'Card 3 consumes 3 time units.', 
                      'Card 4 consumes 4 time units.', 
                      'That leaves you at least one time unit left over each day, and you may freelance (trade time for money) or recuperate (trade time for energy).'].map((elem, i) => (<div key={i}>{elem}</div>))
-    const days = [   'You have thirteen days to play.', 
-                     'Each day consumes 1 energy and 4 dollars in addition to other points.'].map((elem, i) => (<div key={i}>{elem}</div>))
     const instructionElement = [
+      {
+        name: "days",
+        inst: days
+      },
       {
         name: "energy",
         inst: energy
@@ -39,10 +43,6 @@ class Instructions extends Component {
       {
         name: "time",
         inst: time
-      },
-      {
-        name: "days",
-        inst: days
       }
     ].map((element, i) =>
       (
