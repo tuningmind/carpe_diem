@@ -27,8 +27,8 @@ describe('App', () => {
   it('removes four cards from the deck onclick', () => {
     const app = setup()
     const unused = app.state('unused')
-    const gameboard = app.find('Gameboard')
-    const hand = gameboard.prop('makeHand')(unused)
+    const Hand = app.find('Hand')
+    const hand = Hand.prop('makeHand')(unused)
     expect(hand.length).toBe(4)
   })
 
@@ -38,8 +38,8 @@ describe('App', () => {
       energy: 1
     }
     const startingEnergy = app.state('energy')
-    const gameboard = app.find('Gameboard')
-    gameboard.prop('applyCard')(card)
+    const hand = app.find('Hand')
+    hand.prop('applyCard')(card)
     const endingEnergy = app.state('energy')
     expect(endingEnergy).toBe(startingEnergy + card.energy)
   })

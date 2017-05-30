@@ -11,13 +11,13 @@ class Card extends Component {
   setTired(card) {
     if (this.props.gamestate.energy + card.energy -1 < 0) {
       card.tired = true
-    }
+    } else {card.tired = false}
   }
 
   setNsf(card) {
     if (this.props.gamestate.dollars + card.dollars -1 < 0) {
       card.nsf = true
-    }
+    } else {card.tired = false}
   }
 
   playCard = (card) => {
@@ -50,12 +50,14 @@ class Card extends Component {
           onClick={
             () => {
               this.props.showMessage('')
+              this.setTired(card)
+              this.setNsf(card)
               if (this.props.isPlayableCard(card)) {
                 this.playCard(card)
               } else {
                 if (!this.props.gamestate.playableHand) {
+                  console.log("!this.props.gamestate.playableHand", !this.props.gamestate.playableHand)
                   this.unplayableMessage(card)
-                  this.props.makeHand(this.props.gamestate.unused)
                 } else {
                   this.setTired(card)
                   this.setNsf(card)

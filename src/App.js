@@ -26,14 +26,19 @@ class App extends Component {
     this.isPlayableCard = this.isPlayableCard.bind(this)
   }
 
-  applyCard(card) {
-    let newTotals = {
+  showProspectivePoints(card) {
+    let prospectivePoints = {
       energy: this.state.energy + card.energy - 1,
       dollars: this.state.dollars + card.dollars - 4,
       time: 4 - this.state.hand.indexOf(card),
       day: this.state.day - 1,
       victory: this.state.victory + card.victory,
     }
+    return prospectivePoints 
+  }
+
+  applyCard(card) {
+    let newTotals = this.showProspectivePoints(card)
     this.setState(newTotals)
   }
 
@@ -117,6 +122,7 @@ class App extends Component {
               applyCard={this.applyCard.bind(this)}
               showMessage={this.showMessage.bind(this)}
               isPlayableCard={this.isPlayableCard}
+              showProspectivePoints={this.showProspectivePoints}
             />
           </div>
           <div id="msg">
