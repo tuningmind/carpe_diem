@@ -41,7 +41,7 @@ describe('App', () => {
     const hand = app.find('Hand')
     hand.prop('applyCard')(card)
     const endingEnergy = app.state('energy')
-    expect(endingEnergy).toBe(startingEnergy + card.energy)
+    expect(endingEnergy).toBe(startingEnergy + card.energy - 1)
   })
 
 })

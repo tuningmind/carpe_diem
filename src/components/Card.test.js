@@ -25,7 +25,7 @@ describe('Card', () => {
   it('removes four cards from deck \
       and creates new hand of four cards', () => {
     const card = setup()
-    // const hand = card.prop('onClick')()
+    props.isPlayableCard.mockReturnValue(true)
     const hand = card.simulate('click')
     expect(props.makeHand)
       .toHaveBeenCalledWith(props.gamestate.unused)
@@ -33,8 +33,9 @@ describe('Card', () => {
 
   it('does not apply unplayable card', () => {
     const card = setup()
+    props.isPlayableCard.mockReturnValue(false)
     const hand = card.simulate('click')
-    expect(props.isPlayableCard(props.card))
-      .toHaveBeenCalledWith(props.card)
+    expect(props.applyCard)
+      .not.toHaveBeenCalled()
   })
 })
