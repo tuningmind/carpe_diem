@@ -61,6 +61,7 @@ class App extends Component {
     // return false only if no cards are playable
     let playable = hand.some(this.isPlayableCard)
     this.setState({playableHand: playable})
+    return playable
   }
 
   makeHand(deck) {

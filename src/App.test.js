@@ -9,7 +9,6 @@ describe('App', () => {
 
   beforeEach(() => {
     props = {
-
     }
   })
 
@@ -42,6 +41,14 @@ describe('App', () => {
     hand.prop('applyCard')(card)
     const endingEnergy = app.state('energy')
     expect(endingEnergy).toBe(startingEnergy + card.energy - 1)
+  })
+
+  it('sets playableHand to true if any card in a hand is playable', () => {
+    const app = setup()
+    const hand = [false, false, true, false]
+    app.prop('setHandPlayability')(hand)
+    expect(setHandPlayability(hand)).toBe(true)
+    
   })
 
 })
