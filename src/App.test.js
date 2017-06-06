@@ -46,8 +46,7 @@ describe('App', () => {
   it('sets playableHand to true if any card in a hand is playable', () => {
     const app = setup()
     const hand = [false, false, true, false]
-    app.prop('setHandPlayability')(hand)
-    expect(setHandPlayability(hand)).toBe(true)
+    expect(app.setHandPlayability(hand)).toBe(true)
     
   })
 

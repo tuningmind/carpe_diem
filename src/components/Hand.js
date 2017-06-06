@@ -17,6 +17,7 @@ class Hand extends Component {
             showMessage={this.props.showMessage}
             isPlayableCard={this.props.isPlayableCard}
             showProspectivePoints={this.props.showProspectivePoints}
+            setCurrentCard={this.props.setCurrentCard}
           />
         )
       }

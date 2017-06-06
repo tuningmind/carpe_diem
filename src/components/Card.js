@@ -9,23 +9,23 @@ class Card extends Component {
   }
   
   setTired(card) {
-    if (this.props.gamestate.energy + card.energy -1 < 0) {
+    if (this.props.gamestate.energy + card.energy - 1 < 0) {
       card.tired = true
     } else {card.tired = false}
   }
 
   setNsf(card) {
-    if (this.props.gamestate.dollars + card.dollars -1 < 0) {
+    if (this.props.gamestate.dollars + card.dollars - 4 < 0) {
       card.nsf = true
-    } else {card.tired = false}
+    } else {card.nsf = false}
   }
 
-  playCard = (card) => {
+  playCard(card) {
     this.props.applyCard(card)
     this.props.makeHand(this.props.gamestate.unused)
   }
 
-  unplayableMessage = (card) => {
+  unplayableMessage(card) {
     let msg
     if (this.props.gamestate.playableHand === false) {
       msg = "None of these cards are playable. Click any card to get the next hand."
@@ -39,8 +39,25 @@ class Card extends Component {
     else if (card.tired) {
       msg = "This card is not playable because energy is too low"
     }
+    else {
+      msg = ''
+    }
     this.props.showMessage(msg)
   }
+
+  handleClick(card) {
+    this.setTired(card)
+    this.setNsf(card)
+    this.unplayableMessage(card)
+
+    if (this.props.isPlayableCard(card)) {
+      this.playCard(card)
+    } 
+    else if (!this.props.gamestate.playableHand) {
+      this.props.makeHand(this.props.gamestate.unused)
+    } 
+  }
+
 
   render() {
     let card = this.props.card
@@ -49,21 +66,8 @@ class Card extends Component {
         <div className="card"
           onClick={
             () => {
-              this.props.showMessage('')
-              this.setTired(card)
-              this.setNsf(card)
-              if (this.props.isPlayableCard(card)) {
-                this.playCard(card)
-              } else {
-                if (!this.props.gamestate.playableHand) {
-                  console.log("!this.props.gamestate.playableHand", !this.props.gamestate.playableHand)
-                  this.unplayableMessage(card)
-                } else {
-                  this.setTired(card)
-                  this.setNsf(card)
-                  this.unplayableMessage(card)
-                }
-              }
+              this.props.setCurrentCard(card)
+              this.handleClick(card)
             }
           }
         >
