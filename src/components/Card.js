@@ -27,6 +27,9 @@ class Card extends Component {
 
   unplayableMessage(card) {
     let msg
+    if (this.props.gamestate.unused.length === 0) {
+      msg = "Game over"
+    }
     if (this.props.gamestate.playableHand === false) {
       msg = "None of these cards are playable. Click any card to get the next hand."
     }
