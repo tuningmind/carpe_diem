@@ -18,6 +18,7 @@ class Hand extends Component {
             isPlayableCard={this.props.isPlayableCard}
             showProspectivePoints={this.props.showProspectivePoints}
             setCurrentCard={this.props.setCurrentCard}
+            setHandPlayability={this.props.setHandPlayability}
           />
         )
       }

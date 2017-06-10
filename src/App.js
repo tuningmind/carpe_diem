@@ -22,13 +22,13 @@ class App extends Component {
       victory: 0,
       msg: 'Seize the card',
       playableHand: true,
-      currentCard: ''
+      card: ''
     }
     this.isPlayableCard = this.isPlayableCard.bind(this)
   }
 
   setCurrentCard(card) {
-    this.setState({currentCard: card.corner + card.suit})
+    this.setState({card: card.corner + card.suit})
   }
 
   showProspectivePoints(card) {
@@ -48,13 +48,10 @@ class App extends Component {
   }
 
   isPlayableCard(card) {
-    if ((this.state.energy + card.energy - 1 < 0) && (this.state.dollars + card.dollars -4 < 0)) {
+    if (this.state.dollars + card.dollars - 4 < 0) {
       return false
     }
-    else if (this.state.dollars + card.dollars - 4 < 0) {
-      return false
-    }
-    else if (this.state.energy + card.energy -1 < 0) {
+    else if (this.state.energy + card.energy - 1 < 0) {
       return false
     }
     else {
@@ -66,18 +63,18 @@ class App extends Component {
     // return false only if no cards are playable
     let playable = hand.some(this.isPlayableCard)
     this.setState({playableHand: playable})
-    return playable
   }
 
   makeHand(deck) {
     let handNumbers = deck.slice(-4)
     let handArray = handNumbers.map((num) => Cards[num]) 
     let unused = deck.slice(0, deck.length -4)
-    this.setHandPlayability(handArray)
     this.setState({
       hand: handArray,
-      unused: unused
+      unused: unused,
+      msg: 'Seize the card'
     })
+    this.setHandPlayability(handArray)
     return handArray
   }
 
@@ -130,6 +127,7 @@ class App extends Component {
               isPlayableCard={this.isPlayableCard}
               showProspectivePoints={this.showProspectivePoints}
               setCurrentCard={this.setCurrentCard.bind(this)}
+              setHandPlayability={this.setHandPlayability.bind(this)}
             />
           </div>
           <div id="msg">

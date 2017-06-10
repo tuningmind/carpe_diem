@@ -27,7 +27,7 @@ class Card extends Component {
 
   unplayableMessage(card) {
     let msg
-    if (this.props.gamestate.unused.length === 0) {
+    if (this.props.gamestate.unused.length === 4) {
       msg = "Game over"
     }
     if (this.props.gamestate.playableHand === false) {
@@ -43,21 +43,24 @@ class Card extends Component {
       msg = "This card is not playable because energy is too low"
     }
     else {
-      msg = ''
+      msg = 'Seize the card'
     }
     this.props.showMessage(msg)
   }
 
   handleClick(card) {
+    this.props.setCurrentCard(card)
     this.setTired(card)
     this.setNsf(card)
     this.unplayableMessage(card)
+    this.props.setHandPlayability(this.props.gamestate.hand)
 
-    if (this.props.isPlayableCard(card)) {
-      this.playCard(card)
-    } 
-    else if (!this.props.gamestate.playableHand) {
+    if (!this.props.gamestate.playableHand) {
       this.props.makeHand(this.props.gamestate.unused)
+    } 
+    else if (this.props.isPlayableCard(card)) {
+      this.props.makeHand(this.props.gamestate.unused)
+      this.props.applyCard(card)
     } 
   }
 
@@ -69,7 +72,6 @@ class Card extends Component {
         <div className="card"
           onClick={
             () => {
-              this.props.setCurrentCard(card)
               this.handleClick(card)
             }
           }
