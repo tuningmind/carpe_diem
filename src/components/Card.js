@@ -64,17 +64,27 @@ class Card extends Component {
     } 
   }
 
+  handleMouseOver(card) {
+    const prospectivePoints = {
+      energy: this.props.gamestate.energy + card.energy - 1,
+      dollars: this.props.gamestate.dollars + card.dollars - 4,
+      time: 4 - this.props.gamestate.hand.indexOf(card),
+      day: this.props.gamestate.day - 1,
+      victory: this.props.gamestate.victory + card.victory,
+    }
+    this.props.showMessage(
+      "This would result in " + prospectivePoints.energy + " energy, " + prospectivePoints.dollars + " dollars"
+    )
+  }
+
 
   render() {
     let card = this.props.card
 
     return (
-        <div className="card"
-          onClick={
-            () => {
-              this.handleClick(card)
-            }
-          }
+        <div className='card'
+          onMouseOver={ () => {this.handleMouseOver(card)}}
+          onClick={ () => {this.handleClick(card)}}
         >
           <div className={card.color}>
             {card.corner}

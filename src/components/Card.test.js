@@ -18,24 +18,34 @@ describe('Card', () => {
       },
       makeHand: jest.fn(),
       showMessage: jest.fn(),
-      isPlayableCard: jest.fn()
+      isPlayableCard: jest.fn(),
+      setCurrentCard: jest.fn(),
+      setHandPlayability: jest.fn()
     }
   })
 
-  it('removes four cards from deck \
-      and creates new hand of four cards', () => {
+  it('runs', () => {
+  })
+
+  it('removes four cards from deck and creates new hand of four cards', () => {
     const card = setup()
     props.isPlayableCard.mockReturnValue(true)
-    const hand = card.simulate('click')
-    expect(props.makeHand)
-      .toHaveBeenCalledWith(props.gamestate.unused)
+    card.simulate('click')
+    expect(props.makeHand).toHaveBeenCalledWith(props.gamestate.unused)
   })
 
   it('does not apply unplayable card', () => {
     const card = setup()
     props.isPlayableCard.mockReturnValue(false)
-    const hand = card.simulate('click')
-    expect(props.applyCard)
-      .not.toHaveBeenCalled()
+    card.simulate('click')
+    expect(props.applyCard).not.toHaveBeenCalled()
+  })
+
+  it('', () => {
+    props.card.corner = 'A'
+    props.card.suit = '♦'
+    const card = setup()
+    card.simulate('click')
+    //expect(props.gamestate.card).toEqual('A♦')
   })
 })

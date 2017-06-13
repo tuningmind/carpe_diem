@@ -52,4 +52,12 @@ describe('App', () => {
     expect(playableHand).toBe(true)
   })
 
+  it('sets playableHand to false if no card in a hand is playable', () => {
+    const app = setup()
+    const setHandPlayability = app.find('Hand').prop('setHandPlayability')
+    const hand = [false, false, false, false]
+    setHandPlayability(hand)
+    const playableHand = app.state('playableHand')
+    expect(playableHand).toBe(true)
+  })
 })
