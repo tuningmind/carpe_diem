@@ -15,9 +15,6 @@ h1, h2, h3, h4, h5 {
 
 div #myapp {
   min-height: 100vh;
-  background-color: #2d3d14;
-  background-color: darkolivegreen;
-  background-color: #465927;
   background-color: #2a3517;
   color: white;
   font-size: 18px;
@@ -81,7 +78,7 @@ img {
   font-size: .9em;
   box-shadow: inset 1px 3px 6px 1px gray;
   background-color: lightgray;
-  color: gray;
+  color: #303030;
   height: 1.45em;
   border-radius: 5px;
   padding-top: .4em;
@@ -101,7 +98,7 @@ img {
   background: rgba(0, 0, 0, 0.75); }
 
 .card {
-  box-shadow: 1px 2px 6px 2px dimgray;
+  box-shadow: 1px 2px 6px 2px #303030;
   position: relative;
   color: black;
   width: 4.15em;
@@ -117,7 +114,8 @@ img {
   height: 1.5em;
   font-size: 1.5em;
   padding: .25em .4em;
-  color: gray;
+  background-color: lightgray;
+  color: #303030;
   border-radius: 5px; }
 
 #newHand:hover {
@@ -278,20 +276,14 @@ footer {
   left: 0.20em;
   top: 0.20em; }
 
-@media screen and (max-width: 900px) {
-  div #myapp {
-    background-color: goldenrod; } }
-
 @media screen and (max-width: 800px) {
   div #myapp {
-    background-color: olive;
     min-height: 100vh; }
   #footer {
     flex-direction: column; } }
 
 @media screen and (max-width: 700px) {
   div #myapp {
-    background-color: darkorange;
     min-height: 100vh;
     font-size: 0.9em; }
   #footer {
@@ -299,7 +291,6 @@ footer {
 
 @media screen and (max-width: 600px) {
   div #myapp {
-    background-color: crimson;
     min-height: 100vh;
     font-size: 0.8em; }
   #footer {
@@ -308,7 +299,6 @@ footer {
 @media screen and (max-width: 500px) {
   div #myapp {
     min-height: 100vh;
-    background-color: purple;
     font-size: 0.6em; }
   #footer {
     flex-direction: column; } }
@@ -316,8 +306,7 @@ footer {
 @media screen and (max-width: 400px) {
   div #myapp {
     font-size: 0.6em;
-    min-height: 100vh;
-    background-color: cornflowerblue; }
+    min-height: 100vh; }
   #gameboard {
     flex-direction: column; }
   #display {
@@ -329,8 +318,7 @@ footer {
 @media screen and (max-width: 300px) {
   div #myapp {
     font-size: 0.5em;
-    min-height: 100vh;
-    background-color: cornflowerblue; }
+    min-height: 100vh; }
   #gameboard {
     flex-direction: column; }
   #display {
