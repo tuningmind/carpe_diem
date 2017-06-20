@@ -25,7 +25,7 @@ class Instructions extends Component {
                      'That leaves you at least one time unit left over each day, and you may freelance (trade time for money) or recuperate (trade time for energy).'].map((elem, i) => (<div key={i}>{elem}</div>))
     const instructionElement = [
       { name: "playability",
-        inst: 'Cards that would result in energy or dollars being zero or above are playable'
+        inst: 'Cards are playable when they result in energy or dollars being zero or above.'
       },
       {
         name: "days",

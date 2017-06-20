@@ -87,6 +87,7 @@ img {
 }
 #hand {
   display: flex;
+  margin-left: 2px;
 }
 #msg {
   width: 30em;
@@ -106,6 +107,7 @@ img {
   height: 5.3em;
   border-radius: 5px;
   background-color: white;
+  padding: 1px;
   }
 .card div {
   flex: 0 0 25%;
@@ -282,6 +284,7 @@ footer {
   #display {
     width: 16.5em;
     text-align: center;
+    margin-bottom: 2px;
   }
   #footer {
     flex-direction: column;
