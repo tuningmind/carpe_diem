@@ -71,19 +71,21 @@ img {
 #display {
   width:  4.15em;
   height: 5.30em;
-  box-shadow: 1px 2px 3px 2px #e0e4e8;
   border-radius: 5px;
-  background-color: lightgray;
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: right;
   p {
     font-size: .9em;
-    box-shadow: inset 3px 2px 4px 0px gray;
+    box-shadow: inset 1px 3px 6px 1px gray;
     background-color: lightgray;
     color: gray;
-    padding-right: 0.4em;
-    padding-top: 0.25em;
-    height: 1.35em;
+    height: 1.45em;
     border-radius: 5px;
+    padding-top: .4em;
+    padding-right: .2em;
   }
 }
 #hand {
@@ -100,14 +102,13 @@ img {
   background:rgba(0,0,0,.75);
 }
 .card {
-  box-shadow: 1px 2px 3px 2px #e0e4e8;
+  box-shadow: 1px 2px 6px 2px dimgray;
   position: relative;
   color: black;
   width:  4.15em;
   height: 5.3em;
   border-radius: 5px;
   background-color: white;
-  border: 1px solid #909090;
   }
 .card div {
   flex: 0 0 25%;
@@ -115,7 +116,7 @@ img {
 #newHand {
   width: 5.15em;
   height: 1.5em;
-  font-size: 2em;
+  font-size: 1.5em;
   padding: .25em .4em;
   color: gray;
   border-radius: 5px;
@@ -217,26 +218,25 @@ footer {
   left: 0.20em;
   top:  0.20em;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 900px) {
   div #myapp {
-    font-size: 0.7em;
-    background-color: cornflowerblue;
+    background-color: goldenrod;
   }
-  #gameboard {
-    font-size: 0.7em;
+}
+@media screen and (max-width: 800px) {
+  div #myapp {
+    background-color: olive;
+    min-height: 100vh;
   }
   #footer {
     flex-direction: column;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   div #myapp {
+    background-color: darkorange;
     min-height: 100vh;
-    background-color: purple;
-    font-size: 0.7em;
-  }
-  #gameboard {
-    font-size: 0.7em;
+    font-size: 0.9em;
   }
   #footer {
     flex-direction: column;
@@ -246,42 +246,53 @@ footer {
   div #myapp {
     background-color: crimson;
     min-height: 100vh;
-    font-size: 0.7em;
-  }
-  #gameboard {
-    font-size: 0.7em;
+    font-size: 0.8em;
   }
   #footer {
     flex-direction: column;
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 500px) {
   div #myapp {
-    background-color: darkorange;
-  }
-  #gameboard {
-    font-size: 1.2em;
+    min-height: 100vh;
+    background-color: purple;
+    font-size: 0.6em;
   }
   #footer {
     flex-direction: column;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 400px) {
   div #myapp {
-    background-color: olive;
+    font-size: 0.6em;
+    min-height: 100vh;
+    background-color: cornflowerblue;
   }
   #gameboard {
-    font-size: 1.4em;
+    flex-direction: column;
+  }
+  #display {
+    width: 16.5em;
+    text-align: center;
   }
   #footer {
     flex-direction: column;
   }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 300px) {
   div #myapp {
-    background-color: goldenrod;
+    font-size: 0.5em;
+    min-height: 100vh;
+    background-color: cornflowerblue;
   }
   #gameboard {
-    font-size: 1.6em;
+    flex-direction: column;
+  }
+  #display {
+    width: 16.5em;
+    text-align: center;
+  }
+  #footer {
+    flex-direction: column;
   }
 }
