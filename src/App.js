@@ -7,6 +7,7 @@ import Hand from './components/Hand'
 import Cards from './components/Cards'
 import Instructions from './components/Instructions'
 import Footer from './components/Footer'
+import NewHandButton from './components/NewHandButton'
 
 class App extends Component {
 
@@ -121,7 +122,6 @@ class App extends Component {
             <Display gamestate={this.state} />
             <Hand 
               gamestate={this.state}
-              makeHand={this.makeHand.bind(this)}
               applyCard={this.applyCard.bind(this)}
               showMessage={this.showMessage.bind(this)}
               isPlayableCard={this.isPlayableCard}
@@ -132,6 +132,12 @@ class App extends Component {
           </div>
           <div id="msg">
             {this.state.msg}
+          </div>
+          <div id="newHand">
+            <NewHandButton 
+              makeHand={this.makeHand.bind(this)}
+              unused={this.state.unused}
+            />            
           </div>
           <Instructions />
         </main>
