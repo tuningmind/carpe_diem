@@ -111,6 +111,23 @@ img {
 .card div {
   flex: 0 0 25%; }
 
+#newHand {
+  width: 5.15em;
+  height: 1.5em;
+  font-size: 2em;
+  padding: .25em .4em;
+  color: gray;
+  border-radius: 5px; }
+
+#newHand:hover {
+  background: ivory; }
+
+#newHand:active {
+  background: mistyrose; }
+
+#newHand:focus {
+  outline: none; }
+
 #instructions {
   width: 30em;
   display: flex;

@@ -133,7 +133,7 @@ class App extends Component {
           <div id="msg">
             {this.state.msg}
           </div>
-          <div id="newHand">
+          <div>
             <NewHandButton 
               makeHand={this.makeHand.bind(this)}
               unused={this.state.unused}
