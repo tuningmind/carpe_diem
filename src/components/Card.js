@@ -55,11 +55,10 @@ class Card extends Component {
     this.props.setHandPlayability(this.props.gamestate.hand)
 
     if (!this.props.gamestate.playableHand) {
-      this.props.makeHand(this.props.gamestate.unused)
+      this.props.showMessage("This hand has no playable cards")
     } 
     else if (this.props.isPlayableCard(this.props.gamestate.card)) {
       this.props.applyCard(card)
-      this.props.makeHand(this.props.gamestate.unused)
     } 
   }
 
