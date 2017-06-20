@@ -22,13 +22,13 @@ class App extends Component {
       victory: 0,
       msg: 'Seize the card',
       playableHand: true,
-      card: ''
+      card: {} 
     }
     this.isPlayableCard = this.isPlayableCard.bind(this)
   }
 
   setCurrentCard(card) {
-    this.setState({card: card.corner + card.suit})
+    this.setState({card: card})
   }
 
   showProspectivePoints(card) {

@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 class Card extends Component {
   constructor() {
     super()
-    this.playCard = this.playCard.bind(this)
     this.setTired = this.setTired.bind(this)
     this.setNsf = this.setNsf.bind(this)
   }
@@ -20,9 +19,8 @@ class Card extends Component {
     } else {card.nsf = false}
   }
 
-  playCard(card) {
-    this.props.applyCard(card)
-    this.props.makeHand(this.props.gamestate.unused)
+  setPlayableCard(card) {
+    card.playable = this.props.isPlayableCard(card)
   }
 
   unplayableMessage(card) {
@@ -49,18 +47,19 @@ class Card extends Component {
   }
 
   handleClick(card) {
-    this.props.setCurrentCard(card)
     this.setTired(card)
     this.setNsf(card)
+    this.setPlayableCard(card)
+    this.props.setCurrentCard(card)
     this.unplayableMessage(card)
     this.props.setHandPlayability(this.props.gamestate.hand)
 
     if (!this.props.gamestate.playableHand) {
       this.props.makeHand(this.props.gamestate.unused)
     } 
-    else if (this.props.isPlayableCard(card)) {
-      this.props.makeHand(this.props.gamestate.unused)
+    else if (this.props.isPlayableCard(this.props.gamestate.card)) {
       this.props.applyCard(card)
+      this.props.makeHand(this.props.gamestate.unused)
     } 
   }
 
@@ -77,14 +76,15 @@ class Card extends Component {
     )
   }
 
-
   render() {
     let card = this.props.card
 
     return (
         <div className='card'
           onMouseOver={ () => {this.handleMouseOver(card)}}
-          onClick={ () => {this.handleClick(card)}}
+          onClick={ () => {
+            console.log("gamestate: ", this.props.gamestate)
+            this.handleClick(card)}}
         >
           <div className={card.color}>
             {card.corner}
