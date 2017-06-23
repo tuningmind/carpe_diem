@@ -147,7 +147,7 @@ class App extends Component {
           </div>
           <div>
             <NewHandButton 
-              showMessage={this.showMessage}
+              setMessage={this.setMessage.bind(this)}
               makeHand={this.makeHand.bind(this)}
               setHandPlayability={this.setHandPlayability.bind(this)}
               gamestate={this.state}
