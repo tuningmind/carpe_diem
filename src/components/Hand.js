@@ -14,10 +14,11 @@ class Hand extends Component {
             card={card}
             applyCard={this.props.applyCard}
             makeHand={this.props.makeHand}
-            showMessage={this.props.showMessage}
+            setMessage={this.props.setMessage}
             isPlayableCard={this.props.isPlayableCard}
             showProspectivePoints={this.props.showProspectivePoints}
             setCurrentCard={this.props.setCurrentCard}
+            checkHandPlayability={this.props.checkHandPlayability}
             setHandPlayability={this.props.setHandPlayability}
           />
         )

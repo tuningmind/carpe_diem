@@ -14,15 +14,17 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      unused: this.shuffledeck(),
+      unused: [],
+      used: [],
       hand: [],
       energy: 3,
       dollars: 8,
       time: 5,
-      day: 13,
+      day: 0,
       victory: 0,
-      msg: 'Seize the card',
+      msg: '',
       playableHand: true,
+      gameover: false,
       card: {} 
     }
     this.isPlayableCard = this.isPlayableCard.bind(this)
@@ -37,15 +39,56 @@ class App extends Component {
       energy: this.state.energy + card.energy - 1,
       dollars: this.state.dollars + card.dollars - 4,
       time: 4 - this.state.hand.indexOf(card),
-      day: this.state.day - 1,
+      day: this.state.day + 1,
       victory: this.state.victory + card.victory,
     }
     return prospectivePoints 
   }
 
   applyCard(card) {
-    let newTotals = this.showProspectivePoints(card)
+    const newTotals = this.showProspectivePoints(card)
     this.setState(newTotals)
+  }
+
+  setGameover() {
+    this.setState({gameover: true})
+  }
+
+  checkHandPlayability(hand) {
+    // return false only if no cards are playable
+    return (hand.some(this.isPlayableCard) && this.state.playableHand)
+  }
+
+  setHandPlayability(playable) {
+    this.setState({playableHand: playable})
+  }
+
+  setMessage(msg) {
+    this.setState({msg: msg})
+  }
+
+  makeHand(deck) {
+    const handNumbers = deck.slice(-4)
+    const handArray = handNumbers.map((num) => Cards[num]) 
+    const unused = deck.slice(0, deck.length -4)
+
+    this.setState({
+      hand: handArray,
+      unused: unused,
+      day: this.state.day + 1,
+      msg: 'Seize the card'
+    })
+    const playable = this.checkHandPlayability(handArray)
+    this.setHandPlayability(playable)
+    return handArray
+  }
+
+  componentDidMount() {
+    const unused = this.shuffledeck()
+    this.setState({
+      hand: this.makeHand(unused),
+      unused: unused
+    })
   }
 
   isPlayableCard(card) {
@@ -58,35 +101,6 @@ class App extends Component {
     else {
       return true
     }
-  }
-
-  setHandPlayability(hand) {
-    // return false only if no cards are playable
-    let playable = hand.some(this.isPlayableCard)
-    this.setState({playableHand: playable})
-  }
-
-  makeHand(deck) {
-    let handNumbers = deck.slice(-4)
-    let handArray = handNumbers.map((num) => Cards[num]) 
-    let unused = deck.slice(0, deck.length -4)
-    this.setState({
-      hand: handArray,
-      unused: unused,
-      msg: 'Seize the card'
-    })
-    this.setHandPlayability(handArray)
-    return handArray
-  }
-
-  componentDidMount() {
-    this.setState({
-      hand: this.makeHand(this.state.unused)
-    })
-  }
-
-  showMessage(msg) {
-    this.setState({msg: msg})
   }
 
   shuffledeck() {
@@ -123,10 +137,11 @@ class App extends Component {
             <Hand 
               gamestate={this.state}
               applyCard={this.applyCard.bind(this)}
-              showMessage={this.showMessage.bind(this)}
+              setMessage={this.setMessage.bind(this)}
               isPlayableCard={this.isPlayableCard}
-              showProspectivePoints={this.showProspectivePoints}
+              showProspectivePoints={this.showProspectivePoints.bind(this)}
               setCurrentCard={this.setCurrentCard.bind(this)}
+              checkHandPlayability={this.checkHandPlayability.bind(this)}
               setHandPlayability={this.setHandPlayability.bind(this)}
             />
           </div>
@@ -135,8 +150,9 @@ class App extends Component {
           </div>
           <div>
             <NewHandButton 
+              showMessage={this.showMessage}
               makeHand={this.makeHand.bind(this)}
-              unused={this.state.unused}
+              gamestate={this.state}
             />            
           </div>
           <Instructions />

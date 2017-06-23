@@ -25,11 +25,8 @@ class Card extends Component {
 
   unplayableMessage(card) {
     let msg
-    if (this.props.gamestate.unused.length === 4) {
-      msg = "Game over"
-    }
     if (this.props.gamestate.playableHand === false) {
-      msg = "None of these cards are playable. Click any card to get the next hand."
+      msg = "None of these cards are playable."
     }
     else if (card.tired && card.nsf) {
       msg = "This card is not playable because energy and dollars are too low" 
@@ -43,35 +40,30 @@ class Card extends Component {
     else {
       msg = 'Seize the card'
     }
-    this.props.showMessage(msg)
+    this.props.setMessage(msg)
   }
 
   handleClick(card) {
-    this.setTired(card)
-    this.setNsf(card)
-    this.setPlayableCard(card)
-    this.props.setCurrentCard(card)
-    this.unplayableMessage(card)
-    this.props.setHandPlayability(this.props.gamestate.hand)
+    if (this.props.checkHandPlayability(this.props.gamestate.hand)) {
+      this.props.setMessage('')
+      this.setTired(card)
+      this.setNsf(card)
+      this.setPlayableCard(card)
+      this.props.setCurrentCard(card)
 
-    if (!this.props.gamestate.playableHand) {
-      this.props.showMessage("This hand has no playable cards")
-    } 
-    else if (this.props.isPlayableCard(this.props.gamestate.card)) {
-      this.props.applyCard(card)
-    } 
+      if (this.props.isPlayableCard(card)) {
+        this.props.applyCard(card)
+        this.props.setHandPlayability(false)
+      } else {this.unplayableMessage(card)}
+    }
   }
 
   handleMouseOver(card) {
-    const prospectivePoints = {
-      energy: this.props.gamestate.energy + card.energy - 1,
-      dollars: this.props.gamestate.dollars + card.dollars - 4,
-      time: 4 - this.props.gamestate.hand.indexOf(card),
-      day: this.props.gamestate.day - 1,
-      victory: this.props.gamestate.victory + card.victory,
-    }
-    this.props.showMessage(
-      "This would result in " + prospectivePoints.energy + " energy, " + prospectivePoints.dollars + " dollars"
+    const prospectivePoints = this.props.showProspectivePoints(card)
+    this.props.setMessage(
+      "This would result in " + prospectivePoints.energy + " energy, " 
+      + prospectivePoints.dollars + " dollars, and " 
+      + prospectivePoints.victory + " victory points"
     )
   }
 
@@ -81,9 +73,8 @@ class Card extends Component {
     return (
         <div className='card'
           onMouseOver={ () => {this.handleMouseOver(card)}}
-          onClick={ () => {
-            console.log("gamestate: ", this.props.gamestate)
-            this.handleClick(card)}}
+          onClick={ () => {this.handleClick(card)}}
+          onMouseLeave={ () => {this.props.setMessage('')}}
         >
           <div className={card.color}>
             {card.corner}

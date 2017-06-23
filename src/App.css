@@ -84,6 +84,9 @@ img {
   padding-top: .4em;
   padding-right: .2em; }
 
+#display-final {
+  width: 16.5em; }
+
 #hand {
   display: flex;
   margin-left: 2px; }
