@@ -7,6 +7,7 @@ class NewHand extends Component {
       this.props.makeHand(this.props.gamestate.unused) 
     } else {
       this.props.setMessage('Game Over')
+      this.props.setGameover()
     }
   }
 

@@ -87,13 +87,30 @@ img {
 }
 #display-final {
   width: 16.5em;
+  height: 5.30em;
+  border-radius: 5px;
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  p {
+    font-size: .9em;
+    box-shadow: inset 1px 3px 6px 1px gray;
+    background-color: lightgray;
+    color: #303030;
+    height: 1.45em;
+    border-radius: 5px;
+    padding-top: .4em;
+    padding-right: .2em;
+  }
 }
 #hand {
   display: flex;
   margin-left: 2px;
 }
 #msg {
-  width: 30em;
+  width: 100%;
   text-align: center;
   font-size: 2em;
   min-height: 2em;

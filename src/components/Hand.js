@@ -25,9 +25,11 @@ class Hand extends Component {
     )
 
     return (
-      <div id="hand">
-        {cardJsx}  
-      </div>
+      this.props.gamestate.gameover 
+      ? 
+        <div id="hand"></div>
+      :
+        <div id="hand"> {cardJsx} </div>
     )
   }
 }

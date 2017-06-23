@@ -9,7 +9,8 @@ class Display extends Component {
       gamestate.gameover 
         ?
       ( 
-        <div id="display display-final">
+        <div id="display-final">
+          <p>Final total:</p>
           <p id="dollars">{gamestate.dollars + gamestate.victory} dollars</p>
         </div>
       )
