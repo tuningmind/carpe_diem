@@ -3,9 +3,10 @@ import React, { Component } from 'react'
 class NewHand extends Component {
 
   clickHandler() {
-    if (this.props.gamestate.unused) {
+    if (this.props.gamestate.unused.length) {
       this.props.makeHand(this.props.gamestate.unused) 
-    } else {
+      this.props.setHandPlayability(true)
+    } else if (!this.props.gamestate.unused.length) {
       this.props.setMessage('Game Over')
     }
   }

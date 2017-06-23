@@ -37,9 +37,6 @@ class Card extends Component {
     else if (card.tired) {
       msg = "This card is not playable because energy is too low"
     }
-    else {
-      msg = 'Seize the card'
-    }
     this.props.setMessage(msg)
   }
 
@@ -55,16 +52,18 @@ class Card extends Component {
         this.props.applyCard(card)
         this.props.setHandPlayability(false)
       } else {this.unplayableMessage(card)}
-    }
+    } else {this.props.setMessage('Please click for new hand')}
   }
 
   handleMouseOver(card) {
-    const prospectivePoints = this.props.showProspectivePoints(card)
-    this.props.setMessage(
-      "This would result in " + prospectivePoints.energy + " energy, " 
-      + prospectivePoints.dollars + " dollars, and " 
-      + prospectivePoints.victory + " victory points"
-    )
+    if (this.props.gamestate.playableHand) {
+      const prospectivePoints = this.props.showProspectivePoints(card)
+      this.props.setMessage(
+        "This would result in " + prospectivePoints.energy + " energy, " 
+        + prospectivePoints.dollars + " dollars, and " 
+        + prospectivePoints.victory + " victory points"
+      )
+    }
   }
 
   render() {
