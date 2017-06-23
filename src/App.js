@@ -39,7 +39,6 @@ class App extends Component {
       energy: this.state.energy + card.energy - 1,
       dollars: this.state.dollars + card.dollars - 4,
       time: 4 - this.state.hand.indexOf(card),
-      day: this.state.day + 1,
       victory: this.state.victory + card.victory,
     }
     return prospectivePoints 
@@ -54,11 +53,11 @@ class App extends Component {
     this.setState({gameover: true})
   }
 
-  checkHandPlayability(hand) {
+  checkCardsPlayability(hand) {
     // return false only if no cards are playable
-    return (hand.some(this.isPlayableCard) && this.state.playableHand)
+    return hand.some(this.isPlayableCard) 
   }
-
+  
   setHandPlayability(playable) {
     this.setState({playableHand: playable})
   }
@@ -78,7 +77,7 @@ class App extends Component {
       day: this.state.day + 1,
       msg: 'Seize the card'
     })
-    const playable = this.checkHandPlayability(handArray)
+    const playable = this.checkCardsPlayability(handArray)
     this.setHandPlayability(playable)
     return handArray
   }
@@ -87,7 +86,6 @@ class App extends Component {
     const unused = this.shuffledeck()
     this.setState({
       hand: this.makeHand(unused),
-      unused: unused
     })
   }
 
@@ -141,7 +139,6 @@ class App extends Component {
               isPlayableCard={this.isPlayableCard}
               showProspectivePoints={this.showProspectivePoints.bind(this)}
               setCurrentCard={this.setCurrentCard.bind(this)}
-              checkHandPlayability={this.checkHandPlayability.bind(this)}
               setHandPlayability={this.setHandPlayability.bind(this)}
             />
           </div>

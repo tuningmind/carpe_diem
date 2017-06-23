@@ -5,7 +5,6 @@ class NewHand extends Component {
   clickHandler() {
     if (this.props.gamestate.unused.length) {
       this.props.makeHand(this.props.gamestate.unused) 
-      this.props.setHandPlayability(true)
     } else if (!this.props.gamestate.unused.length) {
       this.props.setMessage('Game Over')
     }

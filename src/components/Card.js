@@ -41,8 +41,7 @@ class Card extends Component {
   }
 
   handleClick(card) {
-    if (this.props.checkHandPlayability(this.props.gamestate.hand)) {
-      this.props.setMessage('')
+    if (this.props.gamestate.playableHand) {
       this.setTired(card)
       this.setNsf(card)
       this.setPlayableCard(card)
