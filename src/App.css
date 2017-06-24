@@ -34,8 +34,9 @@ header {
   align-items: center;
   text-align: center;
   flex: 0 0 8em; }
-  header h5 {
-    color: white; }
+
+header h5 {
+  color: white; }
 
 main {
   display: flex;
@@ -86,15 +87,16 @@ img {
   flex-direction: column;
   justify-content: center;
   text-align: right; }
-  #display p {
-    font-size: .9em;
-    box-shadow: inset 1px 3px 6px 1px gray;
-    background-color: lightgray;
-    color: #303030;
-    height: 1.45em;
-    border-radius: 5px;
-    padding-top: .4em;
-    padding-right: .2em; }
+
+#display p {
+  font-size: .9em;
+  box-shadow: inset 1px 3px 6px 1px gray;
+  background-color: lightgray;
+  color: #303030;
+  height: 1.45em;
+  border-radius: 5px;
+  padding-top: .4em;
+  padding-right: .2em; }
 
 #display-final {
   width: 16.5em;
@@ -105,13 +107,14 @@ img {
   flex-direction: column;
   justify-content: center;
   text-align: center; }
-  #display-final p {
-    font-size: .9em;
-    background-color: lightgray;
-    color: #303030;
-    height: 1.45em;
-    padding-top: .4em;
-    padding-right: .2em; }
+
+#display-final p {
+  font-size: .9em;
+  background-color: lightgray;
+  color: #303030;
+  height: 1.45em;
+  padding-top: .4em;
+  padding-right: .2em; }
 
 #hand {
   display: flex;
@@ -321,6 +324,8 @@ footer {
   div #myapp {
     min-height: 100vh;
     font-size: 0.8em; }
+  #victory {
+    font-size: 1.5em; }
   #footer {
     flex-direction: column; } }
 
@@ -328,6 +333,8 @@ footer {
   div #myapp {
     min-height: 100vh;
     font-size: 0.6em; }
+  #victory {
+    font-size: 1.4em; }
   #footer {
     flex-direction: column; } }
 
@@ -335,6 +342,8 @@ footer {
   div #myapp {
     font-size: 0.6em;
     min-height: 100vh; }
+  #victory {
+    font-size: 1.3em; }
   #gameboard {
     flex-direction: column; }
   #display {
@@ -347,6 +356,8 @@ footer {
   div #myapp {
     font-size: 0.5em;
     min-height: 100vh; }
+  #victory {
+    font-size: 1.3em; }
   #gameboard {
     flex-direction: column; }
   #display {

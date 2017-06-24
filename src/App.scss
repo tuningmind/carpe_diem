@@ -273,6 +273,9 @@ footer {
     min-height: 100vh;
     font-size: 0.8em;
   }
+  #victory {
+    font-size: 1.5em;
+  }
   #footer {
     flex-direction: column;
   }
@@ -282,6 +285,9 @@ footer {
     min-height: 100vh;
     font-size: 0.6em;
   }
+  #victory {
+    font-size: 1.4em;
+  }
   #footer {
     flex-direction: column;
   }
@@ -290,6 +296,9 @@ footer {
   div #myapp {
     font-size: 0.6em;
     min-height: 100vh;
+  }
+  #victory {
+    font-size: 1.3em;
   }
   #gameboard {
     flex-direction: column;
@@ -306,6 +315,9 @@ footer {
   div #myapp {
     font-size: 0.5em;
     min-height: 100vh;
+  }
+  #victory {
+    font-size: 1.3em;
   }
   #gameboard {
     flex-direction: column;
