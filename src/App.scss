@@ -18,7 +18,7 @@ div #myapp {
   background-color: #2a3517;
 
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -110,11 +110,9 @@ img {
   text-align: center;
   p {
     font-size: .9em;
-    box-shadow: inset 1px 3px 6px 1px gray;
     background-color: lightgray;
     color: #303030;
     height: 1.45em;
-    border-radius: 5px;
     padding-top: .4em;
     padding-right: .2em;
   }
@@ -127,7 +125,7 @@ img {
   width: 20em;
   text-align: center;
   font-size: 2em;
-  min-height: 2em;
+  min-height: 3em;
   padding-bottom: 0.5em;
 }
 .card {
