@@ -44,6 +44,20 @@ main {
   align-items: center;
   flex: 0 0 auto; }
 
+#victory {
+  border-radius: 50%;
+  width: 4em;
+  height: 4em;
+  margin-top: -2em;
+  margin-left: 1em;
+  padding-top: .6em;
+  color: black;
+  font-size: 2em;
+  font-weight: 900;
+  text-align: center;
+  background-color: #8fb339;
+  transform: rotate(345deg); }
+
 img {
   width: 2.75em;
   height: 4em;
@@ -62,7 +76,7 @@ img {
   justify-content: center;
   align-items: center;
   align-contents: center;
-  padding: 2em 0 2em 0; }
+  padding: 1em 0 1em 0; }
 
 #display {
   width: 4.15em;
@@ -109,14 +123,11 @@ img {
   margin-left: 2px; }
 
 #msg {
-  width: 100%;
+  width: 20em;
   text-align: center;
   font-size: 2em;
   min-height: 2em;
   padding-bottom: 0.5em; }
-
-.overlay {
-  background: rgba(0, 0, 0, 0.75); }
 
 .card {
   box-shadow: 1px 2px 6px 2px #303030;
