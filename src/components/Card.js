@@ -3,41 +3,76 @@ import React, { Component } from 'react'
 class Card extends Component {
   constructor() {
     super()
-    this.callMakeHand =   this.callMakeHand.bind(this)
-    this.callCalc =       this.callCalc.bind(this)
+    this.setTired = this.setTired.bind(this)
+    this.setNsf = this.setNsf.bind(this)
   }
-  callMakeHand = (unused) => {
-    this.props.makeHand(unused)
+  
+  setTired(card) {
+    if (this.props.gamestate.energy + card.energy - 1 < 0) {
+      card.tired = true
+    } else {card.tired = false}
   }
-  callCalc = (card) => {
-    this.props.calc(card) 
-    this.props.showMessage('This is a message.')
-    console.log("days at callCalc: ", this.props.day)
+
+  setNsf(card) {
+    if (this.props.gamestate.dollars + card.dollars - 4 < 0) {
+      card.nsf = true
+    } else {card.nsf = false}
   }
-  unplayableCard(card) {
-    let unplayablecard = false 
-    if (this.props.energy + card.energy -1 < 0) {
-      unplayablecard = true 
+
+  setPlayableCard(card) {
+    card.playable = this.props.isPlayableCard(card)
+  }
+
+  unplayableMessage(card) {
+    let msg
+    if (this.props.gamestate.playableHand === false) {
+      msg = "None of these cards are playable."
     }
-    if (this.props.dollars + card.dollars -4 < 0) {
-      unplayablecard = true 
+    else if (card.tired && card.nsf) {
+      msg = "This card is not playable because energy and dollars are too low" 
     }
-    return unplayablecard
+    else if (card.nsf) {
+      msg = "This card is not playable because dollars are too low"
+    }
+    else if (card.tired) {
+      msg = "This card is not playable because energy is too low"
+    }
+    this.props.setMessage(msg)
+  }
+
+  handleClick(card) {
+    if (this.props.gamestate.playableHand) {
+      this.setTired(card)
+      this.setNsf(card)
+      this.setPlayableCard(card)
+      this.props.setCurrentCard(card)
+
+      if (this.props.isPlayableCard(card)) {
+        this.props.applyCard(card)
+        this.props.setHandPlayability(false)
+      } else {this.unplayableMessage(card)}
+    } else {this.props.setMessage('Please click for new hand')}
+  }
+
+  handleMouseOver(card) {
+    if (this.props.gamestate.playableHand) {
+      const prospectivePoints = this.props.showProspectivePoints(card)
+      this.props.setMessage(
+        "This would result in " + prospectivePoints.energy + " energy, " 
+        + prospectivePoints.dollars + " dollars, and " 
+        + prospectivePoints.victory + " victory points"
+      )
+    }
   }
 
   render() {
-    let unused = this.props.unused
     let card = this.props.card
-    let classnames = card.classnames
 
     return (
-        <div className="card"
-          onClick={
-            () => {
-              this.callCalc(card)
-              this.callMakeHand(unused)
-            }
-          } 
+        <div className='card'
+          onMouseOver={ () => {this.handleMouseOver(card)}}
+          onClick={ () => {this.handleClick(card)}}
+          onMouseLeave={ () => {this.props.setMessage('')}}
         >
           <div className={card.color}>
             {card.corner}
@@ -50,7 +85,7 @@ class Card extends Component {
             : <img src='./img/white.png' alt='' /> }
            
           {
-            classnames.map( (classname, i) => 
+            card.classnames.map( (classname, i) => 
               ( 
                 <div key={i} className={classname}>{card.suit}</div>
               )

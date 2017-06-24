@@ -7,8 +7,12 @@
     "react-dom": "^15.5.4"
   },
   "devDependencies": {
+    "enzyme": "^2.8.2",
+    "eslint": "^3.19.0",
+    "eslint-plugin-react": "^7.0.1",
     "gh-pages": "^1.0.0",
     "node-sass": "^4.5.2",
+    "react-addons-test-utils": "^15.5.1",
     "react-scripts": "0.9.5"
   },
   "homepage": ".",
