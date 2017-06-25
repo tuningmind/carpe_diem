@@ -27,6 +27,7 @@ class App extends Component {
       msg: '',
       playableHand: true,
       gameover: false,
+      offerTrade: false,
       card: {} 
     }
     this.isPlayableCard = this.isPlayableCard.bind(this)
@@ -36,12 +37,17 @@ class App extends Component {
     this.setState({card: card})
   }
 
+  setOfferTrade(bool) {
+    this.setState({offerTrade: bool})
+  }
+
   showProspectivePoints(card) {
     let prospectivePoints = {
       energy: this.state.energy + card.energy - 1,
       dollars: this.state.dollars + card.dollars - 4,
       time: 4 - this.state.hand.indexOf(card),
       victory: this.state.victory + card.victory,
+      offerTrade: true
     }
     return prospectivePoints 
   }
@@ -150,6 +156,10 @@ class App extends Component {
               setHandPlayability={this.setHandPlayability.bind(this)}
             />
           </div>
+          <Trade 
+            setOfferTrade={this.setOfferTrade.bind(this)}
+            gamestate={this.state}
+          />
           <div>
             <NewHandButton 
               setMessage={this.setMessage.bind(this)}
@@ -159,7 +169,6 @@ class App extends Component {
               gamestate={this.state}
             />            
           </div>
-          <Trade />
           <Instructions />
         </main>
         <footer>

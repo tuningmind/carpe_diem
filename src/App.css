@@ -13,6 +13,12 @@ h1, h2, h3, h4, h5 {
   color: white;
   font-weight: 100; }
 
+.hide {
+  display: none; }
+
+.show {
+  display: visible; }
+
 div #myapp {
   min-height: 100vh;
   background-color: #2a3517;
@@ -64,8 +70,7 @@ div#msg {
   width: 16em;
   text-align: center;
   min-height: 3em;
-  font-size: 2em;
-  padding-bottom: 0.5em; }
+  font-size: 2em; }
 
 img {
   width: 2.75em;
@@ -161,7 +166,11 @@ img {
   outline: none; }
 
 #trade {
-  max-width: 16em; }
+  max-width: 16em;
+  width: 16em;
+  font-size: 2em;
+  text-align: center;
+  margin-top: .5em; }
 
 #instructions {
   width: 30em;
@@ -353,7 +362,8 @@ footer {
     flex-direction: column; }
   #display {
     width: 16.5em;
-    text-align: center; }
+    text-align: center;
+    margin-bottom: .5em; }
   #newhand {
     width: 16.5em; }
   #footer {
@@ -370,7 +380,7 @@ footer {
   #display {
     width: 16.5em;
     text-align: center;
-    margin-bottom: 2px; }
+    margin-bottom: .5em; }
   #newhand {
     width: 16.5em; }
   #footer {

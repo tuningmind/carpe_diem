@@ -15,6 +15,8 @@ class NewHand extends Component {
     return(
       <button id="newHand"
         onClick={ () => {
+          const bool = false
+          this.props.setOfferTrade(bool) 
           this.clickHandler()}}
       >
         new hand
