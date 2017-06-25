@@ -8,6 +8,7 @@ import Cards from './components/Cards'
 import Instructions from './components/Instructions'
 import Footer from './components/Footer'
 import NewHandButton from './components/NewHandButton'
+import Trade from './components/Trade'
 import Victory from './components/Victory'
 
 class App extends Component {
@@ -158,6 +159,7 @@ class App extends Component {
               gamestate={this.state}
             />            
           </div>
+          <Trade />
           <Instructions />
         </main>
         <footer>

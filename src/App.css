@@ -38,12 +38,6 @@ header {
 header h5 {
   color: white; }
 
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 0 0 auto; }
-
 #victory {
   border-radius: 50%;
   width: 4em;
@@ -57,6 +51,21 @@ main {
   text-align: center;
   background-color: #8fb339;
   transform: rotate(345deg); }
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex: 0 0 auto; }
+
+div#msg {
+  width: 16em;
+  text-align: center;
+  min-height: 3em;
+  font-size: 2em;
+  padding-bottom: 0.5em; }
 
 img {
   width: 2.75em;
@@ -75,8 +84,7 @@ img {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  align-contents: center;
-  padding: 1em 0 1em 0; }
+  align-contents: center; }
 
 #display {
   width: 4.15em;
@@ -120,13 +128,6 @@ img {
   display: flex;
   margin-left: 2px; }
 
-#msg {
-  width: 20em;
-  text-align: center;
-  font-size: 2em;
-  min-height: 3em;
-  padding-bottom: 0.5em; }
-
 .card {
   box-shadow: 1px 2px 6px 2px #303030;
   position: relative;
@@ -141,13 +142,14 @@ img {
   flex: 0 0 25%; }
 
 #newHand {
-  width: 5.15em;
-  height: 1.5em;
+  width: 10em;
+  height: 2em;
   font-size: 1.5em;
-  padding: .25em .4em;
+  padding: .30em .4em;
   background-color: lightgray;
   color: #303030;
-  border-radius: 5px; }
+  border-radius: 5px;
+  margin: .5em; }
 
 #newHand:hover {
   background: ivory; }
@@ -157,6 +159,9 @@ img {
 
 #newHand:focus {
   outline: none; }
+
+#trade {
+  max-width: 16em; }
 
 #instructions {
   width: 30em;
@@ -340,7 +345,7 @@ footer {
 
 @media screen and (max-width: 400px) {
   div #myapp {
-    font-size: 0.6em;
+    font-size: 0.5em;
     min-height: 100vh; }
   #victory {
     font-size: 1.3em; }
@@ -349,6 +354,8 @@ footer {
   #display {
     width: 16.5em;
     text-align: center; }
+  #newhand {
+    width: 16.5em; }
   #footer {
     flex-direction: column; } }
 
@@ -364,5 +371,7 @@ footer {
     width: 16.5em;
     text-align: center;
     margin-bottom: 2px; }
+  #newhand {
+    width: 16.5em; }
   #footer {
     flex-direction: column; } }
