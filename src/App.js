@@ -157,7 +157,6 @@ class App extends Component {
             />
           </div>
           <Trade 
-            setOfferTrade={this.setOfferTrade.bind(this)}
             gamestate={this.state}
           />
           <div>
@@ -167,6 +166,7 @@ class App extends Component {
               setHandPlayability={this.setHandPlayability.bind(this)}
               setGameover={this.setGameover.bind(this)}
               gamestate={this.state}
+              setOfferTrade={this.setOfferTrade.bind(this)}
             />            
           </div>
           <Instructions />
