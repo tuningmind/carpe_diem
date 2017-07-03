@@ -5,11 +5,15 @@ class Trade extends Component {
     super(props) 
     this.state = {
     }
-    this.tradeclick = this.tradeclick.bind(this)
+    this.tradeenergy = this.tradeenergy.bind(this)
+    this.tradedollars = this.tradedollars.bind(this)
   }
 
-  tradeclick(e) {
-    console.log("this was clicked " )
+  tradeenergy() {
+    console.log("energy was clicked ", this.props.gamestate.energy + this.props.gamestate.time )
+  }
+  tradedollars() {
+    console.log("dollars was clicked ", this.props.gamestate.energy + this.props.gamestate.time )
   }
 
   render() {
@@ -24,9 +28,9 @@ class Trade extends Component {
         <p>Trade your {this.props.gamestate.time} time {unit} for</p>
         <p>
           {this.props.gamestate.time} 
-          <button onClick={this.tradeclick}>energy</button> 
+          <button onClick={this.tradeenergy}>energy</button> 
           or {this.props.gamestate.time} 
-          <button onClick={this.tradeclick}>dollars</button>
+          <button onClick={this.tradedollars}>dollars</button>
         </p>
       </div>
     )
