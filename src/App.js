@@ -31,6 +31,16 @@ class App extends Component {
       card: {} 
     }
     this.isPlayableCard = this.isPlayableCard.bind(this)
+    this.setMessage = this.setMessage.bind(this)
+    this.makeHand = this.makeHand.bind(this)
+    this.setHandPlayability = this.setHandPlayability.bind(this)
+    this.setGameover = this.setGameover.bind(this)
+    this.setOfferTrade = this.setOfferTrade.bind(this)
+    this.applyCard = this.applyCard.bind(this)
+    this.setMessage = this.setMessage.bind(this)
+    this.showProspectivePoints = this.showProspectivePoints.bind(this)
+    this.setCurrentCard = this.setCurrentCard.bind(this)
+    this.setHandPlayability = this.setHandPlayability.bind(this)
   }
 
   setCurrentCard(card) {
@@ -47,9 +57,14 @@ class App extends Component {
       dollars: this.state.dollars + card.dollars - 4,
       time: 4 - this.state.hand.indexOf(card),
       victory: this.state.victory + card.victory,
-      offerTrade: true
+      offerTrade: true,
+      msg: ''
     }
     return prospectivePoints 
+  }
+
+  setTrade() {
+
   }
 
   applyCard(card) {
@@ -148,12 +163,12 @@ class App extends Component {
             <Display gamestate={this.state} />
             <Hand 
               gamestate={this.state}
-              applyCard={this.applyCard.bind(this)}
-              setMessage={this.setMessage.bind(this)}
+              applyCard={this.applyCard}
+              setMessage={this.setMessage}
               isPlayableCard={this.isPlayableCard}
-              showProspectivePoints={this.showProspectivePoints.bind(this)}
-              setCurrentCard={this.setCurrentCard.bind(this)}
-              setHandPlayability={this.setHandPlayability.bind(this)}
+              showProspectivePoints={this.showProspectivePoints}
+              setCurrentCard={this.setCurrentCard}
+              setHandPlayability={this.setHandPlayability}
             />
           </div>
           <Trade 
@@ -161,12 +176,12 @@ class App extends Component {
           />
           <div>
             <NewHandButton 
-              setMessage={this.setMessage.bind(this)}
-              makeHand={this.makeHand.bind(this)}
-              setHandPlayability={this.setHandPlayability.bind(this)}
-              setGameover={this.setGameover.bind(this)}
+              setMessage={this.setMessage}
+              makeHand={this.makeHand}
+              setHandPlayability={this.setHandPlayability}
+              setGameover={this.setGameover}
               gamestate={this.state}
-              setOfferTrade={this.setOfferTrade.bind(this)}
+              setOfferTrade={this.setOfferTrade}
             />            
           </div>
           <Instructions />

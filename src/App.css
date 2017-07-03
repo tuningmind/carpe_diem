@@ -13,6 +13,25 @@ h1, h2, h3, h4, h5 {
   color: white;
   font-weight: 100; }
 
+button {
+  height: 1.5em;
+  font-size: 1em;
+  padding: .03em .4em .20em .4em;
+  background-color: lightgray;
+  color: #303030;
+  color: white;
+  background-color: #2a3517;
+  border-radius: 5px;
+  margin: .5em; }
+
+button:focus {
+  background-color: #1C230F;
+  outline: none; }
+
+button:hover {
+  outline: none;
+  background-color: #1C230F; }
+
 .hide {
   display: none; }
 
@@ -149,7 +168,7 @@ img {
 #newHand {
   width: 10em;
   height: 2em;
-  font-size: 1.5em;
+  font-size: 2em;
   padding: .30em .4em;
   background-color: lightgray;
   color: #303030;
