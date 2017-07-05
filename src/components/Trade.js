@@ -10,10 +10,16 @@ class Trade extends Component {
   }
 
   tradeenergy() {
-    console.log("energy was clicked ", this.props.gamestate.energy + this.props.gamestate.time )
+    const energy = this.props.gamestate.energy + this.props.gamestate.time
+    this.props.setEnergy(energy)
+    this.props.setTime(0)
+    this.props.setOfferTrade(false)
   }
   tradedollars() {
-    console.log("dollars was clicked ", this.props.gamestate.energy + this.props.gamestate.time )
+    const dollars = this.props.gamestate.dollars + this.props.gamestate.time
+    this.props.setDollars(dollars)
+    this.props.setTime(0)
+    this.props.setOfferTrade(false)
   }
 
   render() {

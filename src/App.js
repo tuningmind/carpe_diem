@@ -30,57 +30,37 @@ class App extends Component {
       offerTrade: false,
       card: {} 
     }
-    this.isPlayableCard = this.isPlayableCard.bind(this)
-    this.setMessage = this.setMessage.bind(this)
-    this.makeHand = this.makeHand.bind(this)
-    this.setHandPlayability = this.setHandPlayability.bind(this)
-    this.setGameover = this.setGameover.bind(this)
-    this.setOfferTrade = this.setOfferTrade.bind(this)
     this.applyCard = this.applyCard.bind(this)
-    this.setMessage = this.setMessage.bind(this)
+    this.isPlayableCard = this.isPlayableCard.bind(this)
+    this.makeHand = this.makeHand.bind(this)
     this.showProspectivePoints = this.showProspectivePoints.bind(this)
+
     this.setCurrentCard = this.setCurrentCard.bind(this)
+    this.setDollars= this.setDollars.bind(this)
+    this.setEnergy = this.setEnergy.bind(this)
+    this.setGameover = this.setGameover.bind(this)
     this.setHandPlayability = this.setHandPlayability.bind(this)
+    this.setMessage = this.setMessage.bind(this)
+    this.setOfferTrade = this.setOfferTrade.bind(this)
+    this.setTime = this.setTime.bind(this)
   }
 
   setCurrentCard(card) {
     this.setState({card: card})
   }
 
-  setOfferTrade(bool) {
-    this.setState({offerTrade: bool})
+  setDollars(dollars) {
+    this.setState({dollars: dollars})
   }
 
-  showProspectivePoints(card) {
-    let prospectivePoints = {
-      energy: this.state.energy + card.energy - 1,
-      dollars: this.state.dollars + card.dollars - 4,
-      time: 4 - this.state.hand.indexOf(card),
-      victory: this.state.victory + card.victory,
-      offerTrade: true,
-      msg: ''
-    }
-    return prospectivePoints 
-  }
-
-  setTrade() {
-
-  }
-
-  applyCard(card) {
-    const newTotals = this.showProspectivePoints(card)
-    this.setState(newTotals)
+  setEnergy(energy) {
+    this.setState({energy: energy})
   }
 
   setGameover() {
     this.setState({gameover: true})
   }
 
-  checkCardsPlayability(hand) {
-    // return false only if no cards are playable
-    return hand.some(this.isPlayableCard) 
-  }
-  
   setHandPlayability(playable) {
     this.setState({playableHand: playable})
   }
@@ -89,20 +69,22 @@ class App extends Component {
     this.setState({msg: msg})
   }
 
-  makeHand(deck) {
-    const handNumbers = deck.slice(-4)
-    const handArray = handNumbers.map((num) => Cards[num]) 
-    const unused = deck.slice(0, deck.length -4)
+  setOfferTrade(bool) {
+    this.setState({offerTrade: bool})
+  }
 
-    this.setState({
-      hand: handArray,
-      unused: unused,
-      day: this.state.day + 1,
-      msg: 'Seize the card'
-    })
-    const playable = this.checkCardsPlayability(handArray)
-    this.setHandPlayability(playable)
-    return handArray
+  setTime(time) {
+    this.setState({time: time})
+  }
+
+  applyCard(card) {
+    const newTotals = this.showProspectivePoints(card)
+    this.setState(newTotals)
+  }
+
+  checkCardsPlayability(hand) {
+    // return false only if no cards are playable
+    return hand.some(this.isPlayableCard) 
   }
 
   componentDidMount() {
@@ -122,6 +104,22 @@ class App extends Component {
     else {
       return true
     }
+  }
+  
+  makeHand(deck) {
+    const handNumbers = deck.slice(-4)
+    const handArray = handNumbers.map((num) => Cards[num]) 
+    const unused = deck.slice(0, deck.length -4)
+
+    this.setState({
+      hand: handArray,
+      unused: unused,
+      day: this.state.day + 1,
+      msg: 'Seize the card'
+    })
+    const playable = this.checkCardsPlayability(handArray)
+    this.setHandPlayability(playable)
+    return handArray
   }
 
   shuffledeck() {
@@ -143,6 +141,17 @@ class App extends Component {
       array[index] = temp
     }
     return array
+  }
+  showProspectivePoints(card) {
+    let prospectivePoints = {
+      energy: this.state.energy + card.energy - 1,
+      dollars: this.state.dollars + card.dollars - 4,
+      time: 4 - this.state.hand.indexOf(card),
+      victory: this.state.victory + card.victory,
+      offerTrade: true,
+      msg: ''
+    }
+    return prospectivePoints 
   }
 
   render() {
@@ -173,6 +182,10 @@ class App extends Component {
           </div>
           <Trade 
             gamestate={this.state}
+            setEnergy={this.setEnergy}
+            setDollars={this.setDollars}
+            setTime={this.setTime}
+            setOfferTrade={this.setOfferTrade}
           />
           <div>
             <NewHandButton 
