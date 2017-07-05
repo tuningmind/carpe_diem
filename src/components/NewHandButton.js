@@ -12,8 +12,11 @@ class NewHand extends Component {
   }
 
   render() {
+    const classname = this.props.gamestate.newHandButton ? 'active' : 'inactive'
     return(
-      <button id="newHand"
+      <button 
+        id="newHand"
+        className={classname}
         onClick={ () => {
           this.props.setOfferTrade(false) 
           this.clickHandler()}}

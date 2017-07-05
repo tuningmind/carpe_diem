@@ -17,7 +17,6 @@ button {
   height: 1.5em;
   font-size: 1em;
   padding: .2em .4em .20em .4em;
-  background-color: lightgray;
   color: #303030;
   color: white;
   background-color: #2a3517;
@@ -171,19 +170,25 @@ img {
   height: 2em;
   font-size: 2em;
   padding: .30em .4em;
-  background-color: lightgray;
   color: #303030;
   border-radius: 5px;
   margin: .5em;
-}
-#newHand:hover {
-  background: ivory;
 }
 #newHand:active {
   background: mistyrose;
 }
 #newHand:focus {
   outline: none;
+}
+#newHand:hover {
+  background: ivory;
+}
+.active {
+  background-color: lightgray;
+}
+.inactive {
+  background-color: #2a3517;
+  border: none;
 }
 #trade {
   max-width: 16em; 

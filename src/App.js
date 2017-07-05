@@ -28,6 +28,7 @@ class App extends Component {
       playableHand: true,
       gameover: false,
       offerTrade: false,
+      newHandButton: false,
       card: {} 
     }
     this.applyCard = this.applyCard.bind(this)
@@ -41,6 +42,7 @@ class App extends Component {
     this.setGameover = this.setGameover.bind(this)
     this.setHandPlayability = this.setHandPlayability.bind(this)
     this.setMessage = this.setMessage.bind(this)
+    this.setNewHandButton = this.setNewHandButton.bind(this)
     this.setOfferTrade = this.setOfferTrade.bind(this)
     this.setTime = this.setTime.bind(this)
   }
@@ -67,6 +69,10 @@ class App extends Component {
 
   setMessage(msg) {
     this.setState({msg: msg})
+  }
+
+  setNewHandButton(active) {
+    this.setState({newHandButton: active})
   }
 
   setOfferTrade(bool) {
@@ -186,6 +192,7 @@ class App extends Component {
             setDollars={this.setDollars}
             setTime={this.setTime}
             setOfferTrade={this.setOfferTrade}
+            setNewHandButton={this.setNewHandButton}
           />
           <div>
             <NewHandButton 

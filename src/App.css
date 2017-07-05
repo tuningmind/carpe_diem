@@ -17,7 +17,6 @@ button {
   height: 1.5em;
   font-size: 1em;
   padding: .2em .4em .20em .4em;
-  background-color: lightgray;
   color: #303030;
   color: white;
   background-color: #2a3517;
@@ -59,9 +58,8 @@ header {
   align-items: center;
   text-align: center;
   flex: 0 0 8em; }
-
-header h5 {
-  color: white; }
+  header h5 {
+    color: white; }
 
 #victory {
   border-radius: 50%;
@@ -119,16 +117,15 @@ img {
   flex-direction: column;
   justify-content: center;
   text-align: right; }
-
-#display p {
-  font-size: .9em;
-  box-shadow: inset 1px 3px 6px 1px gray;
-  background-color: lightgray;
-  color: #303030;
-  height: 1.45em;
-  border-radius: 5px;
-  padding-top: .4em;
-  padding-right: .2em; }
+  #display p {
+    font-size: .9em;
+    box-shadow: inset 1px 3px 6px 1px gray;
+    background-color: lightgray;
+    color: #303030;
+    height: 1.45em;
+    border-radius: 5px;
+    padding-top: .4em;
+    padding-right: .2em; }
 
 #display-final {
   width: 16.5em;
@@ -139,14 +136,13 @@ img {
   flex-direction: column;
   justify-content: center;
   text-align: center; }
-
-#display-final p {
-  font-size: .9em;
-  background-color: lightgray;
-  color: #303030;
-  height: 1.45em;
-  padding-top: .4em;
-  padding-right: .2em; }
+  #display-final p {
+    font-size: .9em;
+    background-color: lightgray;
+    color: #303030;
+    height: 1.45em;
+    padding-top: .4em;
+    padding-right: .2em; }
 
 #hand {
   display: flex;
@@ -170,19 +166,25 @@ img {
   height: 2em;
   font-size: 2em;
   padding: .30em .4em;
-  background-color: lightgray;
   color: #303030;
   border-radius: 5px;
   margin: .5em; }
-
-#newHand:hover {
-  background: ivory; }
 
 #newHand:active {
   background: mistyrose; }
 
 #newHand:focus {
   outline: none; }
+
+#newHand:hover {
+  background: ivory; }
+
+.active {
+  background-color: lightgray; }
+
+.inactive {
+  background-color: #2a3517;
+  border: none; }
 
 #trade {
   max-width: 16em;
