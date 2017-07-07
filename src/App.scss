@@ -17,25 +17,34 @@ button {
   height: 1.5em;
   font-size: 1em;
   padding: .2em .4em .20em .4em;
-  color: #303030;
   color: white;
   background-color: #2a3517;
   border-radius: 5px;
   margin: .1em .2em 0 .2em;
-}
-button:focus {
-  background-color: #1C230F;
-  outline: none;
-}
-button:hover {
-  outline: none;
-  background-color: #1C230F;
+  border: none;
 }
 .hide {
   display: none;
 }
 .show {
   display: visible;
+}
+#newHand {
+  width: 10em;
+  height: 2em;
+  font-size: 2em;
+  padding: .30em .4em;
+  color: #303030;
+  margin: .5em;
+}
+#newHand:active {
+  background: mistyrose;
+}
+#newHand:focus {
+  outline: none;
+}
+#newHand:hover {
+  background: ivory;
 }
 div #myapp {
   min-height: 100vh;
@@ -164,31 +173,6 @@ img {
   }
 .card div {
   flex: 0 0 25%;
-}
-#newHand {
-  width: 10em;
-  height: 2em;
-  font-size: 2em;
-  padding: .30em .4em;
-  color: #303030;
-  border-radius: 5px;
-  margin: .5em;
-}
-#newHand:active {
-  background: mistyrose;
-}
-#newHand:focus {
-  outline: none;
-}
-#newHand:hover {
-  background: ivory;
-}
-.active {
-  background-color: lightgray;
-}
-.inactive {
-  background-color: #2a3517;
-  border: none;
 }
 #trade {
   max-width: 16em; 

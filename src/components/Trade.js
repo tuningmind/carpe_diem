@@ -9,16 +9,22 @@ class Trade extends Component {
     this.tradedollars = this.tradedollars.bind(this)
   }
 
+  componentDidMount() {
+    this.props.setNewHandButton(false) 
+  }
   tradeenergy() {
     const energy = this.props.gamestate.energy + this.props.gamestate.time
     this.props.setEnergy(energy)
     this.props.setTime(0)
+    this.props.setNewHandButton(true) 
     this.props.setOfferTrade(false)
   }
+
   tradedollars() {
     const dollars = this.props.gamestate.dollars + this.props.gamestate.time
     this.props.setDollars(dollars)
     this.props.setTime(0)
+    this.props.setNewHandButton(true) 
     this.props.setOfferTrade(false)
   }
 

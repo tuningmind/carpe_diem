@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 class NewHand extends Component {
 
   clickHandler() {
+    this.props.setOfferTrade(false) 
     if (this.props.gamestate.unused.length) {
       this.props.makeHand(this.props.gamestate.unused) 
     } else {
@@ -12,13 +13,12 @@ class NewHand extends Component {
   }
 
   render() {
-    const classname = this.props.gamestate.newHandButton ? 'active' : 'inactive'
+    const classname = this.props.gamestate.showNewHandButton ? 'show' : 'hide'
     return(
       <button 
         id="newHand"
         className={classname}
         onClick={ () => {
-          this.props.setOfferTrade(false) 
           this.clickHandler()}}
       >
         new hand
