@@ -36,15 +36,13 @@ button {
   padding: .30em .4em;
   color: #303030;
   margin: .5em;
-}
-#newHand:active {
-  background: mistyrose;
+  background: DarkOliveGreen;
 }
 #newHand:focus {
   outline: none;
 }
 #newHand:hover {
-  background: ivory;
+  background: OliveDrab;
 }
 div #myapp {
   min-height: 100vh;
