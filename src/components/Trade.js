@@ -40,9 +40,9 @@ class Trade extends Component {
         <p>Trade your {this.props.gamestate.time} time {unit} for</p>
         <p>
           {this.props.gamestate.time} 
-          <button onClick={this.tradeenergy}>energy</button> 
+          <button id="energy" onClick={this.tradeenergy}>energy</button> 
           or {this.props.gamestate.time} 
-          <button onClick={this.tradedollars}>dollars</button>
+          <button id="dollars" onClick={this.tradedollars}>dollars</button>
         </p>
       </div>
     )

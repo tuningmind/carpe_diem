@@ -18,10 +18,19 @@ button {
   font-size: 1em;
   padding: .2em .4em .20em .4em;
   color: white;
-  background-color: #2a3517;
   border-radius: 5px;
   margin: .1em .2em 0 .2em;
   border: none;
+  box-shadow: 1px 2px 6px 2px #162005;
+  background-color: #333c23;
+}
+button:focus {
+  outline: none;
+  background-color: #4b543d;
+}
+button:hover {
+  background-color: #333c23;
+  background-color: #4b543d;
 }
 .hide {
   display: none;
@@ -34,15 +43,8 @@ button {
   height: 2em;
   font-size: 2em;
   padding: .30em .4em;
-  color: #303030;
+  color: black;
   margin: .5em;
-  background: DarkOliveGreen;
-}
-#newHand:focus {
-  outline: none;
-}
-#newHand:hover {
-  background: OliveDrab;
 }
 div #myapp {
   min-height: 100vh;
