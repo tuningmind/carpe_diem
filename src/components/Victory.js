@@ -7,7 +7,7 @@ class Victory extends Component {
       <div id="victory">
         <p>victory</p>
         <p>points:</p>
-        <p>{this.props.gamestate.victory}</p>
+        <p id="points">{this.props.gamestate.victory}</p>
     </div>
     )
   }

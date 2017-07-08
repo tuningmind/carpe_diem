@@ -29,7 +29,7 @@ class Trade extends Component {
   }
 
   render() {
-    const classname = this.props.gamestate.offerTrade ? "show" : "hide"
+    const classname = !this.props.gamestate.offerTrade ? "hide" : "show"
     const unit = this.props.gamestate.time === 1 ? "unit" : "units"
 
     return(

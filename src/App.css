@@ -73,17 +73,21 @@ header h5 {
 
 #victory {
   border-radius: 50%;
-  width: 4em;
-  height: 4em;
+  width: 5em;
+  height: 5em;
   margin-top: -2em;
   margin-left: 1em;
   padding-top: .6em;
   color: black;
-  font-size: 2em;
+  font-size: 1em;
   font-weight: 900;
   text-align: center;
   background-color: #8fb339;
-  transform: rotate(345deg); }
+  transform: rotate(345deg);
+  align-self: flex-start; }
+
+#points {
+  font-size: 2em; }
 
 main {
   display: flex;
