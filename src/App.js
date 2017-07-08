@@ -165,7 +165,7 @@ class App extends Component {
   render() {
 
     return (
-      <div id="myapp">
+      <div id='myapp'>
         <header>
           <Header />
         </header>
@@ -173,10 +173,10 @@ class App extends Component {
           <Victory 
             gamestate={this.state} 
           />
-          <div id="msg">
+          <div id='msg'>
             {this.state.msg}
           </div>
-           <div id="gameboard"> 
+           <div id='gameboard'> 
             <Display gamestate={this.state} />
             <Hand 
               gamestate={this.state}

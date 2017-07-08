@@ -8,7 +8,7 @@ class Hand extends Component {
     let cardJsx = hand.map((card, i) => {
        return (
           <Card 
-            className="card"
+            className='card'
             key={i} 
             gamestate={this.props.gamestate}
             card={card}
@@ -27,9 +27,9 @@ class Hand extends Component {
     return (
       this.props.gamestate.gameover 
       ? 
-        <div id="hand"></div>
+        <div id='hand'></div>
       :
-        <div id="hand"> {cardJsx} </div>
+        <div id='hand'> {cardJsx} </div>
     )
   }
 }

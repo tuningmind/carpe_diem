@@ -62,7 +62,7 @@ class Instructions extends Component {
     )
 
     return (
-      <div id="instructions">
+      <div id='instructions'>
         {instructionElement}
       </div>
     )

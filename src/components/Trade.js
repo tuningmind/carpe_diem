@@ -30,8 +30,8 @@ class Trade extends Component {
 
   render() {
     const gamestate = this.props.gamestate
-    const classname = gamestate.offerTrade ? "show" : "hide"
-    const unit = gamestate.time === 1 ? "unit" : "units"
+    const classname = gamestate.offerTrade ? 'show' : 'hide'
+    const unit = gamestate.time === 1 ? 'unit' : 'units'
 
     return(
       <div 
@@ -41,9 +41,9 @@ class Trade extends Component {
         <p>Trade your {gamestate.time} time {unit} for</p>
         <p>
           {gamestate.time} 
-          <button id="energy" onClick={this.tradeenergy}>energy</button> 
+          <button id='energy' onClick={this.tradeenergy}>energy</button> 
           or {gamestate.time} 
-          <button id="dollars" onClick={this.tradedollars}>dollars</button>
+          <button id='dollars' onClick={this.tradedollars}>dollars</button>
         </p>
       </div>
     )

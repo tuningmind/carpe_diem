@@ -2,7 +2,7 @@ const Cards = [
   /**HEARTS**/
   {
     index: 0,
-    suit: "♥",
+    suit: '♥',
     rank: 1,
     dollars: -5,
     energy: 1,
@@ -18,7 +18,7 @@ const Cards = [
   },
   {
     index: 1,
-    suit: "♥",
+    suit: '♥',
     rank: 2,
     dollars: 2,
     energy: 1,
@@ -34,7 +34,7 @@ const Cards = [
   },
   {
     index: 2,
-    suit: "♥",
+    suit: '♥',
     rank: 3,
     dollars: 3,
     energy: 1,
@@ -50,7 +50,7 @@ const Cards = [
   },
   {
     index: 3,
-    suit: "♥",
+    suit: '♥',
     rank: 4,
     dollars: 4,
     energy: 1,
@@ -66,7 +66,7 @@ const Cards = [
   },
   {
     index: 4,
-    suit: "♥",
+    suit: '♥',
     rank: 5,
     dollars: 5,
     energy: 1,
@@ -82,7 +82,7 @@ const Cards = [
   },
   {
     index: 5,
-    suit: "♥",
+    suit: '♥',
     rank: 6,
     dollars: 6,
     energy: 1,
@@ -98,7 +98,7 @@ const Cards = [
   },
   {
     index: 6,
-    suit: "♥",
+    suit: '♥',
     rank: 7,
     dollars: 7,
     energy: 1,
@@ -114,7 +114,7 @@ const Cards = [
   },
   {
     index: 7,
-    suit: "♥",
+    suit: '♥',
     rank: 8,
     dollars: 8,
     energy: 1,
@@ -130,7 +130,7 @@ const Cards = [
   },
   {
     index: 8,
-    suit: "♥",
+    suit: '♥',
     rank: 9,
     dollars: 9,
     energy: 1,
@@ -146,7 +146,7 @@ const Cards = [
   },
   {
     index: 9,
-    suit: "♥",
+    suit: '♥',
     rank: 10,
     dollars: 10,
     energy: 1,
@@ -162,7 +162,7 @@ const Cards = [
   },
   {
     index: 10,
-    suit: "♥",
+    suit: '♥',
     rank: 11,
     dollars: -5,
     energy: 1,
@@ -179,7 +179,7 @@ const Cards = [
   },
   {
     index: 11,
-    suit: "♥",
+    suit: '♥',
     rank: 12,
     dollars: -5,
     energy: 1,
@@ -196,7 +196,7 @@ const Cards = [
   },
   {
     index: 12,
-    suit: "♥",
+    suit: '♥',
     rank: 13,
     dollars: -5,
     energy: 1,
@@ -216,7 +216,7 @@ const Cards = [
 
   {
     index: 13,
-    suit: "♣",
+    suit: '♣',
     rank: 1,
     dollars: -5,
     energy: -1,
@@ -232,7 +232,7 @@ const Cards = [
   },
   {
     index: 14,
-    suit: "♣",
+    suit: '♣',
     rank: 2,
     dollars: 2,
     energy: -1,
@@ -248,7 +248,7 @@ const Cards = [
   },
   {
     index: 15,
-    suit: "♣",
+    suit: '♣',
     rank: 3,
     dollars: 3,
     energy: -1,
@@ -264,7 +264,7 @@ const Cards = [
   },
   {
     index: 16,
-    suit: "♣",
+    suit: '♣',
     rank: 4,
     dollars: 4,
     energy: -1,
@@ -280,7 +280,7 @@ const Cards = [
   },
   {
     index: 17,
-    suit: "♣",
+    suit: '♣',
     rank: 5,
     dollars: 5,
     energy: -1,
@@ -296,7 +296,7 @@ const Cards = [
   },
   {
     index: 18,
-    suit: "♣",
+    suit: '♣',
     rank: 6,
     dollars: 6,
     energy: -1,
@@ -312,7 +312,7 @@ const Cards = [
   },
   {
     index: 19,
-    suit: "♣",
+    suit: '♣',
     rank: 7,
     dollars: 7,
     energy: -1,
@@ -328,7 +328,7 @@ const Cards = [
   },
   {
     index: 20,
-    suit: "♣",
+    suit: '♣',
     rank: 8,
     dollars: 8,
     energy: -1,
@@ -344,7 +344,7 @@ const Cards = [
   },
   {
     index: 21,
-    suit: "♣",
+    suit: '♣',
     rank: 9,
     dollars: 9,
     energy: -1,
@@ -360,7 +360,7 @@ const Cards = [
   },
   {
     index: 22,
-    suit: "♣",
+    suit: '♣',
     rank: 10,
     dollars: 10,
     energy: -1,
@@ -376,7 +376,7 @@ const Cards = [
   },
   {
     index: 23,
-    suit: "♣",
+    suit: '♣',
     rank: 11,
     dollars: -5,
     energy: -1,
@@ -393,7 +393,7 @@ const Cards = [
   },
   {
     index: 24,
-    suit: "♣",
+    suit: '♣',
     rank: 12,
     dollars: -5,
     energy: -1,
@@ -410,7 +410,7 @@ const Cards = [
   },
   {
     index: 25,
-    suit: "♣",
+    suit: '♣',
     rank: 13,
     dollars: -5,
     energy: -1,
@@ -430,7 +430,7 @@ const Cards = [
 
   {
     index: 26,
-    suit: "♦",
+    suit: '♦',
     rank: 1,
     dollars: -5,
     energy: 0,
@@ -446,7 +446,7 @@ const Cards = [
   },
   {
     index: 27,
-    suit: "♦",
+    suit: '♦',
     rank: 2,
     dollars: 2,
     energy: 0,
@@ -462,7 +462,7 @@ const Cards = [
   },
   {
     index: 28,
-    suit: "♦",
+    suit: '♦',
     rank: 3,
     dollars: 3,
     energy: 0,
@@ -478,7 +478,7 @@ const Cards = [
   },
   {
     index: 29,
-    suit: "♦",
+    suit: '♦',
     rank: 4,
     dollars: 4,
     energy: 0,
@@ -494,7 +494,7 @@ const Cards = [
   },
   {
     index: 30,
-    suit: "♦",
+    suit: '♦',
     rank: 5,
     dollars: 5,
     energy: 0,
@@ -510,7 +510,7 @@ const Cards = [
   },
   {
     index: 31,
-    suit: "♦",
+    suit: '♦',
     rank: 6,
     dollars: 6,
     energy: 0,
@@ -526,7 +526,7 @@ const Cards = [
   },
   {
     index: 32,
-    suit: "♦",
+    suit: '♦',
     rank: 7,
     dollars: 7,
     energy: 0,
@@ -542,7 +542,7 @@ const Cards = [
   },
   {
     index: 33,
-    suit: "♦",
+    suit: '♦',
     rank: 8,
     dollars: 8,
     energy: 0,
@@ -558,7 +558,7 @@ const Cards = [
   },
   {
     index: 34,
-    suit: "♦",
+    suit: '♦',
     rank: 9,
     dollars: 9,
     energy: 0,
@@ -574,7 +574,7 @@ const Cards = [
   },
   {
     index: 35,
-    suit: "♦",
+    suit: '♦',
     rank: 10,
     dollars: 10,
     energy: 0,
@@ -590,7 +590,7 @@ const Cards = [
   },
   {
     index: 36,
-    suit: "♦",
+    suit: '♦',
     rank: 11,
     dollars: -5,
     energy: 0,
@@ -607,7 +607,7 @@ const Cards = [
   },
   {
     index: 37,
-    suit: "♦",
+    suit: '♦',
     rank: 12,
     dollars: -5,
     energy: 0,
@@ -624,7 +624,7 @@ const Cards = [
   },
   {
     index: 38,
-    suit: "♦",
+    suit: '♦',
     rank: 13,
     dollars: -5,
     energy: 0,
@@ -644,7 +644,7 @@ const Cards = [
 
   {
     index: 39,
-    suit: "♠",
+    suit: '♠',
     rank: 1,
     dollars: -5,
     energy: -3,
@@ -660,7 +660,7 @@ const Cards = [
   },
   {
     index: 40,
-    suit: "♠",
+    suit: '♠',
     rank: 2,
     dollars: 2,
     energy: -3,
@@ -676,7 +676,7 @@ const Cards = [
   },
   {
     index: 41,
-    suit: "♠",
+    suit: '♠',
     rank: 3,
     dollars: 3,
     energy: -3,
@@ -692,7 +692,7 @@ const Cards = [
   },
   {
     index: 42,
-    suit: "♠",
+    suit: '♠',
     rank: 4,
     dollars: 4,
     energy: -3,
@@ -708,7 +708,7 @@ const Cards = [
   },
   {
     index: 43,
-    suit: "♠",
+    suit: '♠',
     rank: 5,
     dollars: 5,
     energy: -3,
@@ -724,7 +724,7 @@ const Cards = [
   },
   {
     index: 44,
-    suit: "♠",
+    suit: '♠',
     rank: 6,
     dollars: 6,
     energy: -3,
@@ -740,7 +740,7 @@ const Cards = [
   },
   {
     index: 45,
-    suit: "♠",
+    suit: '♠',
     rank: 7,
     dollars: 7,
     energy: -3,
@@ -756,7 +756,7 @@ const Cards = [
   },
   {
     index: 46,
-    suit: "♠",
+    suit: '♠',
     rank: 8,
     dollars: 8,
     energy: -3,
@@ -772,7 +772,7 @@ const Cards = [
   },
   {
     index: 47,
-    suit: "♠",
+    suit: '♠',
     rank: 9,
     dollars: 9,
     energy: -3,
@@ -788,7 +788,7 @@ const Cards = [
   },
   {
     index: 48,
-    suit: "♠",
+    suit: '♠',
     rank: 10,
     dollars: 10,
     energy: -3,
@@ -804,7 +804,7 @@ const Cards = [
   },
   {
     index: 49,
-    suit: "♠",
+    suit: '♠',
     rank: 11,
     dollars: -5,
     energy: -3,
@@ -821,7 +821,7 @@ const Cards = [
   },
   {
     index: 50,
-    suit: "♠",
+    suit: '♠',
     rank: 12,
     dollars: -5,
     energy: -3,
@@ -838,7 +838,7 @@ const Cards = [
   },
   {
     index: 51,
-    suit: "♠",
+    suit: '♠',
     rank: 13,
     dollars: -5,
     energy: -3,

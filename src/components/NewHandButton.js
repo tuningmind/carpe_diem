@@ -17,7 +17,7 @@ class NewHand extends Component {
     const classname = gamestate.gameover || !gamestate.showNewHandButton ? 'hide' : 'show'
     return(
       <button 
-        id="newHand"
+        id='newHand'
         className={classname}
         onClick={ () => {
           this.clickHandler()}}
