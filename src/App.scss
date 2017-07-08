@@ -44,7 +44,7 @@ button:hover {
   font-size: 2em;
   padding: .30em .4em;
   color: black;
-  margin: .5em;
+  margin: 2em;
 }
 div #myapp {
   min-height: 100vh;
@@ -103,6 +103,7 @@ div#msg {
   text-align: center;
   min-height: 3em;
   font-size: 2em;
+  margin-top: -1em;
 }
 img {
   width:  2.75em;
@@ -182,10 +183,11 @@ img {
   width: 16em;
   font-size: 2em;
   text-align: center;
-  margin-top: .5em;
+  margin: .5em;
 }
 #instructions {
   width: 30em;
+  max-height: 50em;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -193,6 +195,7 @@ img {
   font-size: 1.35em;
   line-height: 1.2;
   letter-spacing: .05em;
+  margin-top: 10em;
 }
 .instelem {
   display: flex;
