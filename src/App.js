@@ -206,6 +206,7 @@ class App extends Component {
               setOfferTrade={this.setOfferTrade}
             />            
           </div>
+          <h2 id='rules'>Rules</h2>
           <Instructions />
         </main>
         <footer>

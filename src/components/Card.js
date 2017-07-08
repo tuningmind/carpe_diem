@@ -59,7 +59,7 @@ class Card extends Component {
       const prospectivePoints = this.props.showProspectivePoints(card)
       this.props.setMessage(
         'This would result in ' + prospectivePoints.energy + ' energy, ' 
-        + prospectivePoints.dollars + ' dollars, and ' 
+        + prospectivePoints.dollars + ' dollars, ...and ' 
         + prospectivePoints.victory + ' victory points'
       )
     }

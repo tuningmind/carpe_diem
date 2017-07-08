@@ -182,7 +182,7 @@ img {
   width: 16em;
   font-size: 2em;
   text-align: center;
-  margin: 2em; }
+  margin: 1.7em; }
 
 #instructions {
   width: 30em;
@@ -193,8 +193,10 @@ img {
   align-items: stretch;
   font-size: 1.35em;
   line-height: 1.2;
-  letter-spacing: .05em;
-  margin-top: 5em; }
+  letter-spacing: .05em; }
+
+#rules {
+  margin-top: 12em; }
 
 .instelem {
   display: flex;
