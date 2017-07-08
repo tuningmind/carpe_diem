@@ -71,15 +71,11 @@ header {
 
 #rules-link {
   color: white;
-  margin-right: -34em;
-  margin-top: -4em;
-  height: 3em;
-  font-size: 1em;
-  padding: 1em;
+  margin-right: -30em;
+  background-color: #333c23;
   border-radius: 5px;
-  border: none;
-  box-shadow: 1px 2px 6px 2px #162005;
-  background-color: #333c23; }
+  padding: 1em;
+  box-shadow: 1px 2px 6px 2px #162005; }
 
 #victory {
   border-radius: 50%;
