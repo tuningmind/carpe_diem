@@ -68,9 +68,19 @@ header {
   align-items: center;
   text-align: center;
   flex: 0 0 8em;
-  h5 {
-    color: white;
-  }
+  color: white;
+}
+#rules-link {
+  color: white;
+  margin-right: -34em;
+  margin-top: -4em;
+  height: 3em;
+  font-size: 1em;
+  padding: 1em;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 1px 2px 6px 2px #162005;
+  background-color: #333c23;
 }
 #victory {
   border-radius: 50%;
@@ -196,8 +206,8 @@ img {
   line-height: 1.2;
   letter-spacing: .05em;
 }
-#rules {
-  margin-top: 12em;
+#rules-title {
+  margin-top: 25em;
 }
 .instelem {
   display: flex;
