@@ -30,7 +30,7 @@ class Trade extends Component {
 
   render() {
     const gamestate = this.props.gamestate
-    const classname = !gamestate.offerTrade ? "hide" : "show"
+    const classname = gamestate.offerTrade ? "show" : "hide"
     const unit = gamestate.time === 1 ? "unit" : "units"
 
     return(

@@ -170,9 +170,9 @@ class App extends Component {
           <Header />
         </header>
         <main>
-        <Victory 
-          gamestate={this.state} 
-        />
+          <Victory 
+            gamestate={this.state} 
+          />
           <div id="msg">
             {this.state.msg}
           </div>

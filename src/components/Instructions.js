@@ -1,7 +1,18 @@
 import React, { Component } from 'react'
 
 class Instructions extends Component {
-
+  constructor(props) {
+    super(props)
+    this.state = {
+      showing: false
+    }
+    this.handleclick = this.handleclick.bind(this)
+  }
+  handleclick() {
+    const bool = this.state.showing ? false : true 
+    this.setState({showing: bool})
+  }
+  
   render () {
     const days = [   'You have thirteen days to play.', 
                      'Each day consumes 1 energy and 4 dollars in addition to other points.'].map((elem, i) => (<div key={i}>{elem}</div>))
@@ -60,8 +71,11 @@ class Instructions extends Component {
         </div>
       )
     )
+
+    const classname = this.state.showing ? 'show': 'hide' 
     return (
-      <div id="instructions">
+      <div id="instructions" className={classname}>
+        <button id="rules" onClick={this.handleclick}>Rules</button>
         {instructionElement}
       </div>
     )
