@@ -13,7 +13,8 @@ class NewHand extends Component {
   }
 
   render() {
-    const classname = this.props.gamestate.showNewHandButton ? 'show' : 'hide'
+    const gamestate = this.props.gamestate
+    const classname = gamestate.gameover || !gamestate.showNewHandButton ? 'hide' : 'show'
     return(
       <button 
         id="newHand"
