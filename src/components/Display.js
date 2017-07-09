@@ -9,18 +9,18 @@ class Display extends Component {
       gamestate.gameover 
         ?
       ( 
-        <div id="display-final">
+        <div id='display-final'>
           <p>Final total:</p>
-          <p id="dollars">{gamestate.dollars + gamestate.victory} dollars</p>
+          <p id='dollars'>{gamestate.dollars + gamestate.victory} dollars</p>
         </div>
       )
         :
       ( 
-        <div id="display">
-          <p id="energy">{gamestate.energy} energy</p>
-          <p id="dollars">{gamestate.dollars} dollars</p>
-          <p id="time">{gamestate.time} time</p>
-          <p id="days">day {gamestate.day}</p>
+        <div id='display'>
+          <p id='energy'>{gamestate.energy} energy</p>
+          <p id='dollars'>{gamestate.dollars} dollars</p>
+          <p id='time'>{gamestate.time} time</p>
+          <p id='days'>day {gamestate.day}</p>
         </div>
       )
     return display

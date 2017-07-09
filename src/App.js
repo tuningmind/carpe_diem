@@ -28,6 +28,7 @@ class App extends Component {
       playableHand: true,
       gameover: false,
       offerTrade: false,
+      showNewHandButton: false,
       card: {} 
     }
     this.applyCard = this.applyCard.bind(this)
@@ -41,6 +42,7 @@ class App extends Component {
     this.setGameover = this.setGameover.bind(this)
     this.setHandPlayability = this.setHandPlayability.bind(this)
     this.setMessage = this.setMessage.bind(this)
+    this.setNewHandButton = this.setNewHandButton.bind(this)
     this.setOfferTrade = this.setOfferTrade.bind(this)
     this.setTime = this.setTime.bind(this)
   }
@@ -69,6 +71,10 @@ class App extends Component {
     this.setState({msg: msg})
   }
 
+  setNewHandButton(bool) {
+    this.setState({showNewHandButton: bool})
+  }
+
   setOfferTrade(bool) {
     this.setState({offerTrade: bool})
   }
@@ -91,6 +97,7 @@ class App extends Component {
     const unused = this.shuffledeck()
     this.setState({
       hand: this.makeHand(unused),
+      msg: 'Seize the card'
     })
   }
 
@@ -110,15 +117,16 @@ class App extends Component {
     const handNumbers = deck.slice(-4)
     const handArray = handNumbers.map((num) => Cards[num]) 
     const unused = deck.slice(0, deck.length -4)
+    const playable = this.checkCardsPlayability(handArray)
+    this.setHandPlayability(playable)
 
     this.setState({
       hand: handArray,
       unused: unused,
       day: this.state.day + 1,
-      msg: 'Seize the card'
+      msg: 'Seize another card',
+      showNewHandButton: !playable
     })
-    const playable = this.checkCardsPlayability(handArray)
-    this.setHandPlayability(playable)
     return handArray
   }
 
@@ -157,18 +165,18 @@ class App extends Component {
   render() {
 
     return (
-      <div id="myapp">
+      <div id='myapp'>
         <header>
           <Header />
         </header>
-        <Victory 
-          gamestate={this.state} 
-        />
         <main>
-          <div id="msg">
+          <Victory 
+            gamestate={this.state} 
+          />
+          <div id='msg'>
             {this.state.msg}
           </div>
-           <div id="gameboard"> 
+           <div id='gameboard'> 
             <Display gamestate={this.state} />
             <Hand 
               gamestate={this.state}
@@ -186,6 +194,7 @@ class App extends Component {
             setDollars={this.setDollars}
             setTime={this.setTime}
             setOfferTrade={this.setOfferTrade}
+            setNewHandButton={this.setNewHandButton}
           />
           <div>
             <NewHandButton 
@@ -197,6 +206,7 @@ class App extends Component {
               setOfferTrade={this.setOfferTrade}
             />            
           </div>
+          <h2 id='rules-title'>Rules</h2>
           <Instructions />
         </main>
         <footer>

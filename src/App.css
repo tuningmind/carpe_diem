@@ -17,26 +17,34 @@ button {
   height: 1.5em;
   font-size: 1em;
   padding: .2em .4em .20em .4em;
-  background-color: lightgray;
-  color: #303030;
   color: white;
-  background-color: #2a3517;
   border-radius: 5px;
-  margin: .1em .2em 0 .2em; }
+  margin: .1em .2em 0 .2em;
+  border: none;
+  box-shadow: 1px 2px 6px 2px #162005;
+  background-color: #333c23; }
 
 button:focus {
-  background-color: #1C230F;
-  outline: none; }
+  outline: none;
+  background-color: #4b543d; }
 
 button:hover {
-  outline: none;
-  background-color: #1C230F; }
+  background-color: #333c23;
+  background-color: #4b543d; }
 
 .hide {
   display: none; }
 
 .show {
   display: visible; }
+
+#newHand {
+  width: 10em;
+  height: 2em;
+  font-size: 2em;
+  padding: .30em .4em;
+  color: black;
+  margin: 2em; }
 
 div #myapp {
   min-height: 100vh;
@@ -58,23 +66,34 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  flex: 0 0 8em; }
-  header h5 {
-    color: white; }
+  flex: 0 0 8em;
+  color: white; }
+
+#rules-link {
+  color: white;
+  margin-right: -35em;
+  background-color: #333c23;
+  border-radius: 5px;
+  padding: 1em;
+  box-shadow: 1px 2px 6px 2px #162005; }
 
 #victory {
   border-radius: 50%;
-  width: 4em;
-  height: 4em;
+  width: 5em;
+  height: 5em;
   margin-top: -2em;
   margin-left: 1em;
   padding-top: .6em;
   color: black;
-  font-size: 2em;
+  font-size: 1em;
   font-weight: 900;
   text-align: center;
   background-color: #8fb339;
-  transform: rotate(345deg); }
+  transform: rotate(345deg);
+  align-self: flex-start; }
+
+#points {
+  font-size: 2em; }
 
 main {
   display: flex;
@@ -88,7 +107,8 @@ div#msg {
   width: 16em;
   text-align: center;
   min-height: 3em;
-  font-size: 2em; }
+  font-size: 2em;
+  margin-top: -1em; }
 
 img {
   width: 2.75em;
@@ -132,16 +152,15 @@ img {
   width: 16.5em;
   height: 5.30em;
   border-radius: 5px;
-  background-color: gray;
+  background-color: #8D9A7A;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center; }
   #display-final p {
-    font-size: .9em;
-    background-color: lightgray;
-    color: #303030;
-    height: 1.45em;
+    font-size: 1.2em;
+    background-color: #8D9A7A;
+    color: black;
     padding-top: .4em;
     padding-right: .2em; }
 
@@ -162,34 +181,16 @@ img {
 .card div {
   flex: 0 0 25%; }
 
-#newHand {
-  width: 10em;
-  height: 2em;
-  font-size: 2em;
-  padding: .30em .4em;
-  background-color: lightgray;
-  color: #303030;
-  border-radius: 5px;
-  margin: .5em; }
-
-#newHand:hover {
-  background: ivory; }
-
-#newHand:active {
-  background: mistyrose; }
-
-#newHand:focus {
-  outline: none; }
-
 #trade {
   max-width: 16em;
   width: 16em;
   font-size: 2em;
   text-align: center;
-  margin-top: .5em; }
+  margin: 1.7em; }
 
 #instructions {
   width: 30em;
+  max-height: 50em;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -197,6 +198,9 @@ img {
   font-size: 1.35em;
   line-height: 1.2;
   letter-spacing: .05em; }
+
+#rules-title {
+  margin-top: 25em; }
 
 .instelem {
   display: flex;

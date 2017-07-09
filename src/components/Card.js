@@ -26,16 +26,16 @@ class Card extends Component {
   unplayableMessage(card) {
     let msg
     if (this.props.gamestate.playableHand === false) {
-      msg = "None of these cards are playable."
+      msg = 'None of these cards are playable.'
     }
     else if (card.tired && card.nsf) {
-      msg = "This card is not playable because energy and dollars are too low" 
+      msg = 'This card is not playable because energy and dollars are too low' 
     }
     else if (card.nsf) {
-      msg = "This card is not playable because dollars are too low"
+      msg = 'This card is not playable because dollars are too low'
     }
     else if (card.tired) {
-      msg = "This card is not playable because energy is too low"
+      msg = 'This card is not playable because energy is too low'
     }
     this.props.setMessage(msg)
   }
@@ -58,9 +58,9 @@ class Card extends Component {
     if (this.props.gamestate.playableHand) {
       const prospectivePoints = this.props.showProspectivePoints(card)
       this.props.setMessage(
-        "This would result in " + prospectivePoints.energy + " energy, " 
-        + prospectivePoints.dollars + " dollars, and " 
-        + prospectivePoints.victory + " victory points"
+        'This would result in ' + prospectivePoints.energy + ' energy, ' 
+        + prospectivePoints.dollars + ' dollars, ...and ' 
+        + prospectivePoints.victory + ' victory points'
       )
     }
   }
