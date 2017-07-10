@@ -1,5 +1,9 @@
 This game was designed by Zvi Mowshowitz as described in https://thezvi.wordpress.com/2015/03/17/carpe-diem-the-optimization-game-level-1/
 
+## Tools used
+This JavaScript, HTML and Sass app was built with React using create-react-app to bootstrap. 
+Sass was managed using node-sass, and github pages are managed by gh-pages.
+
 ## Game Rules:
 Carpe Diem is an optimization game illustrating the trade-offs between time,
     energy, and money.
