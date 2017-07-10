@@ -13,11 +13,11 @@ class Instructions extends Component {
                      'Numbered cards give you their number in dollar points.', 
                      'Face cards and Aces cost 5 dollars to choose.'].map((elem, i) => (<div key={i}>{elem}</div>))
     const victory = ['Face cards give victory points.', 
-                     'Victory points are added directly to points at the end of the game and are not playable during the game.',
-                     'Jack gives 10 victory points.', 
-                     'Queen gives 20 victory points.', 
+                     'Ace gives 50 victory points.',
                      'King gives 30 victory points.', 
-                     'Ace gives 50 victory points.'].map((elem, i) => (<div key={i}>{elem}</div>))
+                     'Queen gives 20 victory points.', 
+                     'Jack gives 10 victory points.', 
+                     'Victory points are added directly to points at the end of the game and are not playable during the game.'].map((elem, i) => (<div key={i}>{elem}</div>))
     const time = [   'You get 5 time units each day.', 
                      'Card 1 consumes 1 time unit to play.', 
                      'Card 2 consumes 2 time units.', 
