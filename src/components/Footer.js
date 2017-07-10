@@ -23,7 +23,7 @@ class Footer extends Component {
         </p>
         <p className='footlink'>
           <a href='https://github.com/tuningmind/carpe_diem'>
-             tuningmind</a>
+             source</a>
         </p>
       </div>
     )

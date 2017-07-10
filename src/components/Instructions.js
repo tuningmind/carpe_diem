@@ -64,7 +64,7 @@ class Instructions extends Component {
     return (
       <div id='instructions'  style={this.props.gamestate.showRules 
                                       ? {visibility: 'visible'} 
-                                      : {visibility: 'hidden'}}>
+                                      : {display: 'none'}}>
         {instructionElement}
       </div>
     )

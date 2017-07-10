@@ -33,18 +33,26 @@ button:hover {
   background-color: #4b543d;
 }
 .hide {
-  display: none;
+  visibility: hidden;
 }
 .show {
-  display: visible;
+  visibility: visible;
 }
 #newHand {
   width: 10em;
   height: 2em;
   font-size: 2em;
   padding: .30em .4em;
-  color: black;
-  margin: 2em;
+  color: white;
+  margin-bottom: 2em;
+}
+#rules {
+  padding: 1em;
+  padding: .30em .4em;
+  width: 10em;
+  height: 2em;
+  font-size: 2em;
+  margin-bottom: 1em;
 }
 div #myapp {
   min-height: 100vh;
@@ -69,14 +77,6 @@ header {
   text-align: center;
   flex: 0 0 8em;
   color: white;
-}
-#rules-link {
-  color: white;
-  margin-right: -35em;
-  background-color: #333c23;
-  border-radius: 5px;
-  padding: 1em;
-  box-shadow: 1px 2px 6px 2px #162005;
 }
 #victory {
   border-radius: 50%;
@@ -189,7 +189,7 @@ img {
   width: 16em;
   font-size: 2em;
   text-align: center;
-  margin: 1.7em;
+  margin-top: 1.7em;
 }
 #instructions {
   width: 30em;
@@ -201,9 +201,6 @@ img {
   font-size: 1.35em;
   line-height: 1.2;
   letter-spacing: .05em;
-}
-#rules-title {
-  margin-top: 25em;
 }
 .instelem {
   display: flex;
@@ -229,11 +226,14 @@ footer {
   font-size: 1.5em;
   width: 100vw;
   min-height: 4em;
+  p {
+    padding-top: .3em;
+  }
 }
 #footer {
   display: inline-flex;
   background-color: #181F1C;
-  flex: 1 1 3em;
+  flex: 1 1 4em;
   align-items: center;
   justify-content: space-around;
   align-content: stretch;
