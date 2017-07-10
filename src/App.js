@@ -29,6 +29,7 @@ class App extends Component {
       gameover: false,
       offerTrade: false,
       showNewHandButton: false,
+      showRules: false,
       card: {} 
     }
     this.applyCard = this.applyCard.bind(this)
@@ -44,6 +45,7 @@ class App extends Component {
     this.setMessage = this.setMessage.bind(this)
     this.setNewHandButton = this.setNewHandButton.bind(this)
     this.setOfferTrade = this.setOfferTrade.bind(this)
+    this.setShowRules = this.setShowRules.bind(this)
     this.setTime = this.setTime.bind(this)
   }
 
@@ -79,6 +81,9 @@ class App extends Component {
     this.setState({offerTrade: bool})
   }
 
+  setShowRules() {
+    this.setState({showRules: !this.state.showRules})
+  }
   setTime(time) {
     this.setState({time: time})
   }
@@ -163,6 +168,7 @@ class App extends Component {
   }
 
   render() {
+    
 
     return (
       <div id='myapp'>
@@ -206,8 +212,10 @@ class App extends Component {
               setOfferTrade={this.setOfferTrade}
             />            
           </div>
-          <h2 id='rules-title'>Rules</h2>
-          <Instructions />
+          <button id="rules" onClick={this.setShowRules}>Rules</button>
+          <Instructions 
+              gamestate={this.state}
+          />
         </main>
         <footer>
           <Footer />
