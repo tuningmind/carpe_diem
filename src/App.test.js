@@ -58,6 +58,6 @@ describe('App', () => {
     const hand = [false, false, false, false]
     setHandPlayability(hand)
     const playableHand = app.state('playableHand')
-    expect(playableHand).toBe(true)
+    expect(playableHand).toBe(false)
   })
 })
